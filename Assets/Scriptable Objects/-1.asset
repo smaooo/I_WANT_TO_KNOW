@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
-  m_Name: -1 Beginning
+  m_Name: -1
   m_EditorClassIdentifier: 
   number: -1
-  question: May I help you?
+  questions:
+  - question: May I help you?
+    sprite: {fileID: 0}
   answers:
   - answer: 
     approach: polite
@@ -31,5 +33,5 @@ MonoBehaviour:
     approach: neutral
     relatedQuestionNum: 0
     nextQuestion: {fileID: 11400000, guid: 2db2df56c665b834fb6be2399faf9ebd, type: 2}
-  ending: 1
   endingNumber: 0
+  ending: 1

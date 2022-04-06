@@ -10,10 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
-  m_Name: 3 Pitiful
+  m_Name: 47
   m_EditorClassIdentifier: 
-  number: 3
-  question: "\u2026look at yourself. Why should you fall so low in front of me?\nWhat
-    a waste of time this was."
+  number: 47
+  questions:
+  - question: Those are all standing behind me, you are not one of them. You believe
+      yourself to be the outsider of this world. You shall leave at once.
+    sprite: {fileID: 0}
   answers: []
-  ending: 1
+  redirect: {fileID: 0}
+  nextIsEnding: 0
+  endingNumber: 0
+  isEnding: 1

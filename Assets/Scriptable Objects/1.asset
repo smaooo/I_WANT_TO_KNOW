@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  number: 1
+  questions:
+  - question: Very well then. Let me introduce you to the land as I have been a part
+      of it from its very creation - this land is me and I am the land. Everything
+      that the land is - is what I am. Can you see it?
+    sprite: {fileID: 0}
+  answers:
+  - answer: yes
+    approach: 
+    relatedQuestionNum: 4
+    nextQuestion: {fileID: 11400000, guid: 31926e037713dd84baa3c792323ab3ae, type: 2}
+  - answer: no
+    approach: 
+    relatedQuestionNum: 5
+    nextQuestion: {fileID: 11400000, guid: 8e7c1ce16bc552b4d9ce9640b7ebe758, type: 2}
+  - answer: 
+    approach: neutral
+    relatedQuestionNum: 6
+    nextQuestion: {fileID: 11400000, guid: 8aacd25496ea02c468cca9df6b0da3db, type: 2}
+  redirect: {fileID: 0}
+  nextIsEnding: 0
+  ending: {fileID: 0}
+  isEnding: 0

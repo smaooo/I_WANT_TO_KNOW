@@ -10,25 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
-  m_Name: 1 Polite
+  m_Name: 13
   m_EditorClassIdentifier: 
-  number: 1
-  question: Very well then. Let me introduce you to the land as I have been a part
-    of it from its very creation - this land is me and I am the land. Everything
-    that the land is - is what I am. Can you see it
+  number: 13
+  questions:
+  - question: "Are you begging me for one? Isn\u2019t that a little too extreme?"
+    sprite: {fileID: 0}
   answers:
-  - answer: yes
-    approach: 
-    relatedQuestionNum: 4
-    nextQuestion: {fileID: 0}
-    ending: 0
-  - answer: no
-    approach: 
-    relatedQuestionNum: 5
-    nextQuestion: {fileID: 0}
-    ending: 0
   - answer: 
-    approach: neutral
-    relatedQuestionNum: 6
+    approach: beg
+    relatedQuestionNum: 16
     nextQuestion: {fileID: 0}
-    ending: 0
+  - answer: 
+    approach: cry
+    relatedQuestionNum: 17
+    nextQuestion: {fileID: 0}
+  - answer: 
+    approach: I want to believe
+    relatedQuestionNum: 18
+    nextQuestion: {fileID: 0}
+  redirect: {fileID: 0}
+  nextIsEnding: 0
+  ending: {fileID: 0}
+  isEnding: 0

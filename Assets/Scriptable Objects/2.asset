@@ -10,24 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
-  m_Name: 2 Assertive
+  m_Name: 2
   m_EditorClassIdentifier: 
   number: 2
-  question: "\u2026what a rude approach, considering you have just entered my space.
-    What do you want then?"
+  questions:
+  - question: "\u2026what a rude approach, considering you have just entered my space.
+      What do you want then?"
+    sprite: {fileID: 0}
   answers:
   - answer: knowledge
     approach: 
     relatedQuestionNum: 7
-    nextQuestion: {fileID: 0}
-    ending: 0
+    nextQuestion: {fileID: 11400000, guid: 9469b85e487b6e843b6c2f42007752aa, type: 2}
   - answer: story
     approach: 
     relatedQuestionNum: 8
-    nextQuestion: {fileID: 0}
-    ending: 0
+    nextQuestion: {fileID: 11400000, guid: da53043c9cba1cf4fb9f356796aa1ac3, type: 2}
   - answer: world
     approach: 
     relatedQuestionNum: 9
-    nextQuestion: {fileID: 0}
-    ending: 0
+    nextQuestion: {fileID: 11400000, guid: 380297c89e5e3ff41b535e3f0c4c5435, type: 2}
+  endingNumber: 0
+  ending: 0

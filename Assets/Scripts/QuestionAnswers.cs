@@ -15,11 +15,23 @@ public class QuestionAnswers : ScriptableObject
         public QuestionAnswers nextQuestion;
     }
 
+    [System.Serializable]
+    public struct QuestionSprite
+    {
+        [TextArea]
+        public string question;
+        public Sprite sprite;
+    }
+    [Header("Questions & Answers")]
     public int number;
-    [TextArea]
-    public string question;
+    public List<QuestionSprite> questions;
     public List<QA> answers;
-    public int endingNumber;
+    [Header("Redirection")]
+    public QuestionAnswers redirect;
+    [Header("Ending")]
+    public bool nextIsEnding;
+    public QuestionAnswers ending;
+    public bool isEnding;
 }
 
 
