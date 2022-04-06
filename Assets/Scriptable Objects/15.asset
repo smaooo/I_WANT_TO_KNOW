@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
+  m_Name: 15
+  m_EditorClassIdentifier: 
+  number: 15
+  questions:
+  - question: You want to know? What do you want to know?
+    sprite: {fileID: 0}
+  - question: DO YOU UNDERSTAND HUMANENESS?
+    sprite: {fileID: 0}
+  - question: "I do not seem to know why is it that that\u2019s what you want to
+      know?"
+    sprite: {fileID: 0}
+  - question: SO THAT I KNOW THAT WHAT I HAVE EMBARKED TO DO HAS A POINT
+    sprite: {fileID: 0}
+  - question: You are not meant to question me on that. You seem to have lost your
+      mind speaking to me this way.
+    sprite: {fileID: 0}
+  - question: JUST ANSWER ME FOR THIS IS THE ONLY THING WHICH WILL KEEP ME GOING.
+    sprite: {fileID: 0}
+  - question: ...
+    sprite: {fileID: 0}
+  - question: "I will tell you a story then, and you can come to the conclusion yourself.
+      \r\nI did wonder whether I have lost my mind at one point as I was able to
+      look into the hearts of the ones around me, I was able to know their emotions,
+      thoughts and tastes, and for a second I believed that I have seen the very
+      depths of hell. Everything which I have created, everything which has been
+      dear to me was a regret\u2026 Or was it really? I was not sure how to think
+      of those things anymore, I believed that the beauty of the inside and the outside
+      might help those around, but I only saw the evil which it grew in those who
+      were cursed with the fourth sin. I never believed in the things which were
+      deemed normal, but I started wondering if I am the one who needs to be forgiven,
+      I started wondering whether I even knew my place in this thing I have created.
+      I started thinking about the concept of death. I thought that maybe I was starting
+      to understand of what the others were talking about. I was not able to handle
+      being close to them. Oh, did they hurt me\u2026 I thought that it would be
+      better for me to lock myself up and write, write about those who have been
+      consumed by misfortune and every step which those of them have taken made me
+      rage. I would be consumed by anger itself, but once the anger has passed, I
+      found myself forgiving them yet again. I believed there for a second that I
+      was understanding the term itself \u201CHUMANENESS\u201D.\r\n"
+    sprite: {fileID: 0}
+  answers: []
+  redirect: {fileID: 0}
+  nextIsEnding: 1
+  ending: 49
+  isEnding: 0

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
+  m_Name: 37
+  m_EditorClassIdentifier: 
+  number: 37
+  questions:
+  - question: What is it that I do not understand?
+    sprite: {fileID: 0}
+  answers:
+  - answer: me
+    approach: 
+    relatedQuestionNum: 39
+    nextQuestion: {fileID: 11400000, guid: a8a29c57e57252d4ab7a26c8f9322209, type: 2}
+  - answer: yourself
+    approach: 
+    relatedQuestionNum: 40
+    nextQuestion: {fileID: 11400000, guid: 5ca2bb3928fc3a640baa5a492d79ee86, type: 2}
+  - answer: humaneness
+    approach: 
+    relatedQuestionNum: 41
+    nextQuestion: {fileID: 11400000, guid: 816008b9270a4ef4db2792c4dd440db4, type: 2}
+  redirect: {fileID: 0}
+  nextIsEnding: 0
+  ending: 0
+  isEnding: 0

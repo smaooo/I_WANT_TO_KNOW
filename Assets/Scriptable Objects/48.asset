@@ -10,16 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
-  m_Name: 9
+  m_Name: 48
   m_EditorClassIdentifier: 
-  number: 9
+  number: 48
   questions:
-  - question: The world? Are you looking to have the world itself? I do not think
-      I am capable of giving it to you. I have refused this request once already,
-      I do not wish to go through it again.
+  - question: Oh, so you are??? Then you are the one governed by the blind faith?
     sprite: {fileID: 0}
-  answers: []
+  answers:
+  - answer: yes
+    approach: 
+    relatedQuestionNum: 54
+    nextQuestion: {fileID: 11400000, guid: 39482faec41a42241a56bbec6e72f9a3, type: 2}
+  - answer: no
+    approach: 
+    relatedQuestionNum: 55
+    nextQuestion: {fileID: 11400000, guid: 67cc48e8334cae740a5c17ce80d2437a, type: 2}
   redirect: {fileID: 0}
-  nextIsEnding: 1
-  ending: 46
+  nextIsEnding: 0
+  ending: 0
   isEnding: 0

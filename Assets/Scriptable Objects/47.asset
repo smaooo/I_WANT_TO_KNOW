@@ -19,6 +19,6 @@ MonoBehaviour:
     sprite: {fileID: 0}
   answers: []
   redirect: {fileID: 0}
-  nextIsEnding: 0
-  endingNumber: 0
-  isEnding: 1
+  nextIsEnding: 1
+  ending: 14
+  isEnding: 0

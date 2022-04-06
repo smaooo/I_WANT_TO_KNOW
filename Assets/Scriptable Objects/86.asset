@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
-  m_Name: 9
+  m_Name: 86
   m_EditorClassIdentifier: 
-  number: 9
+  number: 86
   questions:
-  - question: The world? Are you looking to have the world itself? I do not think
-      I am capable of giving it to you. I have refused this request once already,
-      I do not wish to go through it again.
+  - question: Your reasoning is flawed and goes against what I have told you. If
+      you cannot answer such a simple question correctly, I shall doubt your assigned
+      standing. You are to be removed now.
     sprite: {fileID: 0}
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1
-  ending: 46
+  ending: 34
   isEnding: 0

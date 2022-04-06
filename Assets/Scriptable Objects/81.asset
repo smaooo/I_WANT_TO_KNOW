@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
-  m_Name: 9
+  m_Name: 81
   m_EditorClassIdentifier: 
-  number: 9
+  number: 81
   questions:
-  - question: The world? Are you looking to have the world itself? I do not think
-      I am capable of giving it to you. I have refused this request once already,
-      I do not wish to go through it again.
+  - question: Here I thought you would know who is standing in front of you. But
+      it seems you are as unaware as all else. It seems that I did a good job after
+      all.
     sprite: {fileID: 0}
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1
-  ending: 46
+  ending: 38
   isEnding: 0

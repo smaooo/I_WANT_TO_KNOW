@@ -30,7 +30,7 @@ public class QuestionAnswers : ScriptableObject
     public QuestionAnswers redirect;
     [Header("Ending")]
     public bool nextIsEnding;
-    public QuestionAnswers ending;
+    public int ending;
     public bool isEnding;
 }
 

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
+  m_Name: 30
+  m_EditorClassIdentifier: 
+  number: 30
+  questions:
+  - question: If that makes me human, one does not require much to be classified
+      as one. What else does one need?
+    sprite: {fileID: 0}
+  answers:
+  - answer: humaneness
+    approach: 
+    relatedQuestionNum: 56
+    nextQuestion: {fileID: 11400000, guid: b701bf0b79a962744a5af0eea430715a, type: 2}
+  - answer: sympathy
+    approach: 
+    relatedQuestionNum: 57
+    nextQuestion: {fileID: 11400000, guid: 83e6769cda2a0ee4d899e7a5e42db8e8, type: 2}
+  - answer: love
+    approach: 
+    relatedQuestionNum: 58
+    nextQuestion: {fileID: 11400000, guid: fb651d914f2b4274ebf92f2729315dc9, type: 2}
+  - answer: else
+    approach: 
+    relatedQuestionNum: 59
+    nextQuestion: {fileID: 11400000, guid: 519f937bc3c310f4bb81afdba550f45b, type: 2}
+  redirect: {fileID: 0}
+  nextIsEnding: 0
+  ending: 0
+  isEnding: 0

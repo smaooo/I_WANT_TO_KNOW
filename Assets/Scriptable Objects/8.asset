@@ -27,12 +27,12 @@ MonoBehaviour:
   - answer: 
     approach: exchange
     relatedQuestionNum: 14
-    nextQuestion: {fileID: 0}
+    nextQuestion: {fileID: 11400000, guid: 852dcd606deb16e4b8f77cc4446c861f, type: 2}
   - answer: I want to know
     approach: 
     relatedQuestionNum: 15
-    nextQuestion: {fileID: 0}
+    nextQuestion: {fileID: 11400000, guid: fb9bc0a8f11a8d34d9ead29b2c15ed2d, type: 2}
   redirect: {fileID: 0}
   nextIsEnding: 0
-  ending: {fileID: 0}
+  ending: 0
   isEnding: 0

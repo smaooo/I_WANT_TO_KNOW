@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
+  m_Name: 64
+  m_EditorClassIdentifier: 
+  number: 64
+  questions:
+  - question: Then what are they?
+    sprite: {fileID: 0}
+  answers:
+  - answer: monster
+    approach: 
+    relatedQuestionNum: 66
+    nextQuestion: {fileID: 11400000, guid: 8415a88914402aa4d80ad3bcda88beb5, type: 2}
+  - answer: lost
+    approach: 
+    relatedQuestionNum: 67
+    nextQuestion: {fileID: 11400000, guid: 5439c09eeec5c534ea41c1133ec15636, type: 2}
+  - answer: traumatized
+    approach: 
+    relatedQuestionNum: 68
+    nextQuestion: {fileID: 11400000, guid: 1709037476e849548ba8d773ca3299d3, type: 2}
+  - answer: else
+    approach: 
+    relatedQuestionNum: 69
+    nextQuestion: {fileID: 11400000, guid: 4e6c0e690d88b09448e11f506a6b92b9, type: 2}
+  redirect: {fileID: 0}
+  nextIsEnding: 0
+  ending: 0
+  isEnding: 0

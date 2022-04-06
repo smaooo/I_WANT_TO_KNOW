@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
+  m_Name: 57
+  m_EditorClassIdentifier: 
+  number: 57
+  questions:
+  - question: Do you sympathize with me then?
+    sprite: {fileID: 0}
+  answers:
+  - answer: yes
+    approach: 
+    relatedQuestionNum: 77
+    nextQuestion: {fileID: 11400000, guid: d475011ad7369de45bf38a82cf335fa9, type: 2}
+  - answer: no
+    approach: 
+    relatedQuestionNum: 78
+    nextQuestion: {fileID: 11400000, guid: f7684f0dd988ee34d8de6542b50abd75, type: 2}
+  - answer: why would i?
+    approach: 
+    relatedQuestionNum: 79
+    nextQuestion: {fileID: 11400000, guid: 00d254738bb9f36428c3d640f6e3c519, type: 2}
+  redirect: {fileID: 0}
+  nextIsEnding: 0
+  ending: 0
+  isEnding: 0

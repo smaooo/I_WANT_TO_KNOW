@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5042678b091e2ce4ea93a48b69038968, type: 3}
-  m_Name: 13
+  m_Name: 5
   m_EditorClassIdentifier: 
-  number: 13
+  number: 5
   questions:
-  - question: "Are you begging me for one? Isn\u2019t that a little too extreme?"
+  - question: Then I shall deem you blind. Why are you here?
     sprite: {fileID: 0}
   answers:
-  - answer: 
-    approach: beg
-    relatedQuestionNum: 16
-    nextQuestion: {fileID: 11400000, guid: bf8304e1458eb274ba0a4d9521c49698, type: 2}
-  - answer: 
-    approach: cry
-    relatedQuestionNum: 17
-    nextQuestion: {fileID: 11400000, guid: f9c1c58e910e55343b51fded15f4ca86, type: 2}
   - answer: 
     approach: believe
     relatedQuestionNum: 18
     nextQuestion: {fileID: 11400000, guid: b5a82e361ba0f1e4dab30ae22ac26e64, type: 2}
+  - answer: 
+    approach: know
+    relatedQuestionNum: 19
+    nextQuestion: {fileID: 11400000, guid: 7962cd62e8daee741906895a3c1e50a6, type: 2}
+  - answer: 
+    approach: understand
+    relatedQuestionNum: 20
+    nextQuestion: {fileID: 11400000, guid: c0fe76178e3e7a54a8802ef1ef3403ff, type: 2}
   redirect: {fileID: 0}
   nextIsEnding: 0
   ending: 0
