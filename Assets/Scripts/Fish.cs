@@ -14,4 +14,8 @@ public class Fish : MonoBehaviour
     {
         
     }
+    private void FixedUpdate()
+    {
+        this.GetComponent<Rigidbody>().velocity = this.transform.right;
+    }
 }

@@ -11,16 +11,15 @@ public class Puddle : MonoBehaviour
     {
         boundryPoints = this.GetComponent<PathCreator>().path.Points;
 
-        print(boundryPoints.Count);
         
         foreach(var p in boundryPoints)
         {
-            //Debug.DrawRay(p, Vector3.up, Color.red, 100);
             points.Add(p);
             points.Add(p + Vector3.down * 2);
-            //Debug.DrawRay(x, Vector3.down, Color.green, 100);
         }
-        //boundryPoints.AddRange(dPoints);
+
+        var b = Instantiate(this.transform.GetChild(0).gameObject, this.transform);
+        b.transform.position = new Vector3(b.transform.position.x, points[1].y, b.transform.position.z);
         var triangles = new List<int>();
         for (int i = 2; i < points.Count; i+=2)
         {
@@ -33,37 +32,30 @@ public class Puddle : MonoBehaviour
             triangles.Add(i+1);
         }
         var l = points.IndexOf(points.Last());
-        //triangles.Add(l);
-        //triangles.Add(l);
+        
         triangles.Add(0);
         triangles.Add(l-1);
         triangles.Add(l);
         triangles.Add(0);
         triangles.Add(l);
         triangles.Add(1);
+
         Mesh mesh = new Mesh();
         mesh.vertices = points.ToArray();
         mesh.triangles = triangles.ToArray();
 
         var g = new GameObject();
-
+        g.transform.SetParent(this.transform);
         g.AddComponent<MeshFilter>();
         g.GetComponent<MeshFilter>().mesh = mesh;
         mesh.RecalculateNormals();
-        var material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
-        g.AddComponent<MeshRenderer>().material = material ;
+        mesh.RecalculateBounds();
+        //var material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+        //g.AddComponent<MeshRenderer>().material = material ;
+        g.AddComponent<MeshCollider>();
         
-        //print(boundryPoints.Count);
+
     }
 
     
-
-    // Update is called once per frame
-    void Update()
-    {
-        //foreach(var p in boundryPoints)
-        //{
-        //    Debug.DrawRay(p, Vector3.up, Color.red, 100);
-        //}
-    }
 }
