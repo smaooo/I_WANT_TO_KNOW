@@ -16,7 +16,19 @@ MonoBehaviour:
   questions:
   - question: 'No? Have you seen your very self? '
     sprite: {fileID: 0}
-  answers: []
+  answers:
+  - answer: I have it
+    approach: 
+    relatedQuestionNum: 76
+    nextQuestion: {fileID: 0}
+  - answer: liar
+    approach: 
+    relatedQuestionNum: 34
+    nextQuestion: {fileID: 11400000, guid: 28913ea210869c145b3b02afe20bbe21, type: 2}
+  - answer: broken
+    approach: 
+    relatedQuestionNum: 35
+    nextQuestion: {fileID: 11400000, guid: f7aa56febb05d784aaab94e08bc5a61e, type: 2}
   redirect: {fileID: 0}
   nextIsEnding: 0
   ending: 0

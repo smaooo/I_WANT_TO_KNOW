@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
         if (e.isKey && e.type == EventType.KeyUp)
         {
             lastKey = (int)(char)e.keyCode;
-            print(lastKey);
         }
     
 
