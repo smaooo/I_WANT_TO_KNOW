@@ -11,8 +11,8 @@ public class FishTracker : MonoBehaviour
     void Start()
     {
         puddleMaterial = puddle.GetComponent<MeshRenderer>().material;
-        if (this.transform.parent.gameObject.name == "FISH1")
-            puddleMaterial.SetFloat("TrackerRadius", this.GetComponent<SphereCollider>().radius * 2);
+        puddleMaterial.SetFloat("TrackerRadius", this.GetComponent<SphereCollider>().radius * 2);
+        //if (this.transform.parent.gameObject.name == "FISH1")
         
     }
 
@@ -25,7 +25,7 @@ public class FishTracker : MonoBehaviour
         if (dist <= 0 && dist > -0.05f && canRipple)
         {
             canRipple = false;
-            
+            print("T");
             puddleMaterial.SetVector("_RefPos", this.transform.position);
             puddleMaterial.SetFloat("_CurrentTime", Time.realtimeSinceStartup);
             puddleMaterial.SetInt("_Ripple", 0);
