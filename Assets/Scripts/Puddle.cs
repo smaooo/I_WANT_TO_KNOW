@@ -7,6 +7,9 @@ public class Puddle : MonoBehaviour
 {
     private List<Vector3> boundryPoints;
     private List<Vector3> points = new List<Vector3>();
+    [SerializeField]
+    private Material puddleGround;
+
     void Start()
     {
         boundryPoints = this.GetComponent<PathCreator>().path.Points;
@@ -20,6 +23,7 @@ public class Puddle : MonoBehaviour
 
         var b = Instantiate(this.transform.GetChild(0).gameObject, this.transform);
         b.transform.position = new Vector3(b.transform.position.x, points[1].y, b.transform.position.z);
+        //b.GetComponent<MeshRenderer>().enabled = true;
         var triangles = new List<int>();
         for (int i = 2; i < points.Count; i+=2)
         {
@@ -50,8 +54,8 @@ public class Puddle : MonoBehaviour
         g.GetComponent<MeshFilter>().mesh = mesh;
         mesh.RecalculateNormals();
         mesh.RecalculateBounds();
-        //var material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
-        //g.AddComponent<MeshRenderer>().material = material ;
+        
+        g.AddComponent<MeshRenderer>().material = puddleGround;
         g.AddComponent<MeshCollider>();
         
 
