@@ -12,15 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Know
   m_EditorClassIdentifier: 
-  score: 2
-  category: know
+  word:
+    word: know
+    score: 3
+    root: 0
+    variations:
+    - knower
+  scoreMultiplier: 2
   simCategory: 
   childs:
   - word: show
     score: 2
+    root: 0
+    variations: []
   - word: give
     score: 2
+    root: 0
+    variations: []
   - word: tell
     score: 3
-  - word: knowledge
+    root: 0
+    variations: []
+  - word: comprehend
     score: 3
+    root: 0
+    variations: []
+  - word: grasp
+    score: 3
+    root: 0
+    variations: []

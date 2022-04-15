@@ -15,23 +15,33 @@ MonoBehaviour:
   number: -1
   questions:
   - question: May I help you?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: 
-    approach: polite
+  - categories:
+    - {fileID: 11400000, guid: 5505c9295b8f61f4e84b4810dcfbe1a6, type: 2}
+    helpers: []
     relatedQuestionNum: 1
     nextQuestion: {fileID: 11400000, guid: 1abf07c10c1906e45a4d994f4b6f2168, type: 2}
-  - answer: 
-    approach: assertive
+  - categories:
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 2
     nextQuestion: {fileID: 11400000, guid: 3a6921183cfa5114d8a21d6a2d2cd53b, type: 2}
-  - answer: 
-    approach: pitiful
+  - categories:
+    - {fileID: 11400000, guid: 69f33db7ecb425e49891a6d0739f78e5, type: 2}
+    helpers: []
     relatedQuestionNum: 3
     nextQuestion: {fileID: 11400000, guid: 94af8f1d27d438c4289b66f5bb21e4f1, type: 2}
-  - answer: 
-    approach: neutral
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 0
     nextQuestion: {fileID: 11400000, guid: 2db2df56c665b834fb6be2399faf9ebd, type: 2}
-  endingNumber: 0
+  redirect: {fileID: 0}
+  nextIsEnding: 0
   ending: 1
+  isEnding: 0

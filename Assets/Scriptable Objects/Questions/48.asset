@@ -15,14 +15,20 @@ MonoBehaviour:
   number: 48
   questions:
   - question: Oh, so you are??? Then you are the one governed by the blind faith?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: yes
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}
+    helpers: []
     relatedQuestionNum: 54
     nextQuestion: {fileID: 11400000, guid: 39482faec41a42241a56bbec6e72f9a3, type: 2}
-  - answer: no
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    helpers: []
     relatedQuestionNum: 55
     nextQuestion: {fileID: 11400000, guid: 67cc48e8334cae740a5c17ce80d2437a, type: 2}
   redirect: {fileID: 0}

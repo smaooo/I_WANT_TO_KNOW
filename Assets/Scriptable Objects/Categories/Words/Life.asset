@@ -12,19 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Life
   m_EditorClassIdentifier: 
-  score: 1
-  category: life
+  word:
+    word: life
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: direction
     score: 1
+    root: 0
+    variations: []
   - word: world
     score: 3
+    root: 0
+    variations: []
   - word: around
     score: 3
+    root: 0
+    variations: []
   - word: surrounding
     score: 3
+    root: 0
+    variations: []
   - word: environment
     score: 3
+    root: 0
+    variations: []
   - word: money
     score: 2
+    root: 0
+    variations: []

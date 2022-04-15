@@ -15,14 +15,22 @@ MonoBehaviour:
   number: 82
   questions:
   - question: I can? And why do you think that is?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: made by the likes of the god
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 94981bcc28a3d344b8a7bf7d9d580a5e, type: 2}
+    - {fileID: 11400000, guid: b04e2da6550fe554f9bfff11966255cd, type: 2}
+    - {fileID: 11400000, guid: 41817a0b0f5d09a43986cc6ce532ce77, type: 2}
+    helpers: []
     relatedQuestionNum: 85
     nextQuestion: {fileID: 11400000, guid: 7679b28d159fdd146aea47b55a2e98ba, type: 2}
-  - answer: else
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 86
     nextQuestion: {fileID: 11400000, guid: 511e59431c1b697429338bcb5d64b498, type: 2}
   redirect: {fileID: 0}

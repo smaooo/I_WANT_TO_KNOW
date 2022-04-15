@@ -12,17 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Entity
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 1
-  category: entity
+  word:
+    word: entity
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: creature
     score: 3
+    root: 0
+    variations: []
   - word: animal
     score: 3
+    root: 0
+    variations: []
   - word: monster
     score: 3
+    root: 0
+    variations: []
   - word: alien
     score: 2
+    root: 0
+    variations: []
   - word: existence
     score: 1
+    root: 0
+    variations: []
+  - word: being
+    score: 1
+    root: 0
+    variations: []
+  - word: individual
+    score: 1
+    root: 0
+    variations: []
+  - word: substance
+    score: 1
+    root: 0
+    variations: []

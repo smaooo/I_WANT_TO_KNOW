@@ -12,17 +12,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Path
   m_EditorClassIdentifier: 
-  score: 1
-  category: path
+  word:
+    word: path
+    score: 3
+    root: 0
+    variations:
+    - pathway
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: way
     score: 3
+    root: 0
+    variations: []
   - word: route
     score: 3
+    root: 0
+    variations:
+    - routeway
   - word: wave
     score: 3
+    root: 0
+    variations: []
   - word: direction
     score: 3
+    root: 0
+    variations: []
   - word: guide
     score: 3
+    root: 0
+    variations: []
+  - word: course
+    score: 1
+    root: 0
+    variations: []
+  - word: line
+    score: 1
+    root: 0
+    variations: []
+  - word: track
+    score: 1
+    root: 0
+    variations: []

@@ -12,17 +12,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Lost
   m_EditorClassIdentifier: 
-  score: 1
-  category: lost
+  word:
+    word: lost
+    score: 3
+    root: 0
+    variations:
+    - lostness
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: astray
     score: 3
+    root: 0
+    variations: []
   - word: path
     score: 3
+    root: 0
+    variations: []
   - word: found
     score: 1
+    root: 0
+    variations: []
   - word: walk
     score: 2
+    root: 0
+    variations: []
   - word: seek
     score: 1
+    root: 0
+    variations: []
+  - word: gone
+    score: 2
+    root: 0
+    variations: []
+  - word: mislaid
+    score: 2
+    root: 0
+    variations: []
+  - word: miss
+    score: 1
+    root: 0
+    variations:
+    - missing
+    - misplaced

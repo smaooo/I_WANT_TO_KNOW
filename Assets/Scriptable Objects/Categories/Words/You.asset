@@ -12,11 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: You
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 1
-  category: you
+  word:
+    word: you
+    score: 3
+    root: 0
+    variations:
+    - thou
+    - ye
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: in front
     score: 3
+    root: 0
+    variations: []
   - word: god
     score: 3
+    root: 0
+    variations: []

@@ -12,13 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Me
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 0
-  category: me
+  word:
+    word: me
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: i
     score: 3
+    root: 0
+    variations: []
   - word: self
     score: 3
+    root: 0
+    variations: []
   - word: mine
     score: 2
+    root: 0
+    variations: []
+  - word: my
+    score: 2
+    root: 0
+    variations: []

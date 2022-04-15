@@ -10,21 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
-  m_Name: Pitiful
+  m_Name: Affirmative
   m_EditorClassIdentifier: 
-  score: 1
-  category: pitiful
+  word:
+    word: affirmative
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
-  - word: help
+  - word: yes
     score: 3
-  - word: ask
-    score: 1
-  - word: lost
-    score: 2
-  - word: please 2
-    score: 3
-  - word: pray
-    score: 1
-  - word: call on
-    score: 1
+    root: 0
+    variations: []

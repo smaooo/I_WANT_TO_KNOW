@@ -10,33 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
-  m_Name: Stroy
-  m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 2
-  category: story
+  m_Name: Polite
+  m_EditorClassIdentifier: 
+  word:
+    word: polite
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
-  - word: why
-    score: 2
-  - word: what
-    score: 2
-  - word: truth
-    score: 1
-  - word: beginning
+  - word: please
     score: 3
-  - word: end
-    score: 1
-  - word: you
-    score: 1
-  - word: me
-    score: 1
-  - word: god
+    root: 0
+    variations: []
+  - word: could
     score: 3
-  - word: human
+    root: 0
+    variations: []
+  - word: would
     score: 3
-  - word: tale
+    root: 0
+    variations: []
+  - word: sorry
     score: 3
-  - word: ballade
-    score: 3
-  - word: parable
-    score: 3
+    root: 0
+    variations: []

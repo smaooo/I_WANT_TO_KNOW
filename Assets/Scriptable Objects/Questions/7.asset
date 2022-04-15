@@ -15,21 +15,28 @@ MonoBehaviour:
   number: 7
   questions:
   - question: You want knowledge?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: yes
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}
+    helpers: []
     relatedQuestionNum: 10
     nextQuestion: {fileID: 11400000, guid: 4cf214877cfd38e4d8212270cfa2aaad, type: 2}
-  - answer: no
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    helpers: []
     relatedQuestionNum: 11
     nextQuestion: {fileID: 11400000, guid: f2fee107499adce45907f1f7eb368af1, type: 2}
-  - answer: 
-    approach: neutral
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 12
     nextQuestion: {fileID: 11400000, guid: f061832259c512044bc64e66abe163c5, type: 2}
   redirect: {fileID: 0}
   nextIsEnding: 0
-  ending: {fileID: 0}
+  ending: 0
   isEnding: 0

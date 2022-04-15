@@ -15,21 +15,31 @@ MonoBehaviour:
   number: 12
   questions:
   - question: Answer me.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: knowledge
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 6702b1929b7e686428dc20544fda8f26, type: 2}
+    - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}
+    helpers: []
     relatedQuestionNum: 7
     nextQuestion: {fileID: 11400000, guid: 9469b85e487b6e843b6c2f42007752aa, type: 2}
-  - answer: story
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: b2ae6b5c2485eed47bc27e5a838aa323, type: 2}
+    - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}
+    helpers: []
     relatedQuestionNum: 8
     nextQuestion: {fileID: 11400000, guid: da53043c9cba1cf4fb9f356796aa1ac3, type: 2}
-  - answer: world
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 6e0459ed612e23041bbf51a5632b8bf9, type: 2}
+    - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}
+    helpers: []
     relatedQuestionNum: 9
     nextQuestion: {fileID: 11400000, guid: 380297c89e5e3ff41b535e3f0c4c5435, type: 2}
   redirect: {fileID: 0}
   nextIsEnding: 0
-  ending: {fileID: 0}
+  ending: 0
   isEnding: 0

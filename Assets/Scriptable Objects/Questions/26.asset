@@ -15,14 +15,21 @@ MonoBehaviour:
   number: 26
   questions:
   - question: Why?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: you look like me
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 94981bcc28a3d344b8a7bf7d9d580a5e, type: 2}
+    - {fileID: 11400000, guid: b04e2da6550fe554f9bfff11966255cd, type: 2}
+    helpers: []
     relatedQuestionNum: 29
     nextQuestion: {fileID: 11400000, guid: cdc40638a323e3f4e8606a41bd5f855b, type: 2}
-  - answer: something else
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 30
     nextQuestion: {fileID: 11400000, guid: 4d3856f16d4a54348ae6124a7c8bd44b, type: 2}
   redirect: {fileID: 0}

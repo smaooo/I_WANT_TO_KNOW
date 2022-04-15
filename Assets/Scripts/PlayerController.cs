@@ -2,16 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using QA;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI textField;
+    public TextMeshProUGUI textField;
     private int lastKey;
     private bool inputActive = false;
+    private Manager manager;
+
+    private QuestionAnswers currentQuestion;
 
     void Start()
     {
+        manager = FindObjectOfType<Manager>();
         Invoke("MakeInputActive", 0.5f);
     }
 
@@ -55,5 +60,13 @@ public class PlayerController : MonoBehaviour
                 lastKey = 0;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            var input = textField.text;
+            textField.text = "";
+            manager.SetNextQuestion(input);
+        }
     }
+
 }

@@ -15,18 +15,28 @@ MonoBehaviour:
   number: 68
   questions:
   - question: Then who was the one that took away that very HUMAN thing?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: god
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 41817a0b0f5d09a43986cc6ce532ce77, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 73
     nextQuestion: {fileID: 11400000, guid: b3e123ad6e23318428a61b9dc447d4cf, type: 2}
-  - answer: parents
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 17bc4b10d56a68643ab23e89dc3b28dc, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 74
     nextQuestion: {fileID: 11400000, guid: 9fff9487e0edfea448bedc2bf3287e6c, type: 2}
-  - answer: life
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 92830f33ac1c5314399bcbe9839e406c, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 75
     nextQuestion: {fileID: 11400000, guid: 6dc83f8c9c6b404438e86ecf37ba5d0c, type: 2}
   redirect: {fileID: 0}

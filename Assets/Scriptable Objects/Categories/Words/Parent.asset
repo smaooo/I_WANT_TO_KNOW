@@ -12,19 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Parent
   m_EditorClassIdentifier: 
-  score: 1
-  category: parent
+  word:
+    word: parent
+    score: 3
+    root: 0
+    variations:
+    - parental
+    - parentally
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: family
     score: 3
+    root: 0
+    variations: []
   - word: others
     score: 2
+    root: 0
+    variations: []
   - word: humans
     score: 3
+    root: 0
+    variations: []
   - word: friends
     score: 2
+    root: 0
+    variations: []
   - word: partner
     score: 1
+    root: 0
+    variations: []
   - word: relations
     score: 1
+    root: 0
+    variations: []

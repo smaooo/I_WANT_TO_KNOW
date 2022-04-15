@@ -12,17 +12,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Kill
   m_EditorClassIdentifier: 
-  score: 1
-  category: kill
+  word:
+    word: kill
+    score: 3
+    root: 0
+    variations:
+    - killable
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: murder
     score: 3
+    root: 0
+    variations: []
   - word: illuminate
     score: 3
+    root: 0
+    variations: []
   - word: discard
     score: 2
+    root: 0
+    variations: []
   - word: rid of
     score: 2
+    root: 0
+    variations: []
   - word: execute
     score: 3
+    root: 0
+    variations: []
+  - word: destroy
+    score: 3
+    root: 0
+    variations: []
+  - word: slay
+    score: 3
+    root: 0
+    variations: []
+  - word: dispatch
+    score: 1
+    root: 0
+    variations: []
+  - word: assassin
+    score: 1
+    root: 0
+    variations:
+    - assassinate

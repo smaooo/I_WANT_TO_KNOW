@@ -15,18 +15,27 @@ MonoBehaviour:
   number: 66
   questions:
   - question: How radical. What do humans do with monsters?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: kill
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 1960884da527d0a49b5a60ff9895e803, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 70
     nextQuestion: {fileID: 11400000, guid: 0c6c814a5ca853b458656bd08579bd36, type: 2}
-  - answer: lock up
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 890f54f2b40da41468f170fedbffbc93, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 71
     nextQuestion: {fileID: 11400000, guid: ebc3f118d7bd0ac4d967bf48c52ac0b6, type: 2}
-  - answer: else
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 72
     nextQuestion: {fileID: 11400000, guid: d5414874981091f4ca4dd655be28bc4e, type: 2}
   redirect: {fileID: 0}

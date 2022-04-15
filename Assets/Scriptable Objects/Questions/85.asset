@@ -16,22 +16,36 @@ MonoBehaviour:
   questions:
   - question: "\u2026\r\nThat is not a bad answer. But what does it take to be a
       human in your opinion?"
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: humaneness
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: f8bf43473620f184fbbda007e3376945, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    - {fileID: 11400000, guid: 94981bcc28a3d344b8a7bf7d9d580a5e, type: 2}
+    helpers: []
     relatedQuestionNum: 56
     nextQuestion: {fileID: 11400000, guid: b701bf0b79a962744a5af0eea430715a, type: 2}
-  - answer: sympathy
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 1b736db8eccc5c24d918e15b726dcd77, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    - {fileID: 11400000, guid: 94981bcc28a3d344b8a7bf7d9d580a5e, type: 2}
+    helpers: []
     relatedQuestionNum: 57
     nextQuestion: {fileID: 11400000, guid: 83e6769cda2a0ee4d899e7a5e42db8e8, type: 2}
-  - answer: love
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 7ebd33f97dc5a9c44b77ae4b14ddc6b8, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    - {fileID: 11400000, guid: 94981bcc28a3d344b8a7bf7d9d580a5e, type: 2}
+    helpers: []
     relatedQuestionNum: 58
     nextQuestion: {fileID: 11400000, guid: fb651d914f2b4274ebf92f2729315dc9, type: 2}
-  - answer: else
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 59
     nextQuestion: {fileID: 11400000, guid: 519f937bc3c310f4bb81afdba550f45b, type: 2}
   redirect: {fileID: 0}

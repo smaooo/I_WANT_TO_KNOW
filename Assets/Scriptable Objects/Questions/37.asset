@@ -15,18 +15,28 @@ MonoBehaviour:
   number: 37
   questions:
   - question: What is it that I do not understand?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: me
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 2a2e90aef1b05544588a0af9f74fb653, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 39
     nextQuestion: {fileID: 11400000, guid: a8a29c57e57252d4ab7a26c8f9322209, type: 2}
-  - answer: yourself
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 8b53704bca236b14591655035003d39c, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 40
     nextQuestion: {fileID: 11400000, guid: 5ca2bb3928fc3a640baa5a492d79ee86, type: 2}
-  - answer: humaneness
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: f8bf43473620f184fbbda007e3376945, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 41
     nextQuestion: {fileID: 11400000, guid: 816008b9270a4ef4db2792c4dd440db4, type: 2}
   redirect: {fileID: 0}

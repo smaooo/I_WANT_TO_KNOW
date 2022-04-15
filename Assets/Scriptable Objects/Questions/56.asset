@@ -16,18 +16,25 @@ MonoBehaviour:
   questions:
   - question: I see, so the word which you have given meaning to. Have you met a
       human who lacks the very essence of HUMANENESS?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: yes
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}
+    helpers: []
     relatedQuestionNum: 60
     nextQuestion: {fileID: 11400000, guid: 5a9d5a2f7f3516e43bc27666c7a522ec, type: 2}
-  - answer: no
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    helpers: []
     relatedQuestionNum: 61
     nextQuestion: {fileID: 11400000, guid: 26d605ef4c207a2419d46fc3a66cd18e, type: 2}
-  - answer: neutral
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 62
     nextQuestion: {fileID: 11400000, guid: 445ba19974d4a694a9452be111cf0eab, type: 2}
   redirect: {fileID: 0}

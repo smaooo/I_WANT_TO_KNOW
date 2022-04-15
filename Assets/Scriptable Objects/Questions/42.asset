@@ -16,14 +16,22 @@ MonoBehaviour:
   questions:
   - question: If we are to assume that being flawed is something that humans can
       only have, then yes is the answer.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: then what are you?
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 818c85e8a980f7940b202400769b8054, type: 2}
+    - {fileID: 11400000, guid: 8b53704bca236b14591655035003d39c, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 44
     nextQuestion: {fileID: 11400000, guid: dd5e415858e28cf4eab45107c6ba54e5, type: 2}
-  - answer: else
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 45
     nextQuestion: {fileID: 11400000, guid: c60720ae4cf58b7478178c5c446f761d, type: 2}
   redirect: {fileID: 0}

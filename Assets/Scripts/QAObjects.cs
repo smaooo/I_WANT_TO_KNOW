@@ -14,13 +14,9 @@ namespace QA
 
     public static class Helpers
     {
-        public static string Synonym(string input)
+        public static QuestionAnswers DetectNext(string input, QuestionAnswers currentQA)
         {
-            return input;
-        }
-        public static string IntentEntity(string input)
-        {
-            return input;
-        }
+            return currentQA;
+        } 
     }
 }

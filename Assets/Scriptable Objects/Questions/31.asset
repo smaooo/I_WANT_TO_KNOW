@@ -17,18 +17,28 @@ MonoBehaviour:
   - question: So, does that mean then that we are the same? Because I do not believe
       that we are. If you believe me to be human, then you are not. Look at yourself,
       can a human really look like this?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: then what am i
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 818c85e8a980f7940b202400769b8054, type: 2}
+    - {fileID: 11400000, guid: 2a2e90aef1b05544588a0af9f74fb653, type: 2}
+    helpers: []
     relatedQuestionNum: 33
     nextQuestion: {fileID: 11400000, guid: 1a72554a4964c8e4c8f28add944af2e5, type: 2}
-  - answer: liar
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 5a895537e63fac248a402b11cd74c7ce, type: 2}
+    - {fileID: 11400000, guid: ca842e315f226ec43b3c0bbc8ebdc8ea, type: 2}
+    helpers: []
     relatedQuestionNum: 34
     nextQuestion: {fileID: 11400000, guid: 28913ea210869c145b3b02afe20bbe21, type: 2}
-  - answer: broken
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 5a895537e63fac248a402b11cd74c7ce, type: 2}
+    - {fileID: 11400000, guid: 50f38fc1a37f61d45af631c4f73bb01c, type: 2}
+    helpers: []
     relatedQuestionNum: 35
     nextQuestion: {fileID: 11400000, guid: f7aa56febb05d784aaab94e08bc5a61e, type: 2}
   redirect: {fileID: 0}

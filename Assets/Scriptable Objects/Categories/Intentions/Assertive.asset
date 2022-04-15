@@ -12,17 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Assertive
   m_EditorClassIdentifier: 
-  score: 1
-  category: assertive
+  word:
+    word: assertive
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: do
     score: 2
+    root: 0
+    variations: []
   - word: want
     score: 2
+    root: 0
+    variations: []
   - word: give
     score: 2
+    root: 0
+    variations: []
   - word: show
     score: 2
+    root: 0
+    variations: []
   - word: tell
     score: 2
+    root: 0
+    variations: []
+  - word: is
+    score: 2
+    root: 0
+    variations: []
+  - word: it is
+    score: 2
+    root: 0
+    variations: []

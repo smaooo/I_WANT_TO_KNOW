@@ -15,18 +15,26 @@ MonoBehaviour:
   number: 57
   questions:
   - question: Do you sympathize with me then?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: yes
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}
+    helpers: []
     relatedQuestionNum: 77
     nextQuestion: {fileID: 11400000, guid: d475011ad7369de45bf38a82cf335fa9, type: 2}
-  - answer: no
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    helpers: []
     relatedQuestionNum: 78
     nextQuestion: {fileID: 11400000, guid: f7684f0dd988ee34d8de6542b50abd75, type: 2}
-  - answer: why would i?
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 818c85e8a980f7940b202400769b8054, type: 2}
+    - {fileID: 11400000, guid: 2a2e90aef1b05544588a0af9f74fb653, type: 2}
+    helpers: []
     relatedQuestionNum: 79
     nextQuestion: {fileID: 11400000, guid: 00d254738bb9f36428c3d640f6e3c519, type: 2}
   redirect: {fileID: 0}

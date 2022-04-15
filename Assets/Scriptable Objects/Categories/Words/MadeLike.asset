@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
+  m_Name: MadeLike
+  m_EditorClassIdentifier: 
+  word:
+    word: made
+    score: 3
+    root: 0
+    variations:
+    - make
+  scoreMultiplier: 1
+  simCategory: like
+  childs:
+  - word: create
+    score: 3
+    root: 0
+    variations: []
+  - word: done
+    score: 2
+    root: 0
+    variations: []
+  - word: fabricate
+    score: 2
+    root: 0
+    variations: []
+  - word: form
+    score: 2
+    root: 0
+    variations: []
+  - word: produce
+    score: 1
+    root: 0
+    variations: []
+  - word: manufacture
+    score: 1
+    root: 0
+    variations: []

@@ -15,14 +15,20 @@ MonoBehaviour:
   number: 27
   questions:
   - question: Well then, what am I?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: god
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 41817a0b0f5d09a43986cc6ce532ce77, type: 2}
+    helpers: []
     relatedQuestionNum: 80
     nextQuestion: {fileID: 11400000, guid: d82f580892824194d92cc00062fb4f0b, type: 2}
-  - answer: else
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 81
     nextQuestion: {fileID: 11400000, guid: 60208b1ad0b949648a0f32cca4318cd6, type: 2}
   redirect: {fileID: 0}

@@ -12,21 +12,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Believe
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 1
-  category: believe
+  word:
+    word: believe
+    score: 3
+    root: 0
+    variations:
+    - believer
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: worth
     score: 3
+    root: 0
+    variations: []
   - word: creation
     score: 1
+    root: 0
+    variations: []
   - word: what for
     score: 3
+    root: 0
+    variations: []
   - word: follow
     score: 3
+    root: 0
+    variations: []
   - word: word
     score: 2
+    root: 0
+    variations: []
   - word: god
     score: 3
+    root: 0
+    variations: []
   - word: destiny
     score: 2
+    root: 0
+    variations: []
+  - word: accept
+    score: 2
+    root: 0
+    variations: []
+  - word: buy
+    score: 2
+    root: 0
+    variations: []
+  - word: credit
+    score: 2
+    root: 0
+    variations: []
+  - word: swallow
+    score: 2
+    root: 0
+    variations: []
+  - word: take
+    score: 2
+    root: 0
+    variations: []
+  - word: trust
+    score: 2
+    root: 0
+    variations: []

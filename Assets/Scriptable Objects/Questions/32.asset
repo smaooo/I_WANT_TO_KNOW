@@ -15,18 +15,28 @@ MonoBehaviour:
   number: 32
   questions:
   - question: No? Then what are you?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: god
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 41817a0b0f5d09a43986cc6ce532ce77, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 46
     nextQuestion: {fileID: 11400000, guid: 92d6b72b4539b65488125b2cd50e5f1a, type: 2}
-  - answer: outside entity
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 48396fe9d5ab32048ba98f22004f663d, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 47
     nextQuestion: {fileID: 11400000, guid: 5f0fbdce82b26f043a055601dbb8f049, type: 2}
-  - answer: fisherman
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: d1200eae794875e46a3887f5df5443b5, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 48
     nextQuestion: {fileID: 11400000, guid: 7d7e79b5b86defc429bded02d703a0d0, type: 2}
   redirect: {fileID: 0}

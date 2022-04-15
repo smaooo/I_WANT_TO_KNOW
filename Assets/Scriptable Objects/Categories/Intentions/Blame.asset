@@ -10,19 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
-  m_Name: Beg
+  m_Name: Blame
   m_EditorClassIdentifier: 
-  score: 1
-  category: beg
+  word:
+    word: blame
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
-  childs:
-  - word: please 2
-    score: 3
-  - word: pray
-    score: 3
-  - word: plead
-    score: 3
-  - word: call on
-    score: 2
-  - word: insist
-    score: 3
+  childs: []

@@ -12,21 +12,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Monster
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 1
-  category: monster
+  word:
+    word: monster
+    score: 3
+    root: 0
+    variations:
+    - monstrosity
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: '- human'
     score: 2
+    root: 0
+    variations: []
   - word: psychopath
     score: 2
+    root: 0
+    variations: []
   - word: inhuman
     score: 3
+    root: 0
+    variations: []
   - word: defective
     score: 3
+    root: 0
+    variations: []
   - word: '- right'
     score: 1
+    root: 0
+    variations: []
   - word: wrong
     score: 2
+    root: 0
+    variations: []
   - word: sick
     score: 3
+    root: 0
+    variations: []
+  - word: grotesque
+    score: 1
+    root: 0
+    variations: []
+  - word: ogre
+    score: 1
+    root: 0
+    variations: []

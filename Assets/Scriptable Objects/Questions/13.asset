@@ -15,18 +15,26 @@ MonoBehaviour:
   number: 13
   questions:
   - question: "Are you begging me for one? Isn\u2019t that a little too extreme?"
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: 
-    approach: beg
+  - categories:
+    - {fileID: 11400000, guid: b939b02cbce96d345867204a73b16ffb, type: 2}
+    helpers: []
     relatedQuestionNum: 16
     nextQuestion: {fileID: 11400000, guid: bf8304e1458eb274ba0a4d9521c49698, type: 2}
-  - answer: 
-    approach: cry
+  - categories:
+    - {fileID: 11400000, guid: 459e7910d28f98641bc3d44141439951, type: 2}
+    helpers: []
     relatedQuestionNum: 17
     nextQuestion: {fileID: 11400000, guid: f9c1c58e910e55343b51fded15f4ca86, type: 2}
-  - answer: 
-    approach: believe
+  - categories:
+    - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}
+    - {fileID: 11400000, guid: 8db4796a4345b574f9ece94b2ce98b5a, type: 2}
+    helpers: []
     relatedQuestionNum: 18
     nextQuestion: {fileID: 11400000, guid: b5a82e361ba0f1e4dab30ae22ac26e64, type: 2}
   redirect: {fileID: 0}

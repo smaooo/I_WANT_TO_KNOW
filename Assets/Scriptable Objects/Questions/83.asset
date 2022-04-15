@@ -15,18 +15,27 @@ MonoBehaviour:
   number: 83
   questions:
   - question: Why not? After all, you were created after the likes of me.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: superior
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: f1bf474cb80cffc4d97dcabfc8303e55, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 87
     nextQuestion: {fileID: 11400000, guid: 6e248cd6c18c41246bbebaa47445b906, type: 2}
-  - answer: love
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 7ebd33f97dc5a9c44b77ae4b14ddc6b8, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 88
     nextQuestion: {fileID: 11400000, guid: d9b1a318b0c1f284a99b5fd49c819b2d, type: 2}
-  - answer: else
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 89
     nextQuestion: {fileID: 11400000, guid: 16bda1458ad638f4ea763ec66bc0cbbf, type: 2}
   redirect: {fileID: 0}

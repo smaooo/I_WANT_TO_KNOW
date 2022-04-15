@@ -16,14 +16,20 @@ MonoBehaviour:
   questions:
   - question: "Do I? I suppose I do to some extend\u2026 Let me ask you then \u2013
       are you human?"
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: yes
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}
+    helpers: []
     relatedQuestionNum: 31
     nextQuestion: {fileID: 11400000, guid: 1bd4809fec497544c830872925b4008b, type: 2}
-  - answer: no
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    helpers: []
     relatedQuestionNum: 32
     nextQuestion: {fileID: 11400000, guid: f39f6b09b8f6e0040b337ef1225b93a2, type: 2}
   redirect: {fileID: 0}

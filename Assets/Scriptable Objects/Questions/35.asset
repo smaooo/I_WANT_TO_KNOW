@@ -16,10 +16,16 @@ MonoBehaviour:
   questions:
   - question: You humans are all the same. When something goes wrong, you chose to
       blame it on anything else other than yourself.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: I am human then
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 818c85e8a980f7940b202400769b8054, type: 2}
+    - {fileID: 11400000, guid: f8bf43473620f184fbbda007e3376945, type: 2}
+    helpers: []
     relatedQuestionNum: 42
     nextQuestion: {fileID: 11400000, guid: e0a9e4bf77152804bb2b9ce5ed202629, type: 2}
   redirect: {fileID: 0}

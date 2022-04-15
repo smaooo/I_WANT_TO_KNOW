@@ -12,17 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: World
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 1
-  category: world
+  word:
+    word: world
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: fish
     score: 1
+    root: 0
+    variations: []
   - word: pond
     score: 1
+    root: 0
+    variations: []
   - word: around
     score: 1
+    root: 0
+    variations: []
   - word: view
     score: 3
+    root: 0
+    variations: []
   - word: wheel
     score: 2
+    root: 0
+    variations: []

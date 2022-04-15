@@ -12,21 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Trauma
   m_EditorClassIdentifier: 
-  score: 1
-  category: trauma
+  word:
+    word: trauma
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: broken
     score: 2
+    root: 0
+    variations: []
   - word: ill
     score: 3
+    root: 0
+    variations: []
   - word: damaged
     score: 3
+    root: 0
+    variations: []
   - word: mental
     score: 3
+    root: 0
+    variations: []
   - word: forgotten
     score: 1
+    root: 0
+    variations: []
   - word: misunderstood
     score: 2
+    root: 0
+    variations: []
   - word: unstable
     score: 2
+    root: 0
+    variations: []
+  - word: wound
+    score: 2
+    root: 0
+    variations: []

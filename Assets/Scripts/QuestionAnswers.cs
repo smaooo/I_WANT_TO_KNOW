@@ -9,18 +9,26 @@ public class QuestionAnswers : ScriptableObject
     [System.Serializable]
     public struct QA
     {
-        public string answer;
-        public string approach;
+        public List<Category> categories;
+        public List<Category> helpers;
         public int relatedQuestionNum;
         public QuestionAnswers nextQuestion;
     }
 
     [System.Serializable]
+    public struct FaceExpression
+    {
+        public Sprite face;
+        public Sprite eyes;
+        public Sprite brows;
+        public Sprite mouth;
+    }
+    [System.Serializable]
     public struct QuestionSprite
     {
         [TextArea]
         public string question;
-        public Sprite sprite;
+        public FaceExpression sprite;
     }
     [Header("Questions & Answers")]
     public int number;

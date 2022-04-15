@@ -12,17 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: God
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 1
-  category: god
+  word:
+    word: god
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: deity
     score: 3
+    root: 0
+    variations: []
   - word: immortal
     score: 3
+    root: 0
+    variations: []
   - word: supreme being
     score: 2
-  - word: divine being
+    root: 0
+    variations: []
+  - word: divine
     score: 3
+    root: 0
+    variations:
+    - divinity
   - word: creator
     score: 3
+    root: 0
+    variations: []
+  - word: lord
+    score: 2
+    root: 0
+    variations: []

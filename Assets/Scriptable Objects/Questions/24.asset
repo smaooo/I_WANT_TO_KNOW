@@ -15,18 +15,25 @@ MonoBehaviour:
   number: 24
   questions:
   - question: Then am I human?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: yes
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}
+    helpers: []
     relatedQuestionNum: 26
     nextQuestion: {fileID: 11400000, guid: 740ac2d6b850a9a4ba12d100b28ccd4e, type: 2}
-  - answer: no
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    helpers: []
     relatedQuestionNum: 27
     nextQuestion: {fileID: 11400000, guid: 4acdc25497908cf48b6cbddd0a390283, type: 2}
-  - answer: not sure
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 28
     nextQuestion: {fileID: 11400000, guid: af0569b6dbf8a194f8ef532569de4fd7, type: 2}
   redirect: {fileID: 0}

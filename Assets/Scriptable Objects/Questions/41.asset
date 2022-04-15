@@ -15,16 +15,29 @@ MonoBehaviour:
   number: 41
   questions:
   - question: ...
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   - question: "It is a flawed concept. And you are a flawed creature.\r"
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: am I human then?
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 818c85e8a980f7940b202400769b8054, type: 2}
+    - {fileID: 11400000, guid: f8bf43473620f184fbbda007e3376945, type: 2}
+    - {fileID: 11400000, guid: 2a2e90aef1b05544588a0af9f74fb653, type: 2}
+    helpers: []
     relatedQuestionNum: 42
     nextQuestion: {fileID: 11400000, guid: e0a9e4bf77152804bb2b9ce5ed202629, type: 2}
-  - answer: it is not
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 43
     nextQuestion: {fileID: 11400000, guid: a3a7ae6f30b699e429e2c3d24fb3617b, type: 2}
   redirect: {fileID: 0}

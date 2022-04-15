@@ -15,14 +15,21 @@ MonoBehaviour:
   number: 21
   questions:
   - question: Then I shall ask you. What does HUMANENESS mean?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: being human
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: f8bf43473620f184fbbda007e3376945, type: 2}
+    helpers:
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
     relatedQuestionNum: 24
     nextQuestion: {fileID: 11400000, guid: e9bc00357151abc479445be35d7bfda9, type: 2}
-  - answer: something else
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 25
     nextQuestion: {fileID: 11400000, guid: 651aeb8aee6879041aa5dc5eedbcd952, type: 2}
   redirect: {fileID: 0}

@@ -10,15 +10,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
-  m_Name: Polite
+  m_Name: Pleading
   m_EditorClassIdentifier: 
-  score: 1
-  category: polite
+  word:
+    word: plead
+    score: 3
+    root: 0
+    variations:
+    - pleading
+  scoreMultiplier: 1
   simCategory: 
   childs:
-  - word: please
+  - word: please 2
     score: 3
-  - word: could
+    root: 0
+    variations: []
+  - word: pray
     score: 3
-  - word: would
+    root: 0
+    variations: []
+  - word: call on
+    score: 2
+    root: 0
+    variations: []
+  - word: insist
     score: 3
+    root: 0
+    variations: []
+  - word: beg
+    score: 3
+    root: 0
+    variations: []

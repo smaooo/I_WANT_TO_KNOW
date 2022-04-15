@@ -15,22 +15,33 @@ MonoBehaviour:
   number: 64
   questions:
   - question: Then what are they?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: monster
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 2904aa88990b5c1408e9ddb3552aaa42, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 66
     nextQuestion: {fileID: 11400000, guid: 8415a88914402aa4d80ad3bcda88beb5, type: 2}
-  - answer: lost
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 281d5779624f4f2448bf906dcc28fc9c, type: 2}
+    - {fileID: 11400000, guid: 69f33db7ecb425e49891a6d0739f78e5, type: 2}
+    helpers: []
     relatedQuestionNum: 67
     nextQuestion: {fileID: 11400000, guid: 5439c09eeec5c534ea41c1133ec15636, type: 2}
-  - answer: traumatized
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 8b8e732b23fb73b488b632ca69364581, type: 2}
+    - {fileID: 11400000, guid: 69f33db7ecb425e49891a6d0739f78e5, type: 2}
+    helpers: []
     relatedQuestionNum: 68
     nextQuestion: {fileID: 11400000, guid: 1709037476e849548ba8d773ca3299d3, type: 2}
-  - answer: else
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 69
     nextQuestion: {fileID: 11400000, guid: 4e6c0e690d88b09448e11f506a6b92b9, type: 2}
   redirect: {fileID: 0}

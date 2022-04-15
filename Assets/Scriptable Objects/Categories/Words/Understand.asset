@@ -12,17 +12,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Understand
   m_EditorClassIdentifier: 
-  score: 2
-  category: understand
+  word:
+    word: understand
+    score: 3
+    root: 0
+    variations:
+    - understandable
+  scoreMultiplier: 2
   simCategory: 
   childs:
   - word: get
     score: 2
+    root: 0
+    variations: []
   - word: meaning
     score: 3
+    root: 0
+    variations: []
   - word: what
     score: 3
+    root: 0
+    variations: []
   - word: where
     score: 3
+    root: 0
+    variations: []
   - word: how
     score: 3
+    root: 0
+    variations: []
+  - word: conclude
+    score: 2
+    root: 0
+    variations: []
+  - word: deduce
+    score: 2
+    root: 0
+    variations: []
+  - word: comprehend
+    score: 2
+    root: 0
+    variations: []
+  - word: reason
+    score: 2
+    root: 0
+    variations: []

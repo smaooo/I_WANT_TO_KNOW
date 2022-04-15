@@ -12,17 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Exchange
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 1
-  category: exchange
+  word:
+    word: exchange
+    score: 3
+    root: 0
+    variations:
+    - exchangeability
+    - exchangeable
+    - exchanger
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: information
     score: 3
+    root: 0
+    variations: []
   - word: offer
     score: 3
+    root: 0
+    variations: []
   - word: suggest
     score: 2
+    root: 0
+    variations: []
   - word: would
     score: 3
+    root: 0
+    variations: []
   - word: give
     score: 2
+    root: 0
+    variations: []
+  - word: swap
+    score: 2
+    root: 0
+    variations: []
+  - word: trade
+    score: 2
+    root: 0
+    variations: []

@@ -16,18 +16,29 @@ MonoBehaviour:
   questions:
   - question: Are you? Then tell me, THE GOD OF THIS WORLD, why should believe in
       you?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: you have to believe
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}
+    - {fileID: 11400000, guid: 8db4796a4345b574f9ece94b2ce98b5a, type: 2}
+    - {fileID: 11400000, guid: 8b53704bca236b14591655035003d39c, type: 2}
+    helpers: []
     relatedQuestionNum: 49
     nextQuestion: {fileID: 11400000, guid: cc624ec34fc985e46a5f51ab1d6c60aa, type: 2}
-  - answer: there is no other way
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    - {fileID: 11400000, guid: c422a1c58573bc344a98c3b1589976c0, type: 2}
+    helpers: []
     relatedQuestionNum: 50
     nextQuestion: {fileID: 11400000, guid: 2c9fdfe5ad129704bb2e8c6967f6cf8f, type: 2}
-  - answer: else
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 51
     nextQuestion: {fileID: 11400000, guid: c59d703b1e813d0458c21b1cf5052882, type: 2}
   redirect: {fileID: 0}

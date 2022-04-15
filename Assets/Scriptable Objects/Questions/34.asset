@@ -15,18 +15,34 @@ MonoBehaviour:
   number: 34
   questions:
   - question: Well, why should I lie? Take a look for yourself.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: you are a liar
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 5a895537e63fac248a402b11cd74c7ce, type: 2}
+    - {fileID: 11400000, guid: ca842e315f226ec43b3c0bbc8ebdc8ea, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    - {fileID: 11400000, guid: 8b53704bca236b14591655035003d39c, type: 2}
+    helpers: []
     relatedQuestionNum: 36
     nextQuestion: {fileID: 11400000, guid: a8ded6b3b09d9e043865fb5d628d24a6, type: 2}
-  - answer: you do not understand
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    - {fileID: 11400000, guid: 8b53704bca236b14591655035003d39c, type: 2}
+    - {fileID: 11400000, guid: 9bcf71bfbeb1b2649b21f20720781aa2, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
     relatedQuestionNum: 37
     nextQuestion: {fileID: 11400000, guid: d63c58fb6b2768f45abc6789704e7e82, type: 2}
-  - answer: you are not human
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    - {fileID: 11400000, guid: f8bf43473620f184fbbda007e3376945, type: 2}
+    - {fileID: 11400000, guid: 8b53704bca236b14591655035003d39c, type: 2}
+    helpers: []
     relatedQuestionNum: 38
     nextQuestion: {fileID: 11400000, guid: d629fd5ef0e9f7f46b0b1fcaf903013f, type: 2}
   redirect: {fileID: 0}

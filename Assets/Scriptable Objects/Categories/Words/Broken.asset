@@ -12,17 +12,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Broken
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 1
-  category: broken
+  word:
+    word: broken
+    score: 3
+    root: 0
+    variations:
+    - break
+    - brokenly
+    - brokenness
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: '- work'
     score: 3
+    root: 0
+    variations: []
   - word: reflection
     score: 3
+    root: 0
+    variations: []
   - word: defective
     score: 3
+    root: 0
+    variations: []
   - word: water
     score: 2
+    root: 0
+    variations: []
   - word: fish
     score: 1
+    root: 0
+    variations: []
+  - word: busted
+    score: 1
+    root: 0
+    variations: []
+  - word: fracture
+    score: 1
+    root: 0
+    variations: []
+  - word: fragment
+    score: 1
+    root: 0
+    variations: []
+  - word: shatter
+    score: 1
+    root: 0
+    variations: []
+  - word: smash
+    score: 1
+    root: 0
+    variations: []

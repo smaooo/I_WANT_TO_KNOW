@@ -12,17 +12,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Human
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 1
-  category: human
+  word:
+    word: human
+    score: 3
+    root: 0
+    variations:
+    - humanness
+    - humaneness
+    - humanlike
+    - humanish
+    - humanity
+  scoreMultiplier: 1
   simCategory: 
   childs:
-  - word: humaneness
-    score: 3
   - word: being
     score: 3
+    root: 0
+    variations: []
   - word: person
     score: 3
-  - word: humanity
-    score: 3
-  - word: humanish
-    score: 3
+    root: 0
+    variations: []
+  - word: mortal
+    score: 2
+    root: 0
+    variations: []
+  - word: earthborn
+    score: 1
+    root: 0
+    variations: []
+  - word: being
+    score: 1
+    root: 0
+    variations: []
+  - word: guy
+    score: 1
+    root: 0
+    variations: []
+  - word: man
+    score: 1
+    root: 0
+    variations: []
+  - word: person
+    score: 1
+    root: 0
+    variations:
+    - personage

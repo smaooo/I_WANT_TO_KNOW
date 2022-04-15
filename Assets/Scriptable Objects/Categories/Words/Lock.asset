@@ -12,21 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Lock
   m_EditorClassIdentifier: 
-  score: 1
-  category: lock
+  word:
+    word: lock
+    score: 3
+    root: 0
+    variations:
+    - lockable
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: judge
     score: 3
+    root: 0
+    variations: []
   - word: prosecute
     score: 3
+    root: 0
+    variations: []
   - word: cell
     score: 2
+    root: 0
+    variations: []
   - word: prison
     score: 2
+    root: 0
+    variations: []
   - word: jail
     score: 2
+    root: 0
+    variations: []
   - word: chamber
     score: 1
+    root: 0
+    variations: []
   - word: close
     score: 3
+    root: 0
+    variations: []

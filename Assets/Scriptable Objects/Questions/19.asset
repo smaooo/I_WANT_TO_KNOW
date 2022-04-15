@@ -17,18 +17,25 @@ MonoBehaviour:
   - question: "Your seeking of stories is admirable I have to say. Let me put it
       this way \u2013 the more you know the less you understand. Is understanding
       something you desire?"
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: yes
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}
+    helpers: []
     relatedQuestionNum: 21
     nextQuestion: {fileID: 11400000, guid: 8d72227523243c4499ac012e3f316ef3, type: 2}
-  - answer: no
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    helpers: []
     relatedQuestionNum: 22
     nextQuestion: {fileID: 11400000, guid: 48d02200d050ad44bbd90f1ab69570ca, type: 2}
-  - answer: neutral
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 23
     nextQuestion: {fileID: 11400000, guid: a8e8366c50292dd4f9e6134eb1282b53, type: 2}
   redirect: {fileID: 0}

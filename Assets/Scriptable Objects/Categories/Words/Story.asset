@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
+  m_Name: Story
+  m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
+  word:
+    word: stroy
+    score: 3
+    root: 0
+    variations:
+    - history
+    - strorylike
+  scoreMultiplier: 2
+  simCategory: 
+  childs:
+  - word: why
+    score: 2
+    root: 0
+    variations: []
+  - word: what
+    score: 2
+    root: 0
+    variations: []
+  - word: truth
+    score: 1
+    root: 0
+    variations: []
+  - word: beginning
+    score: 3
+    root: 0
+    variations: []
+  - word: end
+    score: 1
+    root: 0
+    variations: []
+  - word: you
+    score: 1
+    root: 0
+    variations: []
+  - word: me
+    score: 1
+    root: 0
+    variations: []
+  - word: god
+    score: 3
+    root: 0
+    variations: []
+  - word: human
+    score: 3
+    root: 0
+    variations: []
+  - word: tale
+    score: 3
+    root: 0
+    variations: []
+  - word: ballade
+    score: 3
+    root: 0
+    variations: []
+  - word: parable
+    score: 3
+    root: 0
+    variations: []

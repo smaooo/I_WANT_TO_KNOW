@@ -12,17 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Own
   m_EditorClassIdentifier: 
-  score: 1
-  category: own
+  word:
+    word: own
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: have
   childs:
   - word: obtain
     score: 2
+    root: 0
+    variations: []
   - word: hold
     score: 3
+    root: 0
+    variations: []
   - word: possess
     score: 3
+    root: 0
+    variations: []
   - word: acquire
     score: 2
+    root: 0
+    variations: []
   - word: obligated
     score: 3
+    root: 0
+    variations: []
+  - word: retain
+    score: 3
+    root: 0
+    variations: []

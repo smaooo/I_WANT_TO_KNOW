@@ -10,17 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
-  m_Name: Made
+  m_Name: None
   m_EditorClassIdentifier: 
-  score: 1
-  category: made
-  simCategory: like
-  childs:
-  - word: relate
-    score: 3
-  - word: same
-    score: 3
-  - word: created
-    score: 3
-  - word: done
-    score: 2
+  score: 0
+  category: none
+  simCategory: 
+  childs: []

@@ -10,17 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
-  m_Name: Cry
+  m_Name: Pitiful
   m_EditorClassIdentifier: 
-  score: 1
-  category: cry
+  word:
+    word: pitiful
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
-  - word: mm
+  - word: help
+    score: 3
+    root: 0
+    variations: []
+  - word: ask
     score: 1
-  - word: ooh
+    root: 0
+    variations: []
+  - word: lost
+    score: 2
+    root: 0
+    variations: []
+  - word: please 2
+    score: 3
+    root: 0
+    variations: []
+  - word: pray
     score: 1
-  - word: please 3
+    root: 0
+    variations: []
+  - word: call on
     score: 1
-  - word: 
-    score: 0
+    root: 0
+    variations: []

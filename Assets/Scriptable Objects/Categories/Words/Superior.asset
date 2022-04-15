@@ -12,17 +12,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Superior
   m_EditorClassIdentifier: 
-  score: 1
-  category: superior
+  word:
+    word: superior
+    score: 3
+    root: 0
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
   - word: high
     score: 2
+    root: 0
+    variations: []
   - word: divine
     score: 3
+    root: 0
+    variations: []
   - word: better
     score: 3
+    root: 0
+    variations: []
   - word: dominant
     score: 3
+    root: 0
+    variations: []
   - word: power
     score: 3
+    root: 0
+    variations: []
+  - word: lord
+    score: 2
+    root: 0
+    variations: []
+  - word: master
+    score: 2
+    root: 0
+    variations: []
+  - word: elder
+    score: 1
+    root: 0
+    variations: []
+  - word: senior
+    score: 1
+    root: 0
+    variations: []

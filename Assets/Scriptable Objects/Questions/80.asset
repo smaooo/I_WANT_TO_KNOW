@@ -16,18 +16,25 @@ MonoBehaviour:
   questions:
   - question: God, you say? Then is the GOD able to understand a human? If you are
       human that is.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: yes
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}
+    helpers: []
     relatedQuestionNum: 82
     nextQuestion: {fileID: 11400000, guid: 631aa22f8281f3d448664b13967106b7, type: 2}
-  - answer: no
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    helpers: []
     relatedQuestionNum: 83
     nextQuestion: {fileID: 11400000, guid: b30f14872063f2e4184ac6a4a5754201, type: 2}
-  - answer: neutral
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 84
     nextQuestion: {fileID: 11400000, guid: d08afc4dafc774e499708847f646accd, type: 2}
   redirect: {fileID: 0}

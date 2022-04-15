@@ -7,15 +7,17 @@ public struct CatChild
 {
     public string word;
     public int score;
+    public bool root;
+    public List<string> variations;
 }
 
 public enum CategoryType { INTENTION, WORD }
 [CreateAssetMenu(fileName = "New Category", menuName = "Category")]
 public class Category : ScriptableObject
 {
-    //public CategoryType type;
-    public int score;
-    public string category;
+    
+    public CatChild word;
+    public int scoreMultiplier;
     public string simCategory;
     public List<CatChild> childs;
 }

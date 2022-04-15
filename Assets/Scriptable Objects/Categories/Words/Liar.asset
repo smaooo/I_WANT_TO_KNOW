@@ -12,17 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
   m_Name: Liar
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
-  score: 1
-  category: liar
+  word:
+    word: liar
+    score: 3
+    root: 0
+    variations:
+    - lie
+  scoreMultiplier: 1
   simCategory: 
   childs:
-  - word: lie
-    score: 3
   - word: wrong
     score: 3
+    root: 0
+    variations: []
   - word: untruthful
     score: 2
+    root: 0
+    variations: []
   - word: deceive
     score: 3
+    root: 0
+    variations: []
   - word: '"i" am human'
     score: 3
+    root: 0
+    variations: []
+  - word: fibber
+    score: 2
+    root: 0
+    variations: []
+  - word: fabulist
+    score: 2
+    root: 0
+    variations: []
+  - word: prevaricate
+    score: 2
+    root: 0
+    variations: []

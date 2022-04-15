@@ -15,18 +15,28 @@ MonoBehaviour:
   number: 5
   questions:
   - question: Then I shall deem you blind. Why are you here?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: 
-    approach: believe
+  - categories:
+    - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}
+    - {fileID: 11400000, guid: 458efd5f0c5da5244854dc42d00d36e4, type: 2}
+    helpers: []
     relatedQuestionNum: 18
     nextQuestion: {fileID: 11400000, guid: b5a82e361ba0f1e4dab30ae22ac26e64, type: 2}
-  - answer: 
-    approach: know
+  - categories:
+    - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}
+    - {fileID: 11400000, guid: 8db4796a4345b574f9ece94b2ce98b5a, type: 2}
+    helpers: []
     relatedQuestionNum: 19
     nextQuestion: {fileID: 11400000, guid: 7962cd62e8daee741906895a3c1e50a6, type: 2}
-  - answer: 
-    approach: understand
+  - categories:
+    - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}
+    - {fileID: 11400000, guid: 9bcf71bfbeb1b2649b21f20720781aa2, type: 2}
+    helpers: []
     relatedQuestionNum: 20
     nextQuestion: {fileID: 11400000, guid: c0fe76178e3e7a54a8802ef1ef3403ff, type: 2}
   redirect: {fileID: 0}

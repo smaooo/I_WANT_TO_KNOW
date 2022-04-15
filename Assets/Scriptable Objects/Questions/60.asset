@@ -15,18 +15,25 @@ MonoBehaviour:
   number: 60
   questions:
   - question: So then, do you count that person as HUMAN?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: yes
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}
+    helpers: []
     relatedQuestionNum: 63
     nextQuestion: {fileID: 11400000, guid: 2c38be6157b4fce4ebece114d708d1a8, type: 2}
-  - answer: no
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: 99399014c0f83c84895481bb9caf342c, type: 2}
+    helpers: []
     relatedQuestionNum: 64
     nextQuestion: {fileID: 11400000, guid: 0ac7b870d9b11ee4dbc92e0116ab0599, type: 2}
-  - answer: neutral
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
+    helpers: []
     relatedQuestionNum: 65
     nextQuestion: {fileID: 11400000, guid: 50e07cd904f090d43abe3a2c98d41bb3, type: 2}
   redirect: {fileID: 0}

@@ -15,21 +15,36 @@ MonoBehaviour:
   number: 8
   questions:
   - question: "A story? Oh well, let me see\u2026"
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   - question: Well, why should I tell you a story? I do not believe I have the right
       to do so.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
   answers:
-  - answer: 
-    approach: please
+  - categories:
+    - {fileID: 11400000, guid: 5505c9295b8f61f4e84b4810dcfbe1a6, type: 2}
+    - {fileID: 11400000, guid: b939b02cbce96d345867204a73b16ffb, type: 2}
+    helpers: []
     relatedQuestionNum: 13
     nextQuestion: {fileID: 11400000, guid: 8d514adf3981d6c4b8ca7a69d203dac6, type: 2}
-  - answer: 
-    approach: exchange
+  - categories:
+    - {fileID: 11400000, guid: 94981bcc28a3d344b8a7bf7d9d580a5e, type: 2}
+    - {fileID: 11400000, guid: 7830a7fbca5311d42acdcc080aea2cb6, type: 2}
+    helpers: []
     relatedQuestionNum: 14
     nextQuestion: {fileID: 11400000, guid: 852dcd606deb16e4b8f77cc4446c861f, type: 2}
-  - answer: I want to know
-    approach: 
+  - categories:
+    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}
+    - {fileID: 11400000, guid: 458efd5f0c5da5244854dc42d00d36e4, type: 2}
+    helpers: []
     relatedQuestionNum: 15
     nextQuestion: {fileID: 11400000, guid: fb9bc0a8f11a8d34d9ead29b2c15ed2d, type: 2}
   redirect: {fileID: 0}
