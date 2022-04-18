@@ -15,22 +15,95 @@ public class Manager : MonoBehaviour
     private QuestionAnswers resEnding;
     [SerializeField]
     private Category noneCat;
-
+    [SerializeField]
+    private GameObject wheelPrefab;
+    [SerializeField]
+    private List<Transform> wheelTracks;
+    private Dictionary<int, List<WheelController>> currentWheels = new Dictionary<int, List<WheelController>>();
 
     private void Start()
     {
         currentQuestion = questionsAnswers[0];
         questionText.text = currentQuestion.questions[0].question;
         resEnding = questionsAnswers.Find(x => x.number == 3);
-        
+        for (int i = 0; i < wheelTracks.Count; i++)
+        {
+            currentWheels.Add(i, new List<WheelController>());
+            StartCoroutine(SpawnWheel(i));
+
+        }
     }
 
+    private IEnumerator SpawnWheel(int track = -1)
+    {
+        yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
+        
+        int rand;
+        if (track == -1)
+        {
+            rand = Random.Range(0, wheelTracks.Count);
+        }
+        else
+            rand = track;
+
+        bool canSpawn = true;
+        foreach (var cW in currentWheels[rand])
+        {
+            
+            if (Vector3.Distance(wheelTracks[rand].transform.position,cW.transform.position) < 3)
+            {
+                canSpawn = false;
+                break;
+            }
+            
+        }
+
+        if (canSpawn)
+        {
+            var t = wheelTracks[rand];
+            var w = Instantiate(wheelPrefab);
+            w.GetComponent<WheelController>().currenTrack = rand;
+            w.GetComponent<WheelController>().tracks = wheelTracks;
+            w.transform.position = t.position;
+            w.transform.SetParent(GameObject.FindGameObjectWithTag("Island").transform);
+            currentWheels[rand].Add(w.GetComponent<WheelController>());
+
+        }
+        yield return new WaitForSeconds(Random.Range(0.5f, 3f));
+        StartCoroutine(SpawnWheel());
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.R))
         {
             currentQuestion = questionsAnswers[0];
             FindObjectOfType<PlayerController>().textField.text = "";
+        }
+
+        UpdateCurrentWheels();
+    }
+
+    private void UpdateCurrentWheels()
+    {
+        Dictionary<int, List<WheelController>> toRemove = new Dictionary<int, List<WheelController>>();
+        for (int i = 0; i < wheelTracks.Count; i++)
+        {
+            toRemove.Add(i, new List<WheelController>());
+        }
+        foreach (var t in currentWheels)
+        {
+            foreach (var w in t.Value)
+            {
+                if (w == null)
+                {
+                    toRemove[t.Key].Add(w);
+                }
+            }
+        }
+
+        foreach (var w in toRemove)
+        {
+            currentWheels[w.Key].RemoveAll(x => w.Value.Contains(x));
         }
     }
     public void SetNextQuestion(string input)

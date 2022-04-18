@@ -19,6 +19,7 @@ MonoBehaviour:
     variations:
     - thou
     - ye
+    - your
   scoreMultiplier: 1
   simCategory: 
   childs:

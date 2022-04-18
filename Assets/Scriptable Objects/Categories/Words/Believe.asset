@@ -24,7 +24,8 @@ MonoBehaviour:
   - word: worth
     score: 3
     root: 0
-    variations: []
+    variations:
+    - 
   - word: creation
     score: 1
     root: 0
