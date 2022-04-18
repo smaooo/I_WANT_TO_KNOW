@@ -4,26 +4,29 @@ using UnityEngine;
 
 public class WheelController : MonoBehaviour
 {
-    
+    [HideInInspector]
     public List<Transform> tracks;
     private PlayerController player;
     private List<WheelController> otherWheels;
-    private Vector3 destination;
     new private Rigidbody rigidbody;
     private float boxSize;
     [SerializeField]
     private Vector3 moveSpeed;
-    private bool fallen = false;
-
+    [HideInInspector]
+    public bool fallen = false;
+    private Manager manager;
+    [HideInInspector]
     public int currenTrack;
     private float playerWidth;
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        destination = new Vector3(this.transform.position.x, this.transform.position.y, player.transform.position.z - 10);
+        
         rigidbody = this.GetComponent<Rigidbody>();
         boxSize = this.GetComponent<MeshRenderer>().bounds.size.z;
-        playerWidth = player.GetComponent<MeshRenderer>().bounds.size.x;
+        playerWidth = player.GetComponent<BoxCollider>().size.x;
+        manager = FindObjectOfType<Manager>();
+        print(manager);
     }
 
     private void FixedUpdate()
@@ -42,10 +45,9 @@ public class WheelController : MonoBehaviour
 
     private void DecisionMaker()
     {
-        //Debug.DrawRay(this.transform.position, this.transform.forward * boxSize * 2, Color.red);
-        //var playerRay = Physics.Raycast(this.transform.position, this.transform.forward, boxSize * 2, LayerMask.GetMask("Player"));
+
         if (Mathf.Abs(this.transform.position.x - player.transform.position.x) < playerWidth &&
-            Mathf.Abs(this.transform.position.z - player.transform.position.z) < boxSize * 1.5f)
+            Mathf.Abs(this.transform.position.z - player.transform.position.z) < boxSize * 3)
         {
             int newTrack = -1;
             foreach (var t in tracks)
@@ -79,21 +81,31 @@ public class WheelController : MonoBehaviour
             else
             {
                 var rayDir = new Vector3(tracks[newTrack].position.x, this.transform.position.y, this.transform.position.z) - this.transform.position;
-                var b = Physics.Raycast(this.transform.position, rayDir.normalized, 10, LayerMask.GetMask("Wheel"));
+                var b = Physics.Raycast(this.transform.position, rayDir.normalized, boxSize * 3, LayerMask.GetMask("Wheel"));
                 if (!b)
                     StartCoroutine(MoveToTrack(newTrack));
             }
 
 
         }
-        foreach (var w in GameObject.FindGameObjectsWithTag("Wheel"))
+        
+        foreach (var t in manager.currentWheels)
         {
-
+            foreach (var w in t.Value)
+            {
+                
+                if (w.fallen && Mathf.Abs(this.transform.position.x - w.transform.position.x) < boxSize &&
+                    Mathf.Abs(this.transform.position.z - w.transform.position.z) < boxSize * 1.5f)
+                {
+                    Jump();
+                }
+            }
         }
-        if (Vector3.Dot(this.transform.forward, (this.transform.position - player.transform.position).normalized) > 0 &&
+
+        if (Vector3.Dot(this.transform.forward, (new Vector3(this.transform.position.x,player.transform.position.y,this.transform.position.z) - player.transform.position).normalized) > 0 &&
             Vector3.Distance(this.transform.position, player.transform.position) > 2)
         {
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 
@@ -116,11 +128,15 @@ public class WheelController : MonoBehaviour
             this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotation, 1);
             
         }
-        //this.transform.rotation = Quaternion.AngleAxis(90, this.transform.up);
-        //this.transform.rotation = Quaternion.AngleAxis(90, this.transform.forward);
-
+      
     }
 
+    private void Jump()
+    {
+        Vector3 moveVector = this.transform.forward * boxSize + this.transform.up * boxSize;
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.AddForce(moveVector, ForceMode.Impulse);
+    }
     private IEnumerator MoveToTrack(int track)
     {
         float x = tracks[track].position.x;

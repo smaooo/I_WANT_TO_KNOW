@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private bool inputActive = true;
     private Manager manager;
     new private Rigidbody rigidbody;
-
+    private Animator animator;
     [SerializeField]
     private float moveSpeed = 2f;
 
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private State state = State.Walking;
     void Start()
     {
-        
+        animator = this.GetComponent<Animator>();
         rigidbody = this.GetComponent<Rigidbody>();
         if (trainingMode)
         {
@@ -74,23 +74,13 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        Vector3 moveVector = Vector3.zero;
-        if (Input.GetKey(KeyCode.W))
-        {
-            moveVector = this.transform.forward;
-            if (Input.GetKey(KeyCode.A))
-            {
-                moveVector += -this.transform.right;
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                moveVector += this.transform.right;
-            }
-        }
-        else
-        {
-            moveVector = Vector3.zero;
-        }
+        Vector3 forward = Input.GetAxisRaw("Vertical") > 0.1f ? this.transform.forward : Vector3.zero;
+        Vector3 leftRight = Input.GetAxisRaw("Horizontal") * this.transform.right;
+        Vector3 moveVector = forward + leftRight;
+
+        animator.SetFloat("Forward", Input.GetAxisRaw("Vertical") > 0.1f ? 1 : 0);
+        animator.SetFloat("LeftRight", Input.GetAxisRaw("Horizontal"));
+
 
         rigidbody.velocity = moveVector * moveSpeed;
     }

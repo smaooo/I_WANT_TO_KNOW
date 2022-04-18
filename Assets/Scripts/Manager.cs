@@ -19,7 +19,7 @@ public class Manager : MonoBehaviour
     private GameObject wheelPrefab;
     [SerializeField]
     private List<Transform> wheelTracks;
-    private Dictionary<int, List<WheelController>> currentWheels = new Dictionary<int, List<WheelController>>();
+    public Dictionary<int, List<WheelController>> currentWheels = new Dictionary<int, List<WheelController>>();
 
     private void Start()
     {
