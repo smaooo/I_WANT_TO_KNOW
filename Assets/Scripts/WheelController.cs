@@ -13,7 +13,8 @@ public class WheelController : MonoBehaviour
     private float boxSize;
     [SerializeField]
     private Vector3 moveSpeed;
-    
+    private bool fallen = false;
+
     public int currenTrack;
     private float playerWidth;
     void Start()
@@ -27,12 +28,14 @@ public class WheelController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MoveForward();
+        if (!fallen)
+            MoveForward();
     }
 
     private void LateUpdate()
     {
-        DecisionMaker();
+        if (!fallen)
+            DecisionMaker();
         
         
     }
@@ -41,10 +44,9 @@ public class WheelController : MonoBehaviour
     {
         //Debug.DrawRay(this.transform.position, this.transform.forward * boxSize * 2, Color.red);
         //var playerRay = Physics.Raycast(this.transform.position, this.transform.forward, boxSize * 2, LayerMask.GetMask("Player"));
-        if (Mathf.Abs(this.transform.position.x - player.transform.position.x) < 0.8f &&
+        if (Mathf.Abs(this.transform.position.x - player.transform.position.x) < playerWidth &&
             Mathf.Abs(this.transform.position.z - player.transform.position.z) < boxSize * 1.5f)
         {
-            print("DETECTED");
             int newTrack = -1;
             foreach (var t in tracks)
             {
@@ -52,8 +54,18 @@ public class WheelController : MonoBehaviour
                 {
                     var newLoc = new Vector3(t.transform.position.x, this.transform.position.y, this.transform.position.z);
                     var dir = newLoc - this.transform.position;
-                    var r = Physics.Raycast(this.transform.position, dir, Vector3.Distance(this.transform.position, newLoc) * 1.5f, LayerMask.GetMask("Wheels"));
-                    if (!r)
+                    var r1 = Physics.Raycast(this.transform.position, dir,
+                        Vector3.Distance(this.transform.position, newLoc) * 1.5f, LayerMask.GetMask("Wheels"));
+                    var newLocFront = new Vector3(t.transform.position.x, this.transform.position.y, this.transform.position.z + boxSize);
+                    var dirFront = newLocFront - this.transform.position;
+                    var r2 = Physics.Raycast(this.transform.position, dirFront,
+                        Vector3.Distance(this.transform.position, newLocFront) * 1.5f, LayerMask.GetMask("Wheels"));
+                    var newLocBack = new Vector3(t.transform.position.x, this.transform.position.y, this.transform.position.z - boxSize);
+                    var dirBack = newLocBack - this.transform.position;
+                    var r3 = Physics.Raycast(this.transform.position, newLocBack * 1.5f,
+                        Vector3.Distance(this.transform.position, newLocBack) * 1.5f, LayerMask.GetMask("Wheels"));
+
+                    if (!r1 && !r2 && !r3)
                     {
                         newTrack = tracks.IndexOf(t);
                         break;
@@ -62,7 +74,7 @@ public class WheelController : MonoBehaviour
             }
             if (newTrack == -1)
             {
-
+                StartCoroutine(FallDown());
             }
             else
             {
@@ -70,7 +82,6 @@ public class WheelController : MonoBehaviour
                 var b = Physics.Raycast(this.transform.position, rayDir.normalized, 10, LayerMask.GetMask("Wheel"));
                 if (!b)
                     StartCoroutine(MoveToTrack(newTrack));
-                //else
             }
 
 
@@ -79,9 +90,10 @@ public class WheelController : MonoBehaviour
         {
 
         }
-        if (Vector3.Dot(this.transform.forward, (this.transform.position - player.transform.position).normalized) > 0)
+        if (Vector3.Dot(this.transform.forward, (this.transform.position - player.transform.position).normalized) > 0 &&
+            Vector3.Distance(this.transform.position, player.transform.position) > 2)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 
@@ -92,16 +104,33 @@ public class WheelController : MonoBehaviour
         rigidbody.AddForce(moveVector, ForceMode.Impulse);
     }
 
+    private IEnumerator FallDown()
+    {
+        fallen = true;
+        Quaternion rotation1 = Quaternion.AngleAxis(90, Vector3.up);
+        Quaternion rotation2 = Quaternion.AngleAxis(-90, Vector3.forward);
+        Quaternion rotation = rotation1 * rotation2;
+        while (this.transform.rotation != rotation)
+        {
+            yield return new WaitForEndOfFrame();
+            this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotation, 1);
+            
+        }
+        //this.transform.rotation = Quaternion.AngleAxis(90, this.transform.up);
+        //this.transform.rotation = Quaternion.AngleAxis(90, this.transform.forward);
+
+    }
+
     private IEnumerator MoveToTrack(int track)
     {
         float x = tracks[track].position.x;
-        var newLoc = new Vector3(x, this.transform.position.y, this.transform.position.z);
-
-        while (Vector3.Distance(this.transform.position, newLoc) > 0.1f)
+        
+        while (Mathf.Abs(this.transform.position.x - x ) > 0.1f)
         {
             yield return new WaitForEndOfFrame();
-            this.transform.position = Vector3.MoveTowards(this.transform.position, newLoc, 0.03f);
-            if (Mathf.Abs(this.transform.position.x - newLoc.x) < 0.1f)
+            this.transform.position = Vector3.MoveTowards(this.transform.position,
+                new Vector3(x, this.transform.position.y, this.transform.position.z), 0.03f);
+            if (Mathf.Abs(this.transform.position.x - x) < 0.1f)
             {
                 break;
             }
