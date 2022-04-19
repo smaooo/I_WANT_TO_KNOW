@@ -72,6 +72,15 @@ public class Manager : MonoBehaviour
             var t = wheelTracks[rand];
             var w = Instantiate(wheelPrefab);
             w.GetComponent<WheelController>().currenTrack = rand;
+            if (rand >= 0 && rand < 3)
+            {
+                w.GetComponent<Animator>().SetFloat("LeftRight", 1);
+            }
+            else
+            {
+                w.GetComponent<Animator>().SetFloat("LeftRight",-1);
+
+            }
             w.GetComponent<WheelController>().tracks = wheelTracks;
             w.transform.position = t.position;
             w.transform.SetParent(GameObject.FindGameObjectWithTag("Island").transform);

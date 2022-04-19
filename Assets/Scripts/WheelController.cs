@@ -7,7 +7,6 @@ public class WheelController : MonoBehaviour
     [HideInInspector]
     public List<Transform> tracks;
     private PlayerController player;
-    private List<WheelController> otherWheels;
     new private Rigidbody rigidbody;
     private float boxSize;
     [SerializeField]
@@ -18,14 +17,24 @@ public class WheelController : MonoBehaviour
     [HideInInspector]
     public int currenTrack;
     private float playerWidth;
+    private Animator animator;
+    private bool changingTrack = false;
+
+    private void Awake()
+    {
+        
+    }
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
         
         rigidbody = this.GetComponent<Rigidbody>();
-        boxSize = this.GetComponent<MeshRenderer>().bounds.size.z;
+        boxSize = this.GetComponent<BoxCollider>().bounds.size.z;
         playerWidth = player.GetComponent<BoxCollider>().size.x;
         manager = FindObjectOfType<Manager>();
+        animator = this.GetComponent<Animator>();
+        //ChangeAnimatorTrack();
+
     }
 
     private void FixedUpdate()
@@ -37,8 +46,10 @@ public class WheelController : MonoBehaviour
     private void LateUpdate()
     {
         if (!fallen)
+        {
             DecisionMaker();
-        
+            
+        }
         
     }
 
@@ -77,12 +88,15 @@ public class WheelController : MonoBehaviour
             {
                 StartCoroutine(FallDown());
             }
-            else
+            else if (!changingTrack)
             {
                 var rayDir = new Vector3(tracks[newTrack].position.x, this.transform.position.y, this.transform.position.z) - this.transform.position;
                 var b = Physics.Raycast(this.transform.position, rayDir.normalized, boxSize * 3, LayerMask.GetMask("Wheel"));
                 if (!b)
+                {
+                    changingTrack = true;
                     StartCoroutine(MoveToTrack(newTrack));
+                }
             }
 
 
@@ -137,6 +151,20 @@ public class WheelController : MonoBehaviour
       
     }
 
+    private void ChangeAnimatorTrack()
+    {
+        if (currenTrack >= 0 && currenTrack < 3)
+        {
+            
+            animator.SetFloat("LeftRight", 1);
+        }
+        else
+        {
+            
+            animator.SetFloat("LeftRight", -1);
+        }
+
+    }
     private void Jump()
     {
 
@@ -146,18 +174,22 @@ public class WheelController : MonoBehaviour
     }
     private IEnumerator MoveToTrack(int track)
     {
+        currenTrack = track;
         float x = tracks[track].position.x;
-        
+        animator.SetFloat("LeftRight", 0);
+        animator.SetFloat("Turning", 1);
         while (Mathf.Abs(this.transform.position.x - x ) > 0.1f)
         {
             yield return new WaitForEndOfFrame();
             this.transform.position = Vector3.MoveTowards(this.transform.position,
-                new Vector3(x, this.transform.position.y, this.transform.position.z), 0.03f);
+                new Vector3(x, this.transform.position.y, this.transform.position.z), 0.01f);
             if (Mathf.Abs(this.transform.position.x - x) < 0.1f)
             {
                 break;
             }
         }
-        currenTrack = track;
+        animator.SetFloat("Turning", -1);
+        ChangeAnimatorTrack();
+        changingTrack = false;
     }
 }
