@@ -20,10 +20,11 @@ MonoBehaviour:
   scoreMultiplier: 1
   simCategory: 
   childs:
-  - word: i
+  - word: 'i '
     score: 3
     root: 0
-    variations: []
+    variations:
+    - ' i '
   - word: self
     score: 3
     root: 0

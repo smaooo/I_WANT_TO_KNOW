@@ -44,3 +44,19 @@ MonoBehaviour:
     score: 1
     root: 0
     variations: []
+  - word: do
+    score: 2
+    root: 0
+    variations: []
+  - word: give
+    score: 2
+    root: 0
+    variations: []
+  - word: tell
+    score: 2
+    root: 0
+    variations: []
+  - word: show
+    score: 2
+    root: 0
+    variations: []

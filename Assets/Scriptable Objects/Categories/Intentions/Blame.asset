@@ -19,4 +19,28 @@ MonoBehaviour:
     variations: []
   scoreMultiplier: 1
   simCategory: 
-  childs: []
+  childs:
+  - word: this
+    score: 3
+    root: 0
+    variations: []
+  - word: fault
+    score: 3
+    root: 0
+    variations: []
+  - word: you
+    score: 1
+    root: 0
+    variations: []
+  - word: not
+    score: 2
+    root: 0
+    variations: []
+  - word: that
+    score: 3
+    root: 0
+    variations: []
+  - word: here
+    score: 2
+    root: 0
+    variations: []

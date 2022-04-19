@@ -57,3 +57,7 @@ MonoBehaviour:
     score: 1
     root: 0
     variations: []
+  - word: animal
+    score: 2
+    root: 0
+    variations: []

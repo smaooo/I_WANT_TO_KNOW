@@ -26,7 +26,6 @@ public class WheelController : MonoBehaviour
         boxSize = this.GetComponent<MeshRenderer>().bounds.size.z;
         playerWidth = player.GetComponent<BoxCollider>().size.x;
         manager = FindObjectOfType<Manager>();
-        print(manager);
     }
 
     private void FixedUpdate()
@@ -103,7 +102,7 @@ public class WheelController : MonoBehaviour
         }
 
         if (Vector3.Dot(this.transform.forward, (new Vector3(this.transform.position.x,player.transform.position.y,this.transform.position.z) - player.transform.position).normalized) > 0 &&
-            Vector3.Distance(this.transform.position, player.transform.position) > 2)
+            Vector3.Distance(this.transform.position, player.transform.position) > 5)
         {
             Destroy(this.gameObject);
         }
@@ -119,6 +118,9 @@ public class WheelController : MonoBehaviour
     private IEnumerator FallDown()
     {
         fallen = true;
+        rigidbody.Sleep();
+        rigidbody.isKinematic = true;
+
         Quaternion rotation1 = Quaternion.AngleAxis(90, Vector3.up);
         Quaternion rotation2 = Quaternion.AngleAxis(-90, Vector3.forward);
         Quaternion rotation = rotation1 * rotation2;
@@ -126,14 +128,19 @@ public class WheelController : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
             this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotation, 1);
+            this.transform.position = Vector3.MoveTowards(this.transform.position, 
+                new Vector3(this.transform.position.x, 0 + this.GetComponent<BoxCollider>().size.x / 2, this.transform.position.z), 0.1f);
             
         }
+
+
       
     }
 
     private void Jump()
     {
-        Vector3 moveVector = this.transform.forward * boxSize + this.transform.up * boxSize;
+
+        Vector3 moveVector = this.transform.forward * boxSize / 2 + this.transform.up * this.GetComponent<BoxCollider>().size.x / 2;
         rigidbody.velocity = Vector3.zero;
         rigidbody.AddForce(moveVector, ForceMode.Impulse);
     }

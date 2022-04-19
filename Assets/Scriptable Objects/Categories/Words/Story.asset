@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Story
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
   word:
-    word: stroy
+    word: story
     score: 3
     root: 0
     variations:
@@ -49,7 +49,8 @@ MonoBehaviour:
   - word: me
     score: 1
     root: 0
-    variations: []
+    variations:
+    - i
   - word: god
     score: 3
     root: 0

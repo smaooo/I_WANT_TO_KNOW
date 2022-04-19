@@ -22,6 +22,7 @@ MonoBehaviour:
     - humanlike
     - humanish
     - humanity
+    - humanism
   scoreMultiplier: 1
   simCategory: 
   childs:
@@ -58,3 +59,7 @@ MonoBehaviour:
     root: 0
     variations:
     - personage
+  - word: communication
+    score: 2
+    root: 0
+    variations: []

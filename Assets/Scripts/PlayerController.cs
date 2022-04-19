@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviour
 
     private QuestionAnswers currentQuestion;
     private enum State { Walking, Conversation}
-    private State state = State.Walking;
+    [SerializeField]
+    private State state = State.Conversation;
     void Start()
     {
         animator = this.GetComponent<Animator>();
@@ -50,8 +51,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (inputActive && !trainingMode && state == State.Conversation) 
-            CheckKeyInput();    
+        if (inputActive && !trainingMode && state == State.Conversation)
+        {
+            CheckKeyInput();
+            
+        }
     }
 
     private void OnGUI()
@@ -75,11 +79,56 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         Vector3 forward = Input.GetAxisRaw("Vertical") > 0.1f ? this.transform.forward : Vector3.zero;
-        Vector3 leftRight = Input.GetAxisRaw("Horizontal") * this.transform.right;
+        Vector3 leftRight = Vector3.zero;
+        if (Input.GetAxisRaw("Vertical") > 0)
+        {
+            if (Mathf.Abs(this.transform.position.x - leftBorder.transform.position.x) < 2)
+            {
+                if (Input.GetAxisRaw("Horizontal") > 0)
+                {
+                    leftRight = this.transform.right * Input.GetAxisRaw("Horizontal");
+                    animator.SetFloat("LeftRight", Input.GetAxisRaw("Horizontal"));
+
+                }
+                else
+                {
+
+                    animator.SetFloat("LeftRight", 0);
+                }
+
+            }
+
+            else if (Mathf.Abs(this.transform.position.x - rightBorder.transform.position.x) < 2)
+            {
+                if (Input.GetAxisRaw("Horizontal") < 0)
+                {
+                    leftRight = this.transform.right * Input.GetAxisRaw("Horizontal");
+                    animator.SetFloat("LeftRight", Input.GetAxisRaw("Horizontal"));
+
+                }
+                else
+                {
+
+                    animator.SetFloat("LeftRight", 0);
+                }
+            }
+            else
+            {
+                leftRight = this.transform.right * Input.GetAxisRaw("Horizontal");
+                animator.SetFloat("LeftRight", Input.GetAxisRaw("Horizontal"));
+
+            }
+        }
+        else
+        {
+                animator.SetFloat("LeftRight", 0);
+            
+        }
+
+        //Vector3 leftRight = Input.GetAxisRaw("Vertical") > 0 ? Input.GetAxisRaw("Horizontal") * this.transform.right : Vector3.zero;
         Vector3 moveVector = forward + leftRight;
 
         animator.SetFloat("Forward", Input.GetAxisRaw("Vertical") > 0.1f ? 1 : 0);
-        animator.SetFloat("LeftRight", Input.GetAxisRaw("Horizontal"));
 
 
         rigidbody.velocity = moveVector * moveSpeed;

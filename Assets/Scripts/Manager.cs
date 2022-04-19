@@ -19,19 +19,28 @@ public class Manager : MonoBehaviour
     private GameObject wheelPrefab;
     [SerializeField]
     private List<Transform> wheelTracks;
+    [SerializeField]
+    private int pQ = -1;
+    [SerializeField]
+    private Category swears;
+    [SerializeField]
+    private QuestionAnswers disgustEnding;
     public Dictionary<int, List<WheelController>> currentWheels = new Dictionary<int, List<WheelController>>();
 
     private void Start()
     {
-        currentQuestion = questionsAnswers[0];
+        if (pQ != -1)
+            currentQuestion = questionsAnswers.Find(q => q.number == pQ);
+        else
+            currentQuestion = questionsAnswers[0];
         questionText.text = currentQuestion.questions[0].question;
         resEnding = questionsAnswers.Find(x => x.number == 3);
         for (int i = 0; i < wheelTracks.Count; i++)
         {
             currentWheels.Add(i, new List<WheelController>());
-            StartCoroutine(SpawnWheel(i));
 
         }
+        StartCoroutine(SpawnWheel());
     }
 
     private IEnumerator SpawnWheel(int track = -1)
@@ -111,6 +120,11 @@ public class Manager : MonoBehaviour
         
         currentQuestion = DetectNextQuestion(input, currentQuestion);
         questionText.text = currentQuestion.questions[0].question;
+        questionText.text = "";
+        foreach (var q in currentQuestion.questions)
+        {
+            questionText.text += q.question + "\n";
+        }
         print(currentQuestion);
     }
 
@@ -127,6 +141,7 @@ public class Manager : MonoBehaviour
                 int currentScore = 0;
                 if (input.Contains(cat.word.word))
                     currentScore += cat.word.score;
+                
                 if (cat.simCategory != "")
                     if (input.Contains(cat.simCategory))
                         currentScore += cat.word.score;
@@ -151,8 +166,29 @@ public class Manager : MonoBehaviour
 
 
         }
+        int sScore = 0;
+        foreach (var s in swears.childs)
+        {
+            if (input.Contains(s.word))
+            {
+                sScore += s.score;
+            }
+        }
+        sScore *= swears.scoreMultiplier;
 
         var x = scoring.Where(x => x.Value == 0);
+
+        foreach (var s in scoring)
+        {
+            print(s.Key + " " + s.Value);
+        }
+        print("S: " + sScore);
+        if (sScore > 0)
+        {
+            print("ASDAS");
+            nextQuestion = disgustEnding;
+            return nextQuestion;
+        }
         if (x.Count() == scoring.Count)
         {
             var n = currentQuestion.answers.Where(x => x.categories.Contains(noneCat));
@@ -162,13 +198,22 @@ public class Manager : MonoBehaviour
                 return nextQuestion;
             }
         }
+        
         else
         {
             var ordered = (from v in scoring orderby v.Value descending select v.Key).ToList();
-            nextQuestion = currentQuestion.answers[ordered[0]].nextQuestion;
+            if (ordered[0] < sScore)
+            {
+                nextQuestion = disgustEnding;
+            }
+            else
+            {
+                nextQuestion = currentQuestion.answers[ordered[0]].nextQuestion;
+
+            }
             return nextQuestion;
         }
-
+        
         return resEnding; 
         
     }

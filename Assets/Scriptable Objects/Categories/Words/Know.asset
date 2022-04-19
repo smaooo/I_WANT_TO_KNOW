@@ -33,11 +33,3 @@ MonoBehaviour:
     score: 3
     root: 0
     variations: []
-  - word: comprehend
-    score: 3
-    root: 0
-    variations: []
-  - word: grasp
-    score: 3
-    root: 0
-    variations: []

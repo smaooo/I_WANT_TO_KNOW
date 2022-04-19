@@ -78,3 +78,7 @@ MonoBehaviour:
     score: 1
     root: 0
     variations: []
+  - word: heart
+    score: 2
+    root: 0
+    variations: []

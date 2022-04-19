@@ -52,8 +52,13 @@ MonoBehaviour:
   - word: comprehend
     score: 2
     root: 0
-    variations: []
+    variations:
+    - comprehensive
   - word: reason
+    score: 2
+    root: 0
+    variations: []
+  - word: grasp
     score: 2
     root: 0
     variations: []

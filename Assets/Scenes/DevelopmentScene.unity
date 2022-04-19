@@ -2697,7 +2697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638580371}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.85, z: 52.7}
+  m_LocalPosition: {x: 0, y: 3.13, z: 52.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2132683539}
@@ -2722,6 +2722,7 @@ MonoBehaviour:
   endPoint: {fileID: 354753831}
   leftBorder: {fileID: 460848198}
   rightBorder: {fileID: 1910075527}
+  state: 0
 --- !u!54 &1638580374
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3081,7 +3082,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e79f28f96a66ec4aa0b4f04a6ef4796, type: 2}
   - {fileID: 11400000, guid: 05d12310bc23e254c94da04498ac128c, type: 2}
   questionText: {fileID: 1871060461}
-  noneCat: {fileID: 0}
+  noneCat: {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
   wheelPrefab: {fileID: 6460981209395510528, guid: 7e23b1fd5afc46c48bdf0f8e8056cb8d, type: 3}
   wheelTracks:
   - {fileID: 1035262002}
@@ -3090,6 +3091,9 @@ MonoBehaviour:
   - {fileID: 63315657}
   - {fileID: 907219983}
   - {fileID: 792125756}
+  pQ: -1
+  swears: {fileID: 11400000, guid: 77e3b913fd35cae4d88aa7a892f6a9fd, type: 2}
+  disgustEnding: {fileID: 11400000, guid: f9c1c58e910e55343b51fded15f4ca86, type: 2}
 --- !u!4 &1888013041
 Transform:
   m_ObjectHideFlags: 0

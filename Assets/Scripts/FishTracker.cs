@@ -25,7 +25,6 @@ public class FishTracker : MonoBehaviour
         if (dist <= 0 && dist > -0.05f && canRipple)
         {
             canRipple = false;
-            print("T");
             puddleMaterial.SetVector("_RefPos", this.transform.position);
             puddleMaterial.SetFloat("_CurrentTime", Time.realtimeSinceStartup);
             puddleMaterial.SetInt("_Ripple", 0);
