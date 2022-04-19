@@ -19,27 +19,25 @@ public class WheelController : MonoBehaviour
     private float playerWidth;
     private Animator animator;
     private bool changingTrack = false;
-
-    private void Awake()
-    {
-        
-    }
+    private SpriteRenderer renderer;
+    
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        
+        renderer = this.GetComponent<SpriteRenderer>();
         rigidbody = this.GetComponent<Rigidbody>();
         boxSize = this.GetComponent<BoxCollider>().bounds.size.z;
         playerWidth = player.GetComponent<BoxCollider>().size.x;
         manager = FindObjectOfType<Manager>();
         animator = this.GetComponent<Animator>();
         //ChangeAnimatorTrack();
-
+        moveSpeed.z = Random.Range(0.24f, 0.4f);
+        animator.SetFloat("Speed", moveSpeed.z);
     }
 
     private void FixedUpdate()
     {
-        if (!fallen)
+        if (!fallen && ! changingTrack)
             MoveForward();
     }
 
@@ -50,9 +48,24 @@ public class WheelController : MonoBehaviour
             DecisionMaker();
             
         }
+
+        UpdateSortingLayer();
+        
         
     }
 
+    private void UpdateSortingLayer()
+    {
+        float dotProduct = Vector3.Dot(this.transform.forward, 
+            (new Vector3(this.transform.position.x, player.transform.position.y, this.transform.position.z) - player.transform.position).normalized);
+        if (dotProduct > 0)
+        {
+            renderer.sortingOrder = 500;
+        } else
+        {
+            renderer.sortingOrder = 200 - Mathf.FloorToInt(Vector3.Distance(this.transform.position, player.transform.position));
+        }
+    }
     private void DecisionMaker()
     {
 
@@ -86,6 +99,7 @@ public class WheelController : MonoBehaviour
             }
             if (newTrack == -1)
             {
+                StopAllCoroutines();
                 StartCoroutine(FallDown());
             }
             else if (!changingTrack)
@@ -95,6 +109,7 @@ public class WheelController : MonoBehaviour
                 if (!b)
                 {
                     changingTrack = true;
+                    rigidbody.velocity = Vector3.zero;
                     StartCoroutine(MoveToTrack(newTrack));
                 }
             }
@@ -132,21 +147,22 @@ public class WheelController : MonoBehaviour
     private IEnumerator FallDown()
     {
         fallen = true;
+        animator.SetFloat("Speed", 1);
+        animator.SetTrigger("Fall");
         rigidbody.Sleep();
         rigidbody.isKinematic = true;
+        float targetY = 0 + this.GetComponent<BoxCollider>().size.x / 1.5f;
+        yield return null;
 
-        Quaternion rotation1 = Quaternion.AngleAxis(90, Vector3.up);
-        Quaternion rotation2 = Quaternion.AngleAxis(-90, Vector3.forward);
-        Quaternion rotation = rotation1 * rotation2;
-        while (this.transform.rotation != rotation)
-        {
-            yield return new WaitForEndOfFrame();
-            this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotation, 1);
-            this.transform.position = Vector3.MoveTowards(this.transform.position, 
-                new Vector3(this.transform.position.x, 0 + this.GetComponent<BoxCollider>().size.x / 2, this.transform.position.z), 0.1f);
+        //while (Mathf.Abs(this.transform.position.y - targetY) > 0.2f) 
+        //{
+        //    yield return new WaitForEndOfFrame();
+        //    this.transform.position = Vector3.MoveTowards(this.transform.position, 
+        //        new Vector3(this.transform.position.x, targetY, this.transform.position.z), 0.1f);
             
-        }
+        //}
 
+        this.GetComponent<BoxCollider>().enabled = false;
 
       
     }

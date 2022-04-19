@@ -45,7 +45,7 @@ public class Manager : MonoBehaviour
 
     private IEnumerator SpawnWheel(int track = -1)
     {
-        yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
+        //yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
         
         int rand;
         if (track == -1)
@@ -82,7 +82,7 @@ public class Manager : MonoBehaviour
 
             }
             w.GetComponent<WheelController>().tracks = wheelTracks;
-            w.transform.position = t.position;
+            w.transform.position = t.position + new Vector3(0,0.2f,0);
             w.transform.SetParent(GameObject.FindGameObjectWithTag("Island").transform);
             currentWheels[rand].Add(w.GetComponent<WheelController>());
 
