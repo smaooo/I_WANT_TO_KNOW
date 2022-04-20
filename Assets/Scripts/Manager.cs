@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine.UI;
 using SpellingCorrector;
+using DataCollector;
 
 public class Manager : MonoBehaviour
 {
@@ -35,9 +36,11 @@ public class Manager : MonoBehaviour
     private Spelling spelling;
     [SerializeField]
     private TextAsset textFile;
-
+    private Collector collector;
     private void Start()
     {
+
+        collector = new Collector();
         spelling = new Spelling(textFile);
 
         if (ConstData.Act1LastColor != null)
@@ -128,7 +131,7 @@ public class Manager : MonoBehaviour
             FindObjectOfType<PlayerController>().textField.text = "";
         }
 
-        UpdateCurrentWheels();
+        //UpdateCurrentWheels();
     }
 
     private void UpdateCurrentWheels()
@@ -174,7 +177,7 @@ public class Manager : MonoBehaviour
     public QuestionAnswers DetectNextQuestion(string input, QuestionAnswers currentQuestion)
     {
 
-
+        string prevInput = input;
         string correctInput = "";
 
         foreach (string i in input.Split(' '))
@@ -243,6 +246,7 @@ public class Manager : MonoBehaviour
         {
             print("ASDAS");
             nextQuestion = disgustEnding;
+            collector.AddInput(prevInput, input, nextQuestion.number);
             return nextQuestion;
         }
         if (x.Count() == scoring.Count)
@@ -251,6 +255,7 @@ public class Manager : MonoBehaviour
             if (n.Count() > 0)
             {
                 nextQuestion = n.ToList()[0].nextQuestion;
+                collector.AddInput(prevInput, input, nextQuestion.number);
                 return nextQuestion;
             }
         }
@@ -267,9 +272,10 @@ public class Manager : MonoBehaviour
                 nextQuestion = currentQuestion.answers[ordered[0]].nextQuestion;
 
             }
+            collector.AddInput(prevInput, input, nextQuestion.number);
             return nextQuestion;
         }
-        
+        collector.AddInput(prevInput, input, resEnding.number);
         return resEnding; 
         
     }
