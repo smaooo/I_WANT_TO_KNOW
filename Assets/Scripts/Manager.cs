@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using TMPro;
 using UnityEngine.UI;
+using SpellingCorrector;
 
 public class Manager : MonoBehaviour
 {
@@ -31,14 +32,21 @@ public class Manager : MonoBehaviour
     [SerializeField]
     private RawImage fade;
 
+    private Spelling spelling;
+    [SerializeField]
+    private TextAsset textFile;
+
     private void Start()
     {
+        spelling = new Spelling(textFile);
+
         if (ConstData.Act1LastColor != null)
             fade.color = ConstData.Act1LastColor.GetPixel((int)(Screen.width / 2), (int)(Screen.height / 2));
         else
             fade.color = new Color(1, 1, 1, 1);
 
         StartCoroutine(FadeIn());
+
         if (pQ != -1)
             currentQuestion = questionsAnswers.Find(q => q.number == pQ);
         else
@@ -165,6 +173,19 @@ public class Manager : MonoBehaviour
 
     public QuestionAnswers DetectNextQuestion(string input, QuestionAnswers currentQuestion)
     {
+
+
+        string correctInput = "";
+
+        foreach (string i in input.Split(' '))
+        {
+            correctInput += " " + spelling.Correct(i);
+        }
+
+        print(input);
+        input = correctInput;
+        print(correctInput);
+
         QuestionAnswers nextQuestion;
 
         Dictionary<int, int> scoring = new Dictionary<int, int>();

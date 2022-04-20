@@ -26,7 +26,7 @@ public class MenuSc : MonoBehaviour
         StartCoroutine(AnimationPlay());
     }
 
-
+    
     IEnumerator AnimationPlay()
     {
         textAnim.Play("MenuText");

@@ -1766,7 +1766,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2722,7 +2722,7 @@ MonoBehaviour:
   endPoint: {fileID: 354753831}
   leftBorder: {fileID: 460848198}
   rightBorder: {fileID: 1910075527}
-  state: 0
+  state: 1
 --- !u!54 &1638580374
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2888,8 +2888,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3095,6 +3095,7 @@ MonoBehaviour:
   swears: {fileID: 11400000, guid: 77e3b913fd35cae4d88aa7a892f6a9fd, type: 2}
   disgustEnding: {fileID: 11400000, guid: f9c1c58e910e55343b51fded15f4ca86, type: 2}
   fade: {fileID: 0}
+  textFile: {fileID: 4900000, guid: d7300a77ff455d6498d7db4b94eb65de, type: 3}
 --- !u!4 &1888013041
 Transform:
   m_ObjectHideFlags: 0

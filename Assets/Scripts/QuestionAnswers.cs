@@ -15,6 +15,7 @@ public class QuestionAnswers : ScriptableObject
         public QuestionAnswers nextQuestion;
     }
 
+    public enum Zoom { None, In, Out}
     [System.Serializable]
     public struct FaceExpression
     {
@@ -41,6 +42,7 @@ public class QuestionAnswers : ScriptableObject
         public string question;
         public FaceExpression sprite;
         public FaceAnimation animation;
+        public Zoom zoom;
     }
     [Header("Questions & Answers")]
     public int number;
