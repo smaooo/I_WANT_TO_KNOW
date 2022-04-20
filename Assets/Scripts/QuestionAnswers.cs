@@ -22,12 +22,17 @@ public class QuestionAnswers : ScriptableObject
         public Sprite eyes;
         public Sprite brows;
         public Sprite mouth;
+        public Sprite additional;
     }
     [System.Serializable]
     public struct FaceAnimation
     {
         public Animation eyes;
+        public int eyesLayer;
         public Animation face;
+        public int faceLayer;
+        public Animation additional;
+        public int additionalLayer;
     }
     [System.Serializable]
     public struct QuestionSprite

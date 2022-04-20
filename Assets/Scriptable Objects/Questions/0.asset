@@ -21,6 +21,9 @@ MonoBehaviour:
       eyes: {fileID: 0}
       brows: {fileID: 0}
       mouth: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      face: {fileID: 0}
   answers:
   - categories:
     - {fileID: 11400000, guid: 6702b1929b7e686428dc20544fda8f26, type: 2}
