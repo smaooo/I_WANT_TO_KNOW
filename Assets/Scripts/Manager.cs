@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using TMPro;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -27,8 +28,17 @@ public class Manager : MonoBehaviour
     private QuestionAnswers disgustEnding;
     public Dictionary<int, List<WheelController>> currentWheels = new Dictionary<int, List<WheelController>>();
 
+    [SerializeField]
+    private RawImage fade;
+
     private void Start()
     {
+        if (ConstData.Act1LastColor != null)
+            fade.color = ConstData.Act1LastColor.GetPixel((int)(Screen.width / 2), (int)(Screen.height / 2));
+        else
+            fade.color = new Color(1, 1, 1, 1);
+
+        StartCoroutine(FadeIn());
         if (pQ != -1)
             currentQuestion = questionsAnswers.Find(q => q.number == pQ);
         else
@@ -43,6 +53,18 @@ public class Manager : MonoBehaviour
         StartCoroutine(SpawnWheel());
     }
 
+    private IEnumerator FadeIn()
+    {
+        float timer = 0;
+
+        while(fade.color.a != 0)
+        {
+            yield return new WaitForEndOfFrame();
+            timer += Time.deltaTime / 500;
+
+            fade.color = Color.Lerp(fade.color, new Color(1, 1, 1, 0), timer);
+        }
+    }
     private IEnumerator SpawnWheel(int track = -1)
     {
         //yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
@@ -119,9 +141,13 @@ public class Manager : MonoBehaviour
             }
         }
 
-        foreach (var w in toRemove)
+        if (toRemove.Count > 0)
         {
-            currentWheels[w.Key].RemoveAll(x => w.Value.Contains(x));
+            foreach (var w in toRemove)
+            {
+                currentWheels[w.Key].RemoveAll(x => w.Value.Contains(x));
+            }
+
         }
     }
     public void SetNextQuestion(string input)
