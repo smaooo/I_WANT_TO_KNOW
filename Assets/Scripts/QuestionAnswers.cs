@@ -24,11 +24,18 @@ public class QuestionAnswers : ScriptableObject
         public Sprite mouth;
     }
     [System.Serializable]
+    public struct FaceAnimation
+    {
+        public Animation eyes;
+        public Animation face;
+    }
+    [System.Serializable]
     public struct QuestionSprite
     {
         [TextArea]
         public string question;
         public FaceExpression sprite;
+        public FaceAnimation animation;
     }
     [Header("Questions & Answers")]
     public int number;
