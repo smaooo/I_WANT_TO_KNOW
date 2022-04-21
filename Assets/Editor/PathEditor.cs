@@ -18,7 +18,7 @@ public class PathEditor : Editor
 
     const float segmentSelectDistanceThreshold = .1f;
     int selectedSegmentIndex = -1;
-
+    int selectedSegmentTransform = -1;
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
@@ -53,8 +53,10 @@ public class PathEditor : Editor
     void OnSceneGUI()
     {
         Input();
+        MoveTransfrom();
         Draw();
     }
+
 
     void Input()
     {
@@ -75,6 +77,7 @@ public class PathEditor : Editor
             }
         }
 
+        
         if (guiEvent.type == EventType.MouseDown && guiEvent.button == 1)
         {
             float minDstToAnchor = creator.anchorDiameter * .5f;
@@ -82,7 +85,7 @@ public class PathEditor : Editor
 
             for (int i = 0; i < Path.NumPoints; i += 3)
             {
-                float dst = Vector2.Distance(mousePos, Path[i]);
+                float dst = Vector3.Distance(mousePos, Path[i]);
                 if (dst < minDstToAnchor)
                 {
                     minDstToAnchor = dst;
@@ -95,6 +98,34 @@ public class PathEditor : Editor
                 Undo.RecordObject(creator, "Delete segment");
                 Path.DeleteSegment(closestAnchorIndex);
             }
+        }
+        if (guiEvent.type == EventType.MouseDown && guiEvent.control && guiEvent.button == 0)
+        {
+            selectedSegmentTransform = -1;
+            float minDstToSegment = segmentSelectDistanceThreshold;
+            int newSelectedSegmentIndex = -1;
+
+            for (int i = 0; i < Path.NumSegments; i++)
+            {
+                Vector3[] points = Path.GetPointsInSegment(i);
+                float dst = HandleUtility.DistancePointBezier(mousePos, points[0], points[3], points[1], points[2]);
+                if (dst < minDstToSegment)
+                {
+                    minDstToSegment = dst;
+                    newSelectedSegmentIndex = i;
+                }
+            }
+
+            if (newSelectedSegmentIndex != selectedSegmentTransform)
+            {
+                //Undo.RecordObject(creator, "Move Position");
+                selectedSegmentTransform = newSelectedSegmentIndex;
+                Debug.Log(newSelectedSegmentIndex);
+                //Path.DeleteSegment(closestAnchorIndex);
+                HandleUtility.Repaint();
+
+            }
+
         }
 
         if (guiEvent.type == EventType.MouseMove)
@@ -134,9 +165,10 @@ public class PathEditor : Editor
             }
             Color segmentCol = (i == selectedSegmentIndex && Event.current.shift) ? creator.selectedSegmentCol : creator.segmentCol;
             Handles.DrawBezier(points[0], points[3], points[1], points[2], segmentCol, null, 2);
+
+            
         }
-
-
+       
         for (int i = 0; i < Path.NumPoints; i++)
         {
             if (i % 3 == 0 || creator.displayControlPoints)
@@ -150,11 +182,29 @@ public class PathEditor : Editor
                     Path.MovePoint(i, newPos);
                 }
 
+               
                 //Handles.Label(Path[i], i.ToString());
             }
         }
+       
+
     }
 
+    void MoveTransfrom()
+    {
+        if (selectedSegmentTransform != -1)
+        {
+            EditorGUI.BeginChangeCheck();
+
+            var pos = Handles.PositionHandle(Path[selectedSegmentTransform], Quaternion.identity);
+
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(creator, "Move Pos");
+                Path.MovePoint(selectedSegmentTransform, pos);
+            }
+        }
+    }
     void OnEnable()
     {
         creator = (PathCreator)target;
@@ -163,4 +213,5 @@ public class PathEditor : Editor
             creator.CreatePath();
         }
     }
+    
 }

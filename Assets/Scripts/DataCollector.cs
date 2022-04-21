@@ -56,7 +56,7 @@ namespace DataCollector
             }
         }
 
-        public void AddInput(string input, string correctedInput, int questionNumber)
+        public void AddInput(string input, string correctedInput, int questionNumber, int currentQuestion)
         {
             input = "'" + input + "'";
             correctedInput = "'" + correctedInput + "'";
@@ -65,7 +65,7 @@ namespace DataCollector
                 using (var connection = new SqlConnection(builder.ConnectionString))
                 {
                     connection.Open();
-                    string com = string.Format("INSERT INTO Inputs VALUES ({0},{1},{2},{3})", input, correctedInput, questionNumber, this.id);
+                    string com = string.Format("INSERT INTO Inputs VALUES ({0},{1},{2},{3},{4})", input, correctedInput, questionNumber, this.id,currentQuestion);
                     SqlCommand command = new SqlCommand(com, connection);
                     command.ExecuteNonQuery();
                     connection.Close();

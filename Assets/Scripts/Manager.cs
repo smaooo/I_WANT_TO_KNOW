@@ -37,10 +37,17 @@ public class Manager : MonoBehaviour
     [SerializeField]
     private TextAsset textFile;
     private Collector collector;
+    [SerializeField]
+    private bool collectData = false;
+
     private void Start()
     {
+        
+        if (collectData)
+        {
+            collector = new Collector();
 
-        collector = new Collector();
+        }
         spelling = new Spelling(textFile);
 
         if (ConstData.Act1LastColor != null)
@@ -177,6 +184,7 @@ public class Manager : MonoBehaviour
     public QuestionAnswers DetectNextQuestion(string input, QuestionAnswers currentQuestion)
     {
 
+        int prevQuestion = currentQuestion.number;
         string prevInput = input;
         string correctInput = "";
 
@@ -244,9 +252,9 @@ public class Manager : MonoBehaviour
         print("S: " + sScore);
         if (sScore > 0)
         {
-            print("ASDAS");
             nextQuestion = disgustEnding;
-            collector.AddInput(prevInput, input, nextQuestion.number);
+            if (collectData)
+                collector.AddInput(prevInput, input, nextQuestion.number, prevQuestion);
             return nextQuestion;
         }
         if (x.Count() == scoring.Count)
@@ -255,7 +263,8 @@ public class Manager : MonoBehaviour
             if (n.Count() > 0)
             {
                 nextQuestion = n.ToList()[0].nextQuestion;
-                collector.AddInput(prevInput, input, nextQuestion.number);
+                if (collectData)
+                    collector.AddInput(prevInput, input, nextQuestion.number, prevQuestion);
                 return nextQuestion;
             }
         }
@@ -272,10 +281,12 @@ public class Manager : MonoBehaviour
                 nextQuestion = currentQuestion.answers[ordered[0]].nextQuestion;
 
             }
-            collector.AddInput(prevInput, input, nextQuestion.number);
+            if (collectData)
+                collector.AddInput(prevInput, input, nextQuestion.number, prevQuestion);
             return nextQuestion;
         }
-        collector.AddInput(prevInput, input, resEnding.number);
+        if (collectData)
+            collector.AddInput(prevInput, input, resEnding.number, prevQuestion);
         return resEnding; 
         
     }

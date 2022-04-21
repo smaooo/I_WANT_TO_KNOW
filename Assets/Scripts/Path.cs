@@ -174,7 +174,7 @@ public class Path
 
     public void MovePoint(int i, Vector3 pos)
     {
-        pos.y = yPos;
+        //pos.y = yPos;
         Vector3 deltaMove = pos - points[i];
 
         if (i % 3 == 0 || !autoSetControlPoints)
