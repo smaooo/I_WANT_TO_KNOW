@@ -15,7 +15,35 @@ MonoBehaviour:
   number: 44
   questions:
   - question: "Haven\u2019t you figured it out yet?"
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 962d7d2a6d803cc409d385fa1ab20723, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 4: IT SEEMS YOU ARE STILL CLUELESS'
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 962d7d2a6d803cc409d385fa1ab20723, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

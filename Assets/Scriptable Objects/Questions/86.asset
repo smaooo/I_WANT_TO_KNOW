@@ -16,8 +16,51 @@ MonoBehaviour:
   questions:
   - question: Your reasoning is flawed and goes against what I have told you. If
       you cannot answer such a simple question correctly, I shall doubt your assigned
-      standing. You are to be removed now.
-    sprite: {fileID: 0}
+      standing.
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: You are to be removed now.
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: 8ab1a718035a05d42a7a78b381cb34a4, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 34: UNAWARE OF ORIGIN'
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: 8ab1a718035a05d42a7a78b381cb34a4, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

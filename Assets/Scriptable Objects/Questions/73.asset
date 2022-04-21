@@ -15,19 +15,132 @@ MonoBehaviour:
   number: 73
   questions:
   - question: "\u2026 let me tell you a story you desire so very much."
-    sprite: {fileID: 0}
-  - question: "There lived a human I used to know. That person was close to GOD,
-      that person relied on GOD, they always believed in GOD. And then one day, a
-      tragedy has occurred. Oh, was it a big tragedy for the human and for the humans
-      close to them. The world was not touched by it. But the human believed for
-      their tragedy to be of the greatest burden. They started calling to GOD asking
-      for their misfortune to go away. When they realized the GOD was not going to
-      save them, they started calling, crying out loud. They would scream to the
-      CRUEL GOD, they would hate and cry and beg and pray. And when the hatred went
-      away and all that was left was the DESPAIR itself, they started asking the
-      GOD for a different thing. \r\nThey asked to have just enough time to be able
-      to say their farewells. "
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'There lived a human I used to know. That person was close to GOD,
+      that person relied on GOD, they always believed in GOD. '
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'And then one day, a tragedy has occurred. Oh, was it a big tragedy
+      for the human and for the humans close to them. '
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'The world was not touched by it. But the human believed for their
+      tragedy to be of the greatest burden. They started calling to GOD asking for
+      their misfortune to go away. '
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'When they realized the GOD was not going to save them, they started
+      calling, crying out loud. They would scream to the CRUEL GOD, they would hate
+      and cry and beg and pray. '
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: "And when the hatred went away and all that was left was the DESPAIR
+      itself, they started asking the GOD for a different thing. \r\n"
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'They asked for time to say their farewells. '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 22: BALLADE OF THE CRUEL GOD'
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

@@ -16,7 +16,35 @@ MonoBehaviour:
   questions:
   - question: 'Well, you will have to figure that out yourself. You may leave now,
       I do not wish to talk to the one who deceives anymore. '
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: 048b281f8d32da044906d46c02182f8e, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 2: THE LOOK OF HUMAN'
+    sprite:
+      face: {fileID: 21300000, guid: 048b281f8d32da044906d46c02182f8e, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

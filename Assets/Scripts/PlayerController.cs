@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI textField;
     private int lastKey;
-    private bool inputActive = true;
+    public bool inputActive = false;
     private Manager manager;
     new private Rigidbody rigidbody;
     private Animator animator;
@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Transform rightBorder;
 
-    private QuestionAnswers currentQuestion;
     private enum State { Walking, Conversation}
     [SerializeField]
     private State state = State.Conversation;
@@ -159,6 +158,7 @@ public class PlayerController : MonoBehaviour
         {
             var input = textField.text;
             textField.text = "";
+            inputActive = false;
             manager.SetNextQuestion(input);
         }
     }

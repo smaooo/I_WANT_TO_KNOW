@@ -16,7 +16,35 @@ MonoBehaviour:
   questions:
   - question: Why should that make you upset? After all, that only means that I am
       the flawed one in this conversation.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: 57fd8d2c9c185ed43be79a0b01d12184, type: 3}
+      eyes: {fileID: 21300000, guid: b6904ecb1768d0647a8f6ca6cc67fa5b, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 8: YOU HOLD THE SUPERIORITY'
+    sprite:
+      face: {fileID: 21300000, guid: 57fd8d2c9c185ed43be79a0b01d12184, type: 3}
+      eyes: {fileID: 21300000, guid: b6904ecb1768d0647a8f6ca6cc67fa5b, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

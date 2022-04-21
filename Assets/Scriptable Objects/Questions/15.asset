@@ -15,41 +15,344 @@ MonoBehaviour:
   number: 15
   questions:
   - question: You want to know? What do you want to know?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   - question: DO YOU UNDERSTAND HUMANENESS?
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   - question: "I do not seem to know why is it that that\u2019s what you want to
       know?"
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 353019ccb371fcb42b34a91fe2abca77, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 5758859bb2a474f43a01f1735cdc235f, type: 2}
+      faceLayer: 0
+      reverseFace: 1
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   - question: SO THAT I KNOW THAT WHAT I HAVE EMBARKED TO DO HAS A POINT
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   - question: You are not meant to question me on that. You seem to have lost your
       mind speaking to me this way.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: e6b8e471bda81bc47a6ac09143d61908, type: 3}
+      mouth: {fileID: 21300000, guid: ed55d896c65fa7048b6876f54666703a, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   - question: JUST ANSWER ME FOR THIS IS THE ONLY THING WHICH WILL KEEP ME GOING.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   - question: ...
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: e6b8e471bda81bc47a6ac09143d61908, type: 3}
+      mouth: {fileID: 21300000, guid: 8ab1a718035a05d42a7a78b381cb34a4, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   - question: "I will tell you a story then, and you can come to the conclusion yourself.
-      \r\nI did wonder whether I have lost my mind at one point as I was able to
-      look into the hearts of the ones around me, I was able to know their emotions,
+      \r"
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'I did wonder whether I have lost my mind at one point as I was able
+      to look into the hearts of the ones around me, I was able to know their emotions,
       thoughts and tastes, and for a second I believed that I have seen the very
-      depths of hell. Everything which I have created, everything which has been
-      dear to me was a regret\u2026 Or was it really? I was not sure how to think
-      of those things anymore, I believed that the beauty of the inside and the outside
-      might help those around, but I only saw the evil which it grew in those who
-      were cursed with the fourth sin. I never believed in the things which were
-      deemed normal, but I started wondering if I am the one who needs to be forgiven,
-      I started wondering whether I even knew my place in this thing I have created.
-      I started thinking about the concept of death. I thought that maybe I was starting
-      to understand of what the others were talking about. I was not able to handle
-      being close to them. Oh, did they hurt me\u2026 I thought that it would be
-      better for me to lock myself up and write, write about those who have been
-      consumed by misfortune and every step which those of them have taken made me
-      rage. I would be consumed by anger itself, but once the anger has passed, I
-      found myself forgiving them yet again. I believed there for a second that I
-      was understanding the term itself \u201CHUMANENESS\u201D.\r\n"
-    sprite: {fileID: 0}
+      depths of hell. '
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: "Everything which I have created, everything which has been dear to
+      me was a regret\u2026 \n"
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 597bde74d2cc75d4b9acf15c8b1f4abe, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: Or was it really?
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'I was not sure how to think of those things anymore, I believed that
+      the beauty of the inside and the outside might help those around, but I only
+      saw the evil which it grew in those who were cursed with the fourth sin. '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'I started wondering if I am the one who needs to be forgiven, I started
+      wondering whether I even knew my place in this very thing I have created. '
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'I started thinking about the concept of death. I thought that maybe
+      I was starting to understand of what the others were talking about. I was not
+      able to handle being close to them. '
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: "Oh, did they hurt me\u2026 "
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'I thought that it would be better for me to lock myself up and write,
+      write about those who have been consumed by misfortune. And every step which
+      those of them have taken made me rage. '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: I was be consumed by anger itself, but once the anger had passed, I
+      found myself forgiving them yet again.
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: b3ce3376627cc7347a71db79051621a1, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: "I believed there for a second that I was able to finally understand
+      the term itself -  \u201CHUMANENESS\u201D.\r\n"
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 597bde74d2cc75d4b9acf15c8b1f4abe, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 49: CAN YOU DEFINE IT? '
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 597bde74d2cc75d4b9acf15c8b1f4abe, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

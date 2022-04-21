@@ -15,7 +15,35 @@ MonoBehaviour:
   number: 84
   questions:
   - question: "\u2026you are the same"
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: 623b0a05c0091e6449e63d8c4579094e, type: 3}
+      brows: {fileID: 21300000, guid: 597bde74d2cc75d4b9acf15c8b1f4abe, type: 3}
+      mouth: {fileID: 21300000, guid: 6a14d75552401cf4789147d55cb7c264, type: 3}
+      additional: {fileID: 21300000, guid: 50aaffd992eafa6419dbe50b12243585, type: 3}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 37: ORIGIN'
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: 623b0a05c0091e6449e63d8c4579094e, type: 3}
+      brows: {fileID: 21300000, guid: 597bde74d2cc75d4b9acf15c8b1f4abe, type: 3}
+      mouth: {fileID: 21300000, guid: 6a14d75552401cf4789147d55cb7c264, type: 3}
+      additional: {fileID: 21300000, guid: 50aaffd992eafa6419dbe50b12243585, type: 3}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

@@ -14,13 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 85
   questions:
-  - question: "\u2026\r\nThat is not a bad answer. But what does it take to be a
-      human in your opinion?"
+  - question: "\u2026\r\nThat is not a bad answer. "
     sprite:
-      face: {fileID: 0}
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
       eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 547ef703342e18d40af4e86d677108dc, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: But what does it take to be a human in your opinion?
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: f8bf43473620f184fbbda007e3376945, type: 2}

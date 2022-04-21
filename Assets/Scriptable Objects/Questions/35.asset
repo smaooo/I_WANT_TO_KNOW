@@ -14,13 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 35
   questions:
-  - question: You humans are all the same. When something goes wrong, you chose to
-      blame it on anything else other than yourself.
+  - question: 'You humans are all the same. '
     sprite:
-      face: {fileID: 0}
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
       eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: When something goes wrong, you chose to blame it on anything else other
+      than yourself.
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: ed55d896c65fa7048b6876f54666703a, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: 818c85e8a980f7940b202400769b8054, type: 2}

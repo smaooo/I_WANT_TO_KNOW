@@ -14,12 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 18
   questions:
-  - question: Believe? What are you looking to believe in? Or shall I ask who?
+  - question: 'Believe? What are you looking to believe in? '
     sprite:
-      face: {fileID: 0}
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
       eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: Or shall I ask who?
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 6a14d75552401cf4789147d55cb7c264, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 0b3e8586b7342cf4789dc0d5502a4e37, type: 2}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: 5a895537e63fac248a402b11cd74c7ce, type: 2}

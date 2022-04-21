@@ -14,11 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 89
   questions:
-  - question: 
-    sprite: {fileID: 0}
   - question: The one who was created by the likes of me is, after all - is my biggest
       miscalculation.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: 788be0991a70b114b884a23bd566a57f, type: 3}
+      eyes: {fileID: 21300000, guid: 623b0a05c0091e6449e63d8c4579094e, type: 3}
+      brows: {fileID: 21300000, guid: e6b8e471bda81bc47a6ac09143d61908, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 21300000, guid: 50aaffd992eafa6419dbe50b12243585, type: 3}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 36: DEFECTIVITY IN THE SYSTEM'
+    sprite:
+      face: {fileID: 21300000, guid: 788be0991a70b114b884a23bd566a57f, type: 3}
+      eyes: {fileID: 21300000, guid: 623b0a05c0091e6449e63d8c4579094e, type: 3}
+      brows: {fileID: 21300000, guid: e6b8e471bda81bc47a6ac09143d61908, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 21300000, guid: 50aaffd992eafa6419dbe50b12243585, type: 3}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

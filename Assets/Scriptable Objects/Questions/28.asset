@@ -17,7 +17,35 @@ MonoBehaviour:
   - question: You are unsure of who is standing in front of you? Then you should
       not be speaking to me in the first place. I might pose danger to you after
       all.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: c984e37db7f73ce41ad5d31cbd309aeb, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 39: THE ONE WHO COMMANDS FISH'
+    sprite:
+      face: {fileID: 21300000, guid: c984e37db7f73ce41ad5d31cbd309aeb, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

@@ -14,13 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 46
   questions:
-  - question: Are you? Then tell me, THE GOD OF THIS WORLD, why should believe in
-      you?
+  - question: Are you? Then tell me, THE GOD OF THIS WORLD, why should I believe
+      in you?
     sprite:
-      face: {fileID: 0}
+      face: {fileID: 21300000, guid: b2a4ed7f885747b41ab48e996f393f2b, type: 3}
+      eyes: {fileID: 21300000, guid: e853d3822feaf95428b07243c4c77b74, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
       eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}

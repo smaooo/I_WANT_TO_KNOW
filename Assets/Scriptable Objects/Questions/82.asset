@@ -16,10 +16,19 @@ MonoBehaviour:
   questions:
   - question: I can? And why do you think that is?
     sprite:
-      face: {fileID: 0}
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: e6b8e471bda81bc47a6ac09143d61908, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
       eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: 94981bcc28a3d344b8a7bf7d9d580a5e, type: 2}

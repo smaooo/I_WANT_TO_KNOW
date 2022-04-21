@@ -15,9 +15,52 @@ MonoBehaviour:
   number: 65
   questions:
   - question: 'How is it that you do not have an answer? You are so sure as what
-      a HUMAN is, but you cannot tell me when one has lost HUMANITY? I understand
-      why you are asking for knowledge now, as you can only deceive. '
-    sprite: {fileID: 0}
+      a HUMAN is, but you cannot tell me when one has lost HUMANITY? '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: e6b8e471bda81bc47a6ac09143d61908, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'I understand why you are asking for knowledge now, as you can only
+      deceive. '
+    sprite:
+      face: {fileID: 21300000, guid: c984e37db7f73ce41ad5d31cbd309aeb, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 26: LIES AND DECEIT'
+    sprite:
+      face: {fileID: 21300000, guid: c984e37db7f73ce41ad5d31cbd309aeb, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

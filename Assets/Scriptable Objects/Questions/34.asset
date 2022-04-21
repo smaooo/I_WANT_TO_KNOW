@@ -16,10 +16,19 @@ MonoBehaviour:
   questions:
   - question: Well, why should I lie? Take a look for yourself.
     sprite:
-      face: {fileID: 0}
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: 623b0a05c0091e6449e63d8c4579094e, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
       eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: 5a895537e63fac248a402b11cd74c7ce, type: 2}

@@ -15,13 +15,57 @@ MonoBehaviour:
   number: 1
   questions:
   - question: Very well then. Let me introduce you to the land as I have been a part
-      of it from its very creation - this land is me and I am the land. Everything
-      that the land is - is what I am. Can you see it?
+      of it from its very creation - this land is me and I am the land.
     sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: d0e61e89ea5df274fa109e33651cc1eb, type: 2}
+      eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
-      eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'Everything that the land is - is what I am. '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: 03cbaeaadd30061458c38bfc616fa4a1, type: 2}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: Can you see it?
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 8ab1a718035a05d42a7a78b381cb34a4, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: cd17252066839264dba1d6450ed93a76, type: 2}
+      eyesLayer: 0
+      reverseEyes: 1
+      face: {fileID: 7400000, guid: 0b3e8586b7342cf4789dc0d5502a4e37, type: 2}
+      faceLayer: 1
+      reverseFace: 1
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}

@@ -15,7 +15,35 @@ MonoBehaviour:
   number: 52
   questions:
   - question: 'Then you are not the GOD OF THIS WORLD. '
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: 89676ad068ef368419209a66fa02ea97, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: ed55d896c65fa7048b6876f54666703a, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 11: FALSE GOD'
+    sprite:
+      face: {fileID: 21300000, guid: 89676ad068ef368419209a66fa02ea97, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
+      mouth: {fileID: 21300000, guid: ed55d896c65fa7048b6876f54666703a, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

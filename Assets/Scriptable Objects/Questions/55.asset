@@ -17,7 +17,35 @@ MonoBehaviour:
   - question: 'I see. Then I have received your honest answer as to why you are trying
       to acquire the information from me. You do not get to have it. You have been
       dismissed. '
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: 788be0991a70b114b884a23bd566a57f, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 16: YOUR DOUBT HAS KILLED YOU '
+    sprite:
+      face: {fileID: 21300000, guid: 788be0991a70b114b884a23bd566a57f, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

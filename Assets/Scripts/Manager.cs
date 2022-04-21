@@ -9,12 +9,24 @@ using DataCollector;
 
 public class Manager : MonoBehaviour
 {
+    [System.Serializable]
+    public struct FaceStructure
+    {
+        public SpriteRenderer face;
+        public SpriteRenderer eyes;
+        public SpriteRenderer brows;
+        public SpriteRenderer mouth;
+        public SpriteRenderer additional;
+    }
     [SerializeField]
     private List<QuestionAnswers> questionsAnswers;
     
     private QuestionAnswers currentQuestion;
     [SerializeField]
     private TextMeshProUGUI questionText;
+    [SerializeField]
+    private GameObject inputText;
+
     private QuestionAnswers resEnding;
     [SerializeField]
     private Category noneCat;
@@ -39,10 +51,18 @@ public class Manager : MonoBehaviour
     private Collector collector;
     [SerializeField]
     private bool collectData = false;
+    public enum State { Walking, Conversation}
+    [SerializeField]
+    private State state = State.Conversation;
+    [SerializeField]
+    private GameObject convoCam;
+    [SerializeField]
+    private FaceStructure faceStructure;
+    private PlayerController player;
 
     private void Start()
     {
-        
+        player = FindObjectOfType<PlayerController>();
         if (collectData)
         {
             collector = new Collector();
@@ -57,11 +77,7 @@ public class Manager : MonoBehaviour
 
         StartCoroutine(FadeIn());
 
-        if (pQ != -1)
-            currentQuestion = questionsAnswers.Find(q => q.number == pQ);
-        else
-            currentQuestion = questionsAnswers[0];
-        questionText.text = currentQuestion.questions[0].question;
+        
         resEnding = questionsAnswers.Find(x => x.number == 3);
         for (int i = 0; i < wheelTracks.Count; i++)
         {
@@ -139,8 +155,57 @@ public class Manager : MonoBehaviour
         }
 
         //UpdateCurrentWheels();
+
+        if (state == State.Conversation && !convoCam.activeSelf)
+        {
+            SetupConversation();
+        }
     }
 
+    private void SetupConversation()
+    {
+        Camera.main.gameObject.SetActive(false);
+        convoCam.SetActive(true);
+        questionText.gameObject.SetActive(true);
+        inputText.SetActive(true);
+        if (pQ != -1)
+            currentQuestion = questionsAnswers.Find(q => q.number == pQ);
+        else
+            currentQuestion = questionsAnswers[0];
+    
+        StartCoroutine(ManageQuestion(currentQuestion));
+    }
+
+    private void ChangeSprites(QuestionAnswers.QuestionSprite question)
+    {
+        var expression = question.sprite;
+        if (expression.face != null)
+            faceStructure.face.sprite = expression.face;
+        if (expression.eyes != null)
+            faceStructure.eyes.sprite = expression.eyes;
+        if (expression.brows != null)
+            faceStructure.brows.sprite = expression.brows;
+        if (expression.mouth != null)
+            faceStructure.mouth.sprite = expression.mouth;
+        if (expression.additional != null)
+            faceStructure.additional.sprite = expression.additional;
+    }
+    private IEnumerator PrintText(TextMeshProUGUI textField, string text, float waitTime = 0f)
+    {
+
+        if (!convoCam.activeSelf)
+        {
+            yield return new WaitUntil(() => convoCam.activeSelf);
+        }
+
+        yield return new WaitForSeconds(waitTime);
+        textField.text = "";
+        foreach (var t in text)
+        {
+            textField.text += t;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
     private void UpdateCurrentWheels()
     {
         Dictionary<int, List<WheelController>> toRemove = new Dictionary<int, List<WheelController>>();
@@ -168,17 +233,49 @@ public class Manager : MonoBehaviour
 
         }
     }
+
+    private IEnumerator ManageQuestion(QuestionAnswers question)
+    {
+        yield return null;
+        foreach (var q in question.questions)
+        {
+            ChangeSprites(q);
+            PlayFaceAnimations(q);
+            yield return StartCoroutine(PrintText(questionText, q.question));
+
+            yield return new WaitForSeconds(0.5f);
+        }
+        player.inputActive = true;
+        inputText.GetComponent<TextMeshProUGUI>().text = "";
+    }
+
+    private void PlayFaceAnimations(QuestionAnswers.QuestionSprite question)
+    {
+        var anims = question.animation;
+        var animator = faceStructure.face.GetComponent<Animator>();
+        if (anims.face != null)
+        {
+            animator.Play(anims.face.name, anims.faceLayer);
+            animator.SetFloat("FaceSpeed", anims.reverseFace ? -1 : 1);
+
+        }
+
+        if (anims.eyes != null)
+        {
+            animator.Play(anims.eyes.name, anims.eyesLayer);
+            animator.SetFloat("EyesSpeed", anims.reverseEyes ? -1 : 1);
+        }
+
+        if (anims.additional != null)
+            animator.Play(anims.additional.name, anims.additionalLayer);
+    }
     public void SetNextQuestion(string input)
     {
         
         currentQuestion = DetectNextQuestion(input, currentQuestion);
-        questionText.text = currentQuestion.questions[0].question;
-        questionText.text = "";
-        foreach (var q in currentQuestion.questions)
-        {
-            questionText.text += q.question + "\n";
-        }
-        print(currentQuestion);
+        StartCoroutine(ManageQuestion(currentQuestion));
+     
+        //print(currentQuestion);
     }
 
     public QuestionAnswers DetectNextQuestion(string input, QuestionAnswers currentQuestion)

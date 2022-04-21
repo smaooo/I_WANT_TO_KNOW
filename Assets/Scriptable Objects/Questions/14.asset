@@ -14,10 +14,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 14
   questions:
-  - question: What is it that you have to offer? I know everything of this world,
-      I am the WORLD. I do not believe you have anything to tell me of which I already
-      do not know.
-    sprite: {fileID: 0}
+  - question: 'What is it that you have to offer? '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 5758859bb2a474f43a01f1735cdc235f, type: 2}
+      faceLayer: 0
+      reverseFace: 1
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'I know everything of this world, I am the WORLD. '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 6a14d75552401cf4789147d55cb7c264, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: I do not believe you have anything to tell me of which I already do
+      not know.
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 962d7d2a6d803cc409d385fa1ab20723, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 48: EXCHNAGE DENIED'
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 962d7d2a6d803cc409d385fa1ab20723, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

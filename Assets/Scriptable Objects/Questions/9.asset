@@ -14,10 +14,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 9
   questions:
-  - question: The world? Are you looking to have the world itself? I do not think
-      I am capable of giving it to you. I have refused this request once already,
-      I do not wish to go through it again.
-    sprite: {fileID: 0}
+  - question: 'The world? '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: e6b8e471bda81bc47a6ac09143d61908, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 7b119e51696217c459ea425d31cc4700, type: 2}
+      faceLayer: 0
+      reverseFace: 1
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: Are you looking to have the world itself?
+    sprite:
+      face: {fileID: 21300000, guid: c984e37db7f73ce41ad5d31cbd309aeb, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 0}
+      mouth: {fileID: 0}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: 8a3dcdb10bf00f148a42047ce949adad, type: 2}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: I do not think I am capable of giving it to you. I have refused this
+      request once already, I do not wish to go through it again.
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 8ab1a718035a05d42a7a78b381cb34a4, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 46: HISTORY REPEATS ITSELF'
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 8ab1a718035a05d42a7a78b381cb34a4, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

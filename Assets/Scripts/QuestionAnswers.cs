@@ -28,11 +28,13 @@ public class QuestionAnswers : ScriptableObject
     [System.Serializable]
     public struct FaceAnimation
     {
-        public Animation eyes;
+        public AnimationClip eyes;
         public int eyesLayer;
-        public Animation face;
+        public bool reverseEyes;
+        public AnimationClip face;
         public int faceLayer;
-        public Animation additional;
+        public bool reverseFace;
+        public AnimationClip additional;
         public int additionalLayer;
     }
     [System.Serializable]

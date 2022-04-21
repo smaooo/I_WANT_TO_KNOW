@@ -17,13 +17,21 @@ MonoBehaviour:
   - question: An interesting way to approach a conversation. What is it that you
       want?
     sprite:
-      face: {fileID: 0}
-      eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      face: {fileID: 21300000, guid: 788be0991a70b114b884a23bd566a57f, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 8ab1a718035a05d42a7a78b381cb34a4, type: 3}
+      additional: {fileID: 0}
     animation:
-      eyes: {fileID: 0}
-      face: {fileID: 0}
+      eyes: {fileID: 7400000, guid: 6b26f199a22eff54389fd5e72846dd2c, type: 2}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 0b3e8586b7342cf4789dc0d5502a4e37, type: 2}
+      faceLayer: 0
+      reverseFace: 1
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: 6702b1929b7e686428dc20544fda8f26, type: 2}

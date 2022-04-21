@@ -16,10 +16,19 @@ MonoBehaviour:
   questions:
   - question: Answer me.
     sprite:
-      face: {fileID: 0}
+      face: {fileID: 21300000, guid: 5df8ad0a605603a41bbcf452bec46504, type: 3}
+      eyes: {fileID: 21300000, guid: 623b0a05c0091e6449e63d8c4579094e, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
       eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: 6702b1929b7e686428dc20544fda8f26, type: 2}

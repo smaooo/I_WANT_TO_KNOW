@@ -14,22 +14,170 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 10
   questions:
-  - question: "Knowledge it is\u2026I see. Well, let me tell you about the one who
-      was deceived by the world around them. That day was full of sorrow\u2026and
-      disappointment. \r\nI had someone by my side, they were close, close enough
-      to call them the FIRST STANDING NEXT TO ME, but what they desired was what
-      I had. And what I had was not something they could obtain. They tried to get
-      it from me with all possible means, but I was not in the right to give those
-      things up, no matter how problematic and difficult they were. They grew angrier
-      and angrier until they have lost the last bit of faith they carried. That sent
-      them into the world which is not desired by anyone who is alive or dead. \r\nAnd
-      then came the other one, the one who was infatuated by me, the one who would
-      praise me again and again behind my shoulders, telling me the things which
-      I know to be the truth. That one was the SECOND NEXT TO ME, as they never were
-      able to obtain the title of the first. It sent them into insanity as they were
-      not able to take up the spot which they wanted. And the words of praise became
-      the cries of the one who was not chosen. "
-    sprite: {fileID: 0}
+  - question: "Knowledge it is\u2026I see. "
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: fdd78476411e6d646bb75f6acf269496, type: 2}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: "Well, let me tell you about the one who was deceived by the world
+      around them. That day was full of sorrow\u2026and disappointment. \r"
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: f64cc04838591c24e9308c76b636fe9a, type: 2}
+      eyesLayer: 0
+      reverseEyes: 1
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'I had someone by my side, they were close, close enough to call them
+      the FIRST STANDING NEXT TO ME, but what they desired was what I had. And what
+      I had was not something they could obtain. '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: 6b26f199a22eff54389fd5e72846dd2c, type: 2}
+      eyesLayer: 0
+      reverseEyes: 1
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'They tried to get it from me with all possible means, but I was not
+      in the right to give those things up, no matter how problematic and difficult
+      they were. '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: "They grew angrier and angrier until they have lost the last bit of
+      faith they carried. That sent them into the world which is not desired by anyone
+      who is alive or dead. \r"
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 290344df6d3ac2b4997e915d82a703cb, type: 2}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'And then came the other one, the one who was infatuated by me, the
+      one who would praise me again and again behind my shoulders, telling me the
+      things which I know to be the truth. '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: d0e61e89ea5df274fa109e33651cc1eb, type: 2}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 290344df6d3ac2b4997e915d82a703cb, type: 2}
+      faceLayer: 0
+      reverseFace: 1
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'That one was the SECOND NEXT TO ME, as they never were able to obtain
+      the title of the first. It sent them into insanity as they were not able to
+      take up the spot which they wanted. '
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: f2bba152f5baabd468d8a09fae4dae1d, type: 2}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'And the words of praise became the cries of the one who was not chosen. '
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: fdd78476411e6d646bb75f6acf269496, type: 2}
+      eyesLayer: 0
+      reverseEyes: 1
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 1: THE DESPERATE'
+    sprite:
+      face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

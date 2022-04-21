@@ -17,7 +17,35 @@ MonoBehaviour:
   - question: Here I thought you would know who is standing in front of you. But
       it seems you are as unaware as all else. It seems that I did a good job after
       all.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 597bde74d2cc75d4b9acf15c8b1f4abe, type: 3}
+      mouth: {fileID: 21300000, guid: 6a14d75552401cf4789147d55cb7c264, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 38: THE DISGUISED CREATOR'
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 597bde74d2cc75d4b9acf15c8b1f4abe, type: 3}
+      mouth: {fileID: 21300000, guid: 6a14d75552401cf4789147d55cb7c264, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

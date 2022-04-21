@@ -16,10 +16,19 @@ MonoBehaviour:
   questions:
   - question: Oh, so you are??? Then you are the one governed by the blind faith?
     sprite:
-      face: {fileID: 0}
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: b6904ecb1768d0647a8f6ca6cc67fa5b, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: b3ce3376627cc7347a71db79051621a1, type: 3}
+      additional: {fileID: 0}
+    animation:
       eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}

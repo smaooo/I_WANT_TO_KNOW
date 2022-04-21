@@ -16,10 +16,21 @@ MonoBehaviour:
   questions:
   - question: Then I shall deem you blind. Why are you here?
     sprite:
-      face: {fileID: 0}
+      face: {fileID: 21300000, guid: 89676ad068ef368419209a66fa02ea97, type: 3}
       eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: b3ce3376627cc7347a71db79051621a1, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}

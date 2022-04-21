@@ -101,14 +101,27 @@ public class PathEditor : Editor
         }
         if (guiEvent.type == EventType.MouseDown && guiEvent.control && guiEvent.button == 0)
         {
-            selectedSegmentTransform = -1;
-            float minDstToSegment = segmentSelectDistanceThreshold;
+            float minDstToSegment = 0.5f;
             int newSelectedSegmentIndex = -1;
+            //for (int i = 0; i < Path.NumSegments; i++)
+            //{
+            //    Vector3[] points = Path.GetPointsInSegment(i);
+            //    //float dst = HandleUtility.DistancePointBezier(mousePos, points[0], points[3], points[1], points[2]);
 
-            for (int i = 0; i < Path.NumSegments; i++)
+            //    float dst = HandleUtility.DistancePointBezier(new Vector2(mousePos.x, mousePos.z), new Vector2(points[0].x, points[0].z),
+            //        new Vector2(points[3].x, points[3].z), new Vector2(points[1].x, points[1].z), new Vector2(points[2].x, points[2].z));
+            //    Debug.Log(dst);
+            //    if (dst < minDstToSegment)
+            //    {
+            //        minDstToSegment = dst;
+            //        newSelectedSegmentIndex = i;
+            //    }
+            //}
+
+            for (int i = 0; i < Path.NumPoints; i++)
             {
-                Vector3[] points = Path.GetPointsInSegment(i);
-                float dst = HandleUtility.DistancePointBezier(mousePos, points[0], points[3], points[1], points[2]);
+                float dst = Vector2.Distance(new Vector2(mousePos.x, mousePos.z), new Vector2(Path[i].x,Path[i].z));
+
                 if (dst < minDstToSegment)
                 {
                     minDstToSegment = dst;
@@ -118,11 +131,9 @@ public class PathEditor : Editor
 
             if (newSelectedSegmentIndex != selectedSegmentTransform)
             {
-                //Undo.RecordObject(creator, "Move Position");
                 selectedSegmentTransform = newSelectedSegmentIndex;
                 Debug.Log(newSelectedSegmentIndex);
-                //Path.DeleteSegment(closestAnchorIndex);
-                HandleUtility.Repaint();
+                //HandleUtility.Repaint();
 
             }
 

@@ -16,10 +16,19 @@ MonoBehaviour:
   questions:
   - question: What is it that I do not understand?
     sprite:
-      face: {fileID: 0}
+      face: {fileID: 21300000, guid: 5df8ad0a605603a41bbcf452bec46504, type: 3}
+      eyes: {fileID: 21300000, guid: e853d3822feaf95428b07243c4c77b74, type: 3}
+      brows: {fileID: 21300000, guid: 916036b6466f6644cac4f114ff6842ce, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
       eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers:
   - categories:
     - {fileID: 11400000, guid: 2a2e90aef1b05544588a0af9f74fb653, type: 2}

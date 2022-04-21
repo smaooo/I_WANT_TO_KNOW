@@ -15,7 +15,35 @@ MonoBehaviour:
   number: 62
   questions:
   - question: You do not wish to judge. So, I shall not be the judge of you.
-    sprite: {fileID: 0}
+    sprite:
+      face: {fileID: 21300000, guid: 89676ad068ef368419209a66fa02ea97, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 547ef703342e18d40af4e86d677108dc, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 28: "DO NOT JUDGE, OR YOU TOO WILL BE JUDGED"'
+    sprite:
+      face: {fileID: 21300000, guid: 89676ad068ef368419209a66fa02ea97, type: 3}
+      eyes: {fileID: 0}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 547ef703342e18d40af4e86d677108dc, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

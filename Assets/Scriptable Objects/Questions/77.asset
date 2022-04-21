@@ -14,10 +14,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 77
   questions:
-  - question: "Right, I guess I see why, I do deserve pity. The one is pitied \u2013
-      is the one who has been poisoned and dismissed by the very HUMANITY you so
-      very respect. "
-    sprite: {fileID: 0}
+  - question: Right, I guess I see why, I do deserve pity.
+    sprite:
+      face: {fileID: 21300000, guid: 5df8ad0a605603a41bbcf452bec46504, type: 3}
+      eyes: {fileID: 21300000, guid: e853d3822feaf95428b07243c4c77b74, type: 3}
+      brows: {fileID: 21300000, guid: e6b8e471bda81bc47a6ac09143d61908, type: 3}
+      mouth: {fileID: 21300000, guid: 6a14d75552401cf4789147d55cb7c264, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: "The one is pitied \u2013 is the one who has been poisoned and dismissed
+      by the very HUMANITY you so very respect. "
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: e853d3822feaf95428b07243c4c77b74, type: 3}
+      brows: {fileID: 21300000, guid: e6b8e471bda81bc47a6ac09143d61908, type: 3}
+      mouth: {fileID: 21300000, guid: 962d7d2a6d803cc409d385fa1ab20723, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 'END 29: THE PITIFUL GOD'
+    sprite:
+      face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
+      eyes: {fileID: 21300000, guid: e853d3822feaf95428b07243c4c77b74, type: 3}
+      brows: {fileID: 21300000, guid: e6b8e471bda81bc47a6ac09143d61908, type: 3}
+      mouth: {fileID: 21300000, guid: 962d7d2a6d803cc409d385fa1ab20723, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 0}
+      eyesLayer: 0
+      face: {fileID: 0}
+      faceLayer: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1
