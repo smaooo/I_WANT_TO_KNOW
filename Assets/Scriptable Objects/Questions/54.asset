@@ -26,8 +26,10 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
@@ -41,11 +43,13 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 8
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

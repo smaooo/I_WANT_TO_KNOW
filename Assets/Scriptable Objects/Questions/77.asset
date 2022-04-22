@@ -24,8 +24,10 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
-      face: {fileID: 0}
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 290344df6d3ac2b4997e915d82a703cb, type: 2}
       faceLayer: 0
+      reverseFace: 1
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
@@ -40,8 +42,10 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
@@ -55,11 +59,13 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 8
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

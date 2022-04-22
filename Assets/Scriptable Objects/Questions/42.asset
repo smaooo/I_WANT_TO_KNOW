@@ -23,10 +23,12 @@ MonoBehaviour:
       mouth: {fileID: 21300000, guid: be009387e907c794891cf5f3f57b1e10, type: 3}
       additional: {fileID: 0}
     animation:
-      eyes: {fileID: 0}
+      eyes: {fileID: 7400000, guid: 5021650a8a5411b45b6155859bd2a1c4, type: 2}
       eyesLayer: 0
-      face: {fileID: 0}
-      faceLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 290344df6d3ac2b4997e915d82a703cb, type: 2}
+      faceLayer: 1
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0

@@ -26,11 +26,11 @@ MonoBehaviour:
       eyesLayer: 0
       reverseEyes: 0
       face: {fileID: 7400000, guid: 5758859bb2a474f43a01f1735cdc235f, type: 2}
-      faceLayer: 0
+      faceLayer: 1
       reverseFace: 1
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 2
   - question: "Are you begging me for one? Isn\u2019t that a little too extreme?"
     sprite:
       face: {fileID: 21300000, guid: 788be0991a70b114b884a23bd566a57f, type: 3}
@@ -43,7 +43,7 @@ MonoBehaviour:
       eyesLayer: 0
       reverseEyes: 0
       face: {fileID: 7400000, guid: 7b119e51696217c459ea425d31cc4700, type: 2}
-      faceLayer: 0
+      faceLayer: 1
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
       eyesLayer: 0
       reverseEyes: 0
       face: {fileID: 7400000, guid: 7b119e51696217c459ea425d31cc4700, type: 2}
-      faceLayer: 0
+      faceLayer: 1
       reverseFace: 1
       additional: {fileID: 0}
       additionalLayer: 0

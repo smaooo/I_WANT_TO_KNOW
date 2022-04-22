@@ -61,11 +61,11 @@ MonoBehaviour:
       eyesLayer: 0
       reverseEyes: 0
       face: {fileID: 7400000, guid: 5758859bb2a474f43a01f1735cdc235f, type: 2}
-      faceLayer: 0
+      faceLayer: 1
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 1
   answers:
   - categories:
     - {fileID: 11400000, guid: 5505c9295b8f61f4e84b4810dcfbe1a6, type: 2}

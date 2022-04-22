@@ -26,11 +26,13 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 1
   - question: You are to be removed now.
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
@@ -39,13 +41,15 @@ MonoBehaviour:
       mouth: {fileID: 21300000, guid: 8ab1a718035a05d42a7a78b381cb34a4, type: 3}
       additional: {fileID: 0}
     animation:
-      eyes: {fileID: 0}
+      eyes: {fileID: 7400000, guid: 1873209984f1354498b1e178e2ddcb91, type: 2}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 7
   - question: 'END 34: UNAWARE OF ORIGIN'
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
@@ -56,11 +60,13 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 8
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEditor;
 
 public class Puddle : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Puddle : MonoBehaviour
     private List<Vector3> points = new List<Vector3>();
     [SerializeField]
     private Material puddleGround;
+    [SerializeField]
+    private Material whiteMaterial;
 
     void Start()
     {
@@ -17,8 +20,11 @@ public class Puddle : MonoBehaviour
         
         foreach(var p in boundryPoints)
         {
-            points.Add(p);
-            points.Add(p + Vector3.down * 2);
+            var pos = p;
+
+            pos += Vector3.up * 2;
+            points.Add(pos);
+            points.Add(pos + Vector3.down * 10);
         }
 
         var b = Instantiate(this.transform.GetChild(0).gameObject, this.transform);
@@ -47,18 +53,19 @@ public class Puddle : MonoBehaviour
         Mesh mesh = new Mesh();
         mesh.vertices = points.ToArray();
         mesh.triangles = triangles.ToArray();
-
+        AssetDatabase.SaveAssets();
         var g = new GameObject();
         g.transform.SetParent(this.transform);
         g.AddComponent<MeshFilter>();
         g.GetComponent<MeshFilter>().mesh = mesh;
         mesh.RecalculateNormals();
         mesh.RecalculateBounds();
-        
+        g.layer = 9;
         g.AddComponent<MeshRenderer>().material = puddleGround;
         g.AddComponent<MeshCollider>();
+        puddleGround.SetVector("_PlanePosition", this.transform.position);
+        puddleGround.SetVector("_PlaneNormal", this.transform.up);
         
-
     }
 
     

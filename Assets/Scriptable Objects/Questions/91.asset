@@ -50,7 +50,7 @@ MonoBehaviour:
       faceLayer: 0
       reverseFace: 0
       additional: {fileID: 7400000, guid: ec070b2667d768343a1b6c6c7e06e780, type: 2}
-      additionalLayer: 0
+      additionalLayer: 2
     zoom: 0
   - question: 'END 42: THE ONE LACKING GUIDANCE'
     sprite:
@@ -68,7 +68,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 8
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

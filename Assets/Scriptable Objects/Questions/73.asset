@@ -24,8 +24,10 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
@@ -38,10 +40,12 @@ MonoBehaviour:
       mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
       additional: {fileID: 0}
     animation:
-      eyes: {fileID: 0}
+      eyes: {fileID: 7400000, guid: 484f8840861fb0e46a50e31716db7350, type: 2}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
@@ -54,10 +58,12 @@ MonoBehaviour:
       mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
       additional: {fileID: 0}
     animation:
-      eyes: {fileID: 0}
+      eyes: {fileID: 7400000, guid: 352d67b777b029547894f02a25e6c247, type: 2}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
@@ -71,10 +77,12 @@ MonoBehaviour:
       mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
       additional: {fileID: 0}
     animation:
-      eyes: {fileID: 0}
+      eyes: {fileID: 7400000, guid: 6b26f199a22eff54389fd5e72846dd2c, type: 2}
       eyesLayer: 0
+      reverseEyes: 1
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
@@ -88,10 +96,12 @@ MonoBehaviour:
       mouth: {fileID: 21300000, guid: 694f6e99353186d4a973c38b8f6fa456, type: 3}
       additional: {fileID: 0}
     animation:
-      eyes: {fileID: 0}
+      eyes: {fileID: 7400000, guid: 1873209984f1354498b1e178e2ddcb91, type: 2}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
@@ -104,10 +114,12 @@ MonoBehaviour:
       mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
       additional: {fileID: 0}
     animation:
-      eyes: {fileID: 0}
+      eyes: {fileID: 7400000, guid: ebd6c68c81f1f5f4aaee95d7a595890b, type: 2}
       eyesLayer: 0
+      reverseEyes: 1
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
@@ -119,10 +131,12 @@ MonoBehaviour:
       mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
       additional: {fileID: 0}
     animation:
-      eyes: {fileID: 0}
+      eyes: {fileID: 7400000, guid: cd17252066839264dba1d6450ed93a76, type: 2}
       eyesLayer: 0
+      reverseEyes: 1
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
@@ -136,11 +150,13 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 8
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

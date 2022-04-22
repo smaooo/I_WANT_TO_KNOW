@@ -56,7 +56,7 @@ namespace DataCollector
             }
         }
 
-        public void AddInput(string input, string correctedInput, int questionNumber, int currentQuestion)
+        public void AddInput(string input, string correctedInput, int questionNumber, int currentQuestion, Manager.ScoringToData scoring)
         {
             input = "'" + input + "'";
             correctedInput = "'" + correctedInput + "'";
@@ -68,6 +68,23 @@ namespace DataCollector
                     string com = string.Format("INSERT INTO Inputs VALUES ({0},{1},{2},{3},{4})", input, correctedInput, questionNumber, this.id,currentQuestion);
                     SqlCommand command = new SqlCommand(com, connection);
                     command.ExecuteNonQuery();
+                    int inputID = -1;
+                    com = "SELECT * FROM Inputs WHERE id=(SELECT max(id) FROM Inputs)";
+                    using (command = new SqlCommand(com, connection))
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                inputID = (int)reader.GetValue(0);
+                            }
+                        }
+                    }
+
+                    com = string.Format("INSERT INTO Inputs_Scoring VALUES ({0},{1},{2},{3},{4},{5})",
+                        scoring.cat1, scoring.cat2, scoring.cat3, scoring.cat4, scoring.catS, inputID);
+                    command = new SqlCommand(com, connection);
+                    command.ExecuteNonQuery();
                     connection.Close();
                 }
             }
@@ -78,6 +95,6 @@ namespace DataCollector
         }
 
 
-
+       
     }    
 }

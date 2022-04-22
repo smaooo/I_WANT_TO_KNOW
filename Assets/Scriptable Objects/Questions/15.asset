@@ -61,11 +61,11 @@ MonoBehaviour:
       eyesLayer: 0
       reverseEyes: 0
       face: {fileID: 7400000, guid: 5758859bb2a474f43a01f1735cdc235f, type: 2}
-      faceLayer: 0
+      faceLayer: 1
       reverseFace: 1
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 3
   - question: SO THAT I KNOW THAT WHAT I HAVE EMBARKED TO DO HAS A POINT
     sprite:
       face: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 4
   - question: JUST ANSWER ME FOR THIS IS THE ONLY THING WHICH WILL KEEP ME GOING.
     sprite:
       face: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 5
   - question: "I will tell you a story then, and you can come to the conclusion yourself.
       \r"
     sprite:
@@ -152,7 +152,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 2
   - question: 'I did wonder whether I have lost my mind at one point as I was able
       to look into the hearts of the ones around me, I was able to know their emotions,
       thoughts and tastes, and for a second I believed that I have seen the very
@@ -172,7 +172,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 6
   - question: "Everything which I have created, everything which has been dear to
       me was a regret\u2026 \n"
     sprite:
@@ -335,7 +335,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 2
   - question: 'END 49: CAN YOU DEFINE IT? '
     sprite:
       face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
@@ -352,7 +352,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 8
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

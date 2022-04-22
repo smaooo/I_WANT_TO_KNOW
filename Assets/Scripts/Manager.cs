@@ -18,6 +18,15 @@ public class Manager : MonoBehaviour
         public SpriteRenderer mouth;
         public SpriteRenderer additional;
     }
+
+    public struct ScoringToData
+    {
+        public float cat1;
+        public float cat2;
+        public float cat3;
+        public float cat4;
+        public float catS;
+    }
     [SerializeField]
     private List<QuestionAnswers> questionsAnswers;
     
@@ -26,7 +35,8 @@ public class Manager : MonoBehaviour
     private TextMeshProUGUI questionText;
     [SerializeField]
     private GameObject inputText;
-
+    [SerializeField]
+    private GameObject playerInputPack;
     private QuestionAnswers resEnding;
     [SerializeField]
     private Category noneCat;
@@ -172,7 +182,7 @@ public class Manager : MonoBehaviour
             currentQuestion = questionsAnswers.Find(q => q.number == pQ);
         else
             currentQuestion = questionsAnswers[0];
-    
+        
         StartCoroutine(ManageQuestion(currentQuestion));
     }
 
@@ -237,15 +247,48 @@ public class Manager : MonoBehaviour
     private IEnumerator ManageQuestion(QuestionAnswers question)
     {
         yield return null;
+        var animator = faceStructure.face.GetComponent<Animator>();
         foreach (var q in question.questions)
         {
+            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Empty")
+                && Mathf.Abs(animator.GetCurrentAnimatorStateInfo(0).normalizedTime) < 0.9f)
+             
+            {
+                yield return new WaitUntil(() => Mathf.Abs(animator.GetCurrentAnimatorStateInfo(0).normalizedTime) >= 0.9f);
+              
+
+            }
+            else
+            {
+                if (!animator.GetCurrentAnimatorStateInfo(1).IsName("Empty")
+                    && Mathf.Abs(animator.GetCurrentAnimatorStateInfo(1).normalizedTime) < 0.9f)
+                {
+
+                    yield return new WaitUntil(() => Mathf.Abs(animator.GetCurrentAnimatorStateInfo(1).normalizedTime) >= 0.9);
+
+                }
+                else
+                {
+                    if (!animator.GetCurrentAnimatorStateInfo(2).IsName("Empty")
+                        && Mathf.Abs(animator.GetCurrentAnimatorStateInfo(2).normalizedTime) < 0.9f)
+                    {
+                        yield return new WaitUntil(() => Mathf.Abs(animator.GetCurrentAnimatorStateInfo(2).normalizedTime) >= 0.9);
+                        
+
+                    }
+
+                }
+
+            }
             ChangeSprites(q);
             PlayFaceAnimations(q);
-            yield return StartCoroutine(PrintText(questionText, q.question));
+            if (q.question != "")
+                yield return StartCoroutine(PrintText(questionText, q.question));
 
             yield return new WaitForSeconds(0.5f);
         }
         player.inputActive = true;
+        playerInputPack.SetActive(true);
         inputText.GetComponent<TextMeshProUGUI>().text = "";
     }
 
@@ -255,24 +298,28 @@ public class Manager : MonoBehaviour
         var animator = faceStructure.face.GetComponent<Animator>();
         if (anims.face != null)
         {
-            animator.Play(anims.face.name, anims.faceLayer);
             animator.SetFloat("FaceSpeed", anims.reverseFace ? -1 : 1);
+            animator.Play(anims.face.name, anims.faceLayer);
 
         }
 
         if (anims.eyes != null)
         {
-            animator.Play(anims.eyes.name, anims.eyesLayer);
             animator.SetFloat("EyesSpeed", anims.reverseEyes ? -1 : 1);
+            animator.Play(anims.eyes.name, anims.eyesLayer);
         }
 
         if (anims.additional != null)
+        {
             animator.Play(anims.additional.name, anims.additionalLayer);
+
+        }
     }
     public void SetNextQuestion(string input)
     {
         
         currentQuestion = DetectNextQuestion(input, currentQuestion);
+        print(currentQuestion.number);
         StartCoroutine(ManageQuestion(currentQuestion));
      
         //print(currentQuestion);
@@ -290,12 +337,12 @@ public class Manager : MonoBehaviour
             correctInput += " " + spelling.Correct(i);
         }
 
-        print(input);
+        
         input = correctInput;
-        print(correctInput);
+        
 
         QuestionAnswers nextQuestion;
-
+        print(input);
         Dictionary<int, int> scoring = new Dictionary<int, int>();
         for (int i = 0; i < currentQuestion.answers.Count; i++)
         {
@@ -341,17 +388,23 @@ public class Manager : MonoBehaviour
         sScore *= swears.scoreMultiplier;
 
         var x = scoring.Where(x => x.Value == 0);
-
-        foreach (var s in scoring)
+        var sToD = new ScoringToData
         {
-            print(s.Key + " " + s.Value);
-        }
-        print("S: " + sScore);
+            cat1 = scoring.ContainsKey(0) ? scoring[0] : -1,
+            cat2 = scoring.ContainsKey(1) ? scoring[1] : -1,
+            cat3 = scoring.ContainsKey(2) ? scoring[2] : -1,
+            cat4 = scoring.ContainsKey(3) ? scoring[3] : -1,
+            catS = sScore
+        };
+        //foreach (var s in scoring)
+        //{
+        //    print(s.Key + " " + s.Value);
+        //}
         if (sScore > 0)
         {
             nextQuestion = disgustEnding;
             if (collectData)
-                collector.AddInput(prevInput, input, nextQuestion.number, prevQuestion);
+                collector.AddInput(prevInput, input, nextQuestion.number, prevQuestion, sToD);
             return nextQuestion;
         }
         if (x.Count() == scoring.Count)
@@ -361,7 +414,7 @@ public class Manager : MonoBehaviour
             {
                 nextQuestion = n.ToList()[0].nextQuestion;
                 if (collectData)
-                    collector.AddInput(prevInput, input, nextQuestion.number, prevQuestion);
+                    collector.AddInput(prevInput, input, nextQuestion.number, prevQuestion, sToD);
                 return nextQuestion;
             }
         }
@@ -379,11 +432,11 @@ public class Manager : MonoBehaviour
 
             }
             if (collectData)
-                collector.AddInput(prevInput, input, nextQuestion.number, prevQuestion);
+                collector.AddInput(prevInput, input, nextQuestion.number, prevQuestion, sToD);
             return nextQuestion;
         }
         if (collectData)
-            collector.AddInput(prevInput, input, resEnding.number, prevQuestion);
+            collector.AddInput(prevInput, input, resEnding.number, prevQuestion, sToD);
         return resEnding; 
         
     }

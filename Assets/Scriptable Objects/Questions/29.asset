@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 29
   questions:
-  - question: "Do I? I suppose I do to some extend\u2026 Let me ask you then \u2013
-      are you human?"
+  - question: 
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
@@ -25,8 +24,28 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
-      face: {fileID: 0}
-      faceLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 7b119e51696217c459ea425d31cc4700, type: 2}
+      faceLayer: 1
+      reverseFace: 1
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: "Do I? I suppose I do to some extend\u2026 Let me ask you then \u2013
+      are you human?"
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 5f25d4c5b394844478378fb04ffd7b91, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: fdd78476411e6d646bb75f6acf269496, type: 2}
+      eyesLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 0b3e8586b7342cf4789dc0d5502a4e37, type: 2}
+      faceLayer: 1
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0

@@ -30,7 +30,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 2
   - question: "Well, let me tell you about the one who was deceived by the world
       around them. That day was full of sorrow\u2026and disappointment. \r"
     sprite:
@@ -48,7 +48,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 4
   - question: 'I had someone by my side, they were close, close enough to call them
       the FIRST STANDING NEXT TO ME, but what they desired was what I had. And what
       I had was not something they could obtain. '
@@ -67,7 +67,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 4
   - question: 'They tried to get it from me with all possible means, but I was not
       in the right to give those things up, no matter how problematic and difficult
       they were. '
@@ -86,7 +86,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 4
   - question: "They grew angrier and angrier until they have lost the last bit of
       faith they carried. That sent them into the world which is not desired by anyone
       who is alive or dead. \r"
@@ -101,11 +101,11 @@ MonoBehaviour:
       eyesLayer: 0
       reverseEyes: 0
       face: {fileID: 7400000, guid: 290344df6d3ac2b4997e915d82a703cb, type: 2}
-      faceLayer: 0
+      faceLayer: 1
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 4
   - question: 'And then came the other one, the one who was infatuated by me, the
       one who would praise me again and again behind my shoulders, telling me the
       things which I know to be the truth. '
@@ -120,11 +120,11 @@ MonoBehaviour:
       eyesLayer: 0
       reverseEyes: 0
       face: {fileID: 7400000, guid: 290344df6d3ac2b4997e915d82a703cb, type: 2}
-      faceLayer: 0
+      faceLayer: 1
       reverseFace: 1
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 4
   - question: 'That one was the SECOND NEXT TO ME, as they never were able to obtain
       the title of the first. It sent them into insanity as they were not able to
       take up the spot which they wanted. '
@@ -143,7 +143,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 4
   - question: 'And the words of praise became the cries of the one who was not chosen. '
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
@@ -160,7 +160,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 5
   - question: 'END 1: THE DESPERATE'
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
@@ -177,7 +177,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 8
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

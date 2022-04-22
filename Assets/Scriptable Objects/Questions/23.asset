@@ -24,11 +24,13 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
-      face: {fileID: 0}
-      faceLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 5758859bb2a474f43a01f1735cdc235f, type: 2}
+      faceLayer: 1
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 2
   answers:
   - categories:
     - {fileID: 11400000, guid: f8bf43473620f184fbbda007e3376945, type: 2}

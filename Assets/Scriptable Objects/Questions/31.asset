@@ -15,7 +15,24 @@ MonoBehaviour:
   number: 31
   questions:
   - question: So, does that mean then that we are the same? Because I do not believe
-      that we are. If you believe me to be human, then you are not. Look at yourself,
+      that we are.
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: 8ab1a718035a05d42a7a78b381cb34a4, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: fdd78476411e6d646bb75f6acf269496, type: 2}
+      eyesLayer: 0
+      reverseEyes: 1
+      face: {fileID: 0}
+      faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: If you believe me to be human, then you are not. Look at yourself,
       can a human really look like this?
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
@@ -24,10 +41,29 @@ MonoBehaviour:
       mouth: {fileID: 21300000, guid: ed55d896c65fa7048b6876f54666703a, type: 3}
       additional: {fileID: 0}
     animation:
-      eyes: {fileID: 0}
+      eyes: {fileID: 7400000, guid: 484f8840861fb0e46a50e31716db7350, type: 2}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
+      additional: {fileID: 0}
+      additionalLayer: 0
+    zoom: 0
+  - question: 
+    sprite:
+      face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
+      eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
+      brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
+      mouth: {fileID: 21300000, guid: ed55d896c65fa7048b6876f54666703a, type: 3}
+      additional: {fileID: 0}
+    animation:
+      eyes: {fileID: 7400000, guid: 484f8840861fb0e46a50e31716db7350, type: 2}
+      eyesLayer: 0
+      reverseEyes: 1
+      face: {fileID: 7400000, guid: 0b3e8586b7342cf4789dc0d5502a4e37, type: 2}
+      faceLayer: 1
+      reverseFace: 1
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0

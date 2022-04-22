@@ -27,7 +27,7 @@ MonoBehaviour:
       eyesLayer: 0
       reverseEyes: 0
       face: {fileID: 7400000, guid: 0b3e8586b7342cf4789dc0d5502a4e37, type: 2}
-      faceLayer: 0
+      faceLayer: 1
       reverseFace: 1
       additional: {fileID: 0}
       additionalLayer: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 8
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

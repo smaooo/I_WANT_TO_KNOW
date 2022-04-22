@@ -24,11 +24,13 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
-      face: {fileID: 0}
-      faceLayer: 0
+      reverseEyes: 0
+      face: {fileID: 7400000, guid: 290344df6d3ac2b4997e915d82a703cb, type: 2}
+      faceLayer: 1
+      reverseFace: 1
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 1
   - question: 'END 4: IT SEEMS YOU ARE STILL CLUELESS'
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
@@ -39,11 +41,13 @@ MonoBehaviour:
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
+      reverseEyes: 0
       face: {fileID: 0}
       faceLayer: 0
+      reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 8
   answers: []
   redirect: {fileID: 0}
   nextIsEnding: 1

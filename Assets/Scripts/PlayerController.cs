@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour
     private Transform leftBorder;
     [SerializeField]
     private Transform rightBorder;
-
+    [SerializeField]
+    private GameObject playerInputPack;
     private enum State { Walking, Conversation}
     [SerializeField]
     private State state = State.Conversation;
@@ -158,6 +159,7 @@ public class PlayerController : MonoBehaviour
         {
             var input = textField.text;
             textField.text = "";
+            playerInputPack.SetActive(false);
             inputActive = false;
             manager.SetNextQuestion(input);
         }

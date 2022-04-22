@@ -30,7 +30,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 1
   answers:
   - categories:
     - {fileID: 11400000, guid: b13c3bfb80160af44a30e719193180cb, type: 2}
