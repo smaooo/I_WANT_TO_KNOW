@@ -36,3 +36,11 @@ MonoBehaviour:
     score: 3
     root: 0
     variations: []
+  - word: hello
+    score: 3
+    root: 0
+    variations:
+    - good day
+    - good evening
+    - good afternoon
+    - greetings

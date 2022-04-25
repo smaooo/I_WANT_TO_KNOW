@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEditor;
+using Structures;
 
 public class Puddle : MonoBehaviour
 {
@@ -17,9 +18,11 @@ public class Puddle : MonoBehaviour
     {
         boundryPoints = this.GetComponent<PathCreator>().path.Points;
 
+        var vertecies = new List<Vertex>();
         
         foreach(var p in boundryPoints)
         {
+            vertecies.Add(new Vertex(p));
             var pos = p;
 
             pos += Vector3.up * 2;
@@ -27,6 +30,22 @@ public class Puddle : MonoBehaviour
             points.Add(pos + Vector3.down * 10);
         }
 
+        //var upperFaceTris = IncrementalTriangulationAlgorithm.TriangulatePoints(vertecies);
+        //var upMesh = new Mesh();
+        //upMesh.vertices = boundryPoints.ToArray();
+        //var upMeshtIndex = new List<int>();
+        //foreach(var t in upperFaceTris)
+        //{
+
+        //    upMeshtIndex.Add(boundryPoints.IndexOf(t.v1.position));
+        //    upMeshtIndex.Add(boundryPoints.IndexOf(t.v2.position));
+        //    upMeshtIndex.Add(boundryPoints.IndexOf(t.v3.position));
+        //}
+        //upMesh.triangles = upMeshtIndex.ToArray();
+        //upMesh.RecalculateNormals();
+        //var upG = new GameObject();
+        //upG.AddComponent<MeshFilter>().mesh = upMesh;
+        //upG.AddComponent<MeshRenderer>();
         var b = Instantiate(this.transform.GetChild(0).gameObject, this.transform);
         b.transform.position = new Vector3(b.transform.position.x, points[1].y, b.transform.position.z);
         //b.GetComponent<MeshRenderer>().enabled = true;

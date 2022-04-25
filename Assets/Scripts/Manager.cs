@@ -27,6 +27,34 @@ public class Manager : MonoBehaviour
         public float cat4;
         public float catS;
     }
+
+    [System.Serializable]
+    public struct ZoomPlaces
+    {
+        public Vector3 zoomIn;
+        public Vector3 zoomOut;
+        public Vector3 zoomInX2;
+        public Vector3 zoomInX3;
+        public Vector3 zoomInX4;
+        public Vector3 SlowZoomIn;
+        public Vector3 zoomOutX2;
+        public Vector3 zoomOutFull;
+
+        public Vector3 GetPostion(QuestionAnswers.Zoom zoom) => zoom switch
+        {
+            QuestionAnswers.Zoom.In => zoomIn,
+            QuestionAnswers.Zoom.InX2 => zoomInX2,
+            QuestionAnswers.Zoom.InX3 => zoomInX3,
+            QuestionAnswers.Zoom.InX4 => zoomInX4,
+            QuestionAnswers.Zoom.Out => zoomOut,
+            QuestionAnswers.Zoom.SlowZoomInFull => SlowZoomIn,
+            QuestionAnswers.Zoom.OutX2 => zoomOutX2,
+            QuestionAnswers.Zoom.OutFull => zoomOutFull,
+            _ => Vector3.zero
+
+        };
+        
+    }
     [SerializeField]
     private List<QuestionAnswers> questionsAnswers;
     
@@ -66,9 +94,13 @@ public class Manager : MonoBehaviour
     private State state = State.Conversation;
     [SerializeField]
     private GameObject convoCam;
+    [SerializeReference]
+    private GameObject facePack;
     [SerializeField]
     private FaceStructure faceStructure;
     private PlayerController player;
+    [SerializeField]
+    private ZoomPlaces zoomPlaces;
 
     private void Start()
     {
@@ -174,10 +206,12 @@ public class Manager : MonoBehaviour
 
     private void SetupConversation()
     {
+
         Camera.main.gameObject.SetActive(false);
         convoCam.SetActive(true);
         questionText.gameObject.SetActive(true);
         inputText.SetActive(true);
+        facePack.SetActive(true);
         if (pQ != -1)
             currentQuestion = questionsAnswers.Find(q => q.number == pQ);
         else
@@ -216,6 +250,19 @@ public class Manager : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
+
+    private IEnumerator ZoomCamera(Vector3 position)
+    {
+        float timer = 0;
+        while(Camera.main.transform.position != position)
+        {
+            yield return new WaitForEndOfFrame();
+            timer += Time.deltaTime / 10;
+
+            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, position, timer);
+        }
+    }
+
     private void UpdateCurrentWheels()
     {
         Dictionary<int, List<WheelController>> toRemove = new Dictionary<int, List<WheelController>>();
@@ -252,20 +299,15 @@ public class Manager : MonoBehaviour
         {
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Empty")
                 && Mathf.Abs(animator.GetCurrentAnimatorStateInfo(0).normalizedTime) < 0.9f)
-             
             {
                 yield return new WaitUntil(() => Mathf.Abs(animator.GetCurrentAnimatorStateInfo(0).normalizedTime) >= 0.9f);
-              
-
             }
             else
             {
                 if (!animator.GetCurrentAnimatorStateInfo(1).IsName("Empty")
                     && Mathf.Abs(animator.GetCurrentAnimatorStateInfo(1).normalizedTime) < 0.9f)
                 {
-
                     yield return new WaitUntil(() => Mathf.Abs(animator.GetCurrentAnimatorStateInfo(1).normalizedTime) >= 0.9);
-
                 }
                 else
                 {
@@ -281,6 +323,8 @@ public class Manager : MonoBehaviour
 
             }
             ChangeSprites(q);
+            if (q.zoom != QuestionAnswers.Zoom.None)
+                StartCoroutine(ZoomCamera(zoomPlaces.GetPostion(q.zoom)));
             PlayFaceAnimations(q);
             if (q.question != "")
                 yield return StartCoroutine(PrintText(questionText, q.question));

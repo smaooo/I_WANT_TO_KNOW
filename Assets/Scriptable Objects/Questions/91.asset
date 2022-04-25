@@ -15,8 +15,7 @@ MonoBehaviour:
   number: 91
   questions:
   - question: "That is not who you are meant to believe in. HAVEN\u2019T YOU READ
-      IT? HAS IT NOT TAUGHT YOU ANYTHING?? Take this, it will tell you what you need
-      to know."
+      IT? HAS IT NOT TAUGHT YOU ANYTHING?? "
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
@@ -33,9 +32,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: "That is not who you are meant to believe in. HAVEN\u2019T YOU READ
-      IT? HAS IT NOT TAUGHT YOU ANYTHING?? Take this, it will tell you what you need
-      to know."
+  - question: Take this, it will tell you what you need to know.
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
