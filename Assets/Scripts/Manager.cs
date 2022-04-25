@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine.UI;
 using SpellingCorrector;
 using DataCollector;
+using static System.StringComparison;
 
 public class Manager : MonoBehaviour
 {
@@ -393,6 +394,7 @@ public class Manager : MonoBehaviour
             var currentAnswer = currentQuestion.answers[i];
             foreach (var cat in currentAnswer.categories)
             {
+               
                 int currentScore = 0;
                 if (input.Contains(cat.word.word))
                     currentScore += cat.word.score;
@@ -402,12 +404,28 @@ public class Manager : MonoBehaviour
                         currentScore += cat.word.score;
                 foreach (var child in cat.childs)
                 {
-                    if (input.Contains(child.word))
-                        currentScore += child.score;
-                    foreach (var v in child.variations)
+                    
+                    if (child.numRepeat > 1)
                     {
-                        if (input.Contains(v))
+                        var match = from word in input
+                                    where word.Equals(child.word)
+                                    select word;
+
+                        print("repeated");
+                        if (match.Count() >= child.numRepeat)
+                        {
                             currentScore += child.score;
+                        }
+                    }
+                    else
+                    {
+                        if (input.Contains(child.word))
+                            currentScore += child.score;
+                        foreach (var v in child.variations)
+                        {
+                            if (input.Contains(v))
+                                currentScore += child.score;
+                        }
                     }
                 }
                 currentScore *= cat.scoreMultiplier;

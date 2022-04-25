@@ -8,6 +8,7 @@ public struct CatChild
     public string word;
     public int score;
     public bool root;
+    public int numRepeat;
     public List<string> variations;
 }
 
