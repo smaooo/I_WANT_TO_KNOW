@@ -16,6 +16,7 @@ MonoBehaviour:
     word: know
     score: 3
     root: 0
+    numRepeat: 0
     variations:
     - knower
   scoreMultiplier: 2
@@ -24,12 +25,20 @@ MonoBehaviour:
   - word: show
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: give
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: tell
     score: 3
     root: 0
+    numRepeat: 0
+    variations: []
+  - word: i want to know
+    score: 4
+    root: 0
+    numRepeat: 0
     variations: []

@@ -464,7 +464,7 @@ public class Manager : MonoBehaviour
             var currentAnswer = currentQuestion.answers[i];
             foreach (var cat in currentAnswer.categories)
             {
-
+                
                 int currentScore = 0;
                 if (input.Contains(cat.word.word))
                     currentScore += cat.word.score;
