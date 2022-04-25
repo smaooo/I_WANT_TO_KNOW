@@ -6,7 +6,8 @@ using TMPro;
 using UnityEngine.UI;
 using SpellingCorrector;
 using DataCollector;
-using static System.StringComparison;
+using System;
+using Random = UnityEngine.Random;
 
 public class Manager : MonoBehaviour
 {
@@ -383,71 +384,21 @@ public class Manager : MonoBehaviour
         }
 
         
-        input = correctInput;
-        
-
         QuestionAnswers nextQuestion;
-        print(input);
-        Dictionary<int, int> scoring = new Dictionary<int, int>();
-        for (int i = 0; i < currentQuestion.answers.Count; i++)
+        var wCheck = CheckInput(input, currentQuestion);
+        var check = CheckInput(correctInput, currentQuestion);
+        var scoring = new Dictionary<int, int>();
+        int sScore;
+        if (wCheck.Item1.Values.Sum() >= check.Item1.Values.Sum())
         {
-            var currentAnswer = currentQuestion.answers[i];
-            foreach (var cat in currentAnswer.categories)
-            {
-               
-                int currentScore = 0;
-                if (input.Contains(cat.word.word))
-                    currentScore += cat.word.score;
-                
-                if (cat.simCategory != "")
-                    if (input.Contains(cat.simCategory))
-                        currentScore += cat.word.score;
-                foreach (var child in cat.childs)
-                {
-                    
-                    if (child.numRepeat > 1)
-                    {
-                        var match = from word in input
-                                    where word.Equals(child.word)
-                                    select word;
-
-                        print("repeated");
-                        if (match.Count() >= child.numRepeat)
-                        {
-                            currentScore += child.score;
-                        }
-                    }
-                    else
-                    {
-                        if (input.Contains(child.word))
-                            currentScore += child.score;
-                        foreach (var v in child.variations)
-                        {
-                            if (input.Contains(v))
-                                currentScore += child.score;
-                        }
-                    }
-                }
-                currentScore *= cat.scoreMultiplier;
-
-                if (scoring.ContainsKey(i))
-                    scoring[i] += currentScore;
-                else
-                    scoring.Add(i, currentScore);
-                
-            }
-
-
+            scoring = wCheck.Item1;
+            sScore = wCheck.Item2;
         }
-        int sScore = 0;
-        foreach (var s in swears.childs)
+        else
         {
-            if (input.Contains(s.word))
-            {
-                sScore += s.score;
-            }
+            scoring = check.Item1;
+            sScore = check.Item2;
         }
-        sScore *= swears.scoreMultiplier;
 
         var x = scoring.Where(x => x.Value == 0);
         var sToD = new ScoringToData
@@ -500,6 +451,77 @@ public class Manager : MonoBehaviour
         if (collectData)
             collector.AddInput(prevInput, input, resEnding.number, prevQuestion, sToD);
         return resEnding; 
+        
+    }
+
+
+    private Tuple<Dictionary<int,int>,int> CheckInput(string input, QuestionAnswers currentQuestion)
+    {
+        var scoring = new Dictionary<int, int>();
+
+        for (int i = 0; i < currentQuestion.answers.Count; i++)
+        {
+            var currentAnswer = currentQuestion.answers[i];
+            foreach (var cat in currentAnswer.categories)
+            {
+
+                int currentScore = 0;
+                if (input.Contains(cat.word.word))
+                    currentScore += cat.word.score;
+
+                if (cat.simCategory != "")
+                    if (input.Contains(cat.simCategory))
+                        currentScore += cat.word.score;
+                foreach (var child in cat.childs)
+                {
+
+                    if (child.numRepeat > 1)
+                    {
+                        var match = from word in input
+                                    where word.Equals(child.word)
+                                    select word;
+
+                        if (match.Count() >= child.numRepeat)
+                        {
+                            currentScore += child.score;
+                        }
+                    }
+                    else
+                    {
+                        if (input.Contains(child.word))
+                            currentScore += child.score;
+                        foreach (var v in child.variations)
+                        {
+                            if (input.Contains(v))
+                                currentScore += child.score;
+                        }
+                    }
+                }
+                currentScore *= cat.scoreMultiplier;
+
+                if (scoring.ContainsKey(i))
+                    scoring[i] += currentScore;
+                else
+                    scoring.Add(i, currentScore);
+
+            }
+
+
+        }
+        int sScore = 0;
+        foreach (var s in swears.childs)
+        {
+            if (input.Contains(s.word))
+            {
+                sScore += s.score;
+            }
+        }
+        sScore *= swears.scoreMultiplier;
+
+        var result = new Tuple<Dictionary<int, int>, int>(scoring, sScore);
+
+        return result;
+
         
     }
 }
