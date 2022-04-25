@@ -20,6 +20,8 @@ public class MenuSc : MonoBehaviour
     private GameObject quitButton;
     [SerializeField]
     private RawImage fade;
+    [SerializeField]
+    private GameObject webGlVer;
 
     void Start()
     {
@@ -57,7 +59,8 @@ public class MenuSc : MonoBehaviour
                 {
                     if (Application.platform == RuntimePlatform.WebGLPlayer)
                     {
-
+                        inputActive = false;
+                        webGlVer.SetActive(true);
                     }
                     else
                     {
