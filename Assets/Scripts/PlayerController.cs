@@ -139,15 +139,20 @@ public class PlayerController : MonoBehaviour
     }
     private void CheckKeyInput()
     {
+        
         if (lastKey != 0)
         {
-            if ((lastKey >= 97 && lastKey <=122) || lastKey == 32 || lastKey == 46 || lastKey == 47
-                || lastKey == 49)
+            if ((lastKey >= 97 && lastKey <=122) || lastKey == 32 || lastKey == 46 || lastKey == 63
+                || lastKey == 33)
             {
                 textField.text += ((char)lastKey).ToString();
                 lastKey = 0;
             }
-            
+            else if (lastKey == 47)
+            {
+                textField.text += "?";
+                lastKey = 0;
+            }
             else if (lastKey == 8 && textField.text.Length > 0)
             {
                 textField.text = textField.text.Remove(textField.text.Length - 1);

@@ -29,7 +29,49 @@ public class Manager : MonoBehaviour
         public float cat4;
         public float catS;
     }
+    [System.Serializable]
+    public struct ZoomPack
+    {
+        public Vector3 position;
+        public float speedDivider;
+    }
+    [System.Serializable]
+    public struct Zooming
+    {
+        public ZoomPack zoomIn;
+        public ZoomPack zoomOut;
+        public ZoomPack zoomInX2;
+        public ZoomPack zoomInX3;
+        public ZoomPack zoomInX4;
+        public ZoomPack SlowZoomIn;
+        public ZoomPack zoomOutX2;
+        public ZoomPack zoomOutFull;
+        public Vector3 GetPostion(QuestionAnswers.Zoom zoom) => zoom switch
+        {
+            QuestionAnswers.Zoom.In => zoomIn.position,
+            QuestionAnswers.Zoom.InX2 => zoomInX2.position,
+            QuestionAnswers.Zoom.InX3 => zoomInX3.position,
+            QuestionAnswers.Zoom.InX4 => zoomInX4.position,
+            QuestionAnswers.Zoom.Out => zoomOut.position,
+            QuestionAnswers.Zoom.SlowZoomInFull => SlowZoomIn.position,
+            QuestionAnswers.Zoom.OutX2 => zoomOutX2.position,
+            QuestionAnswers.Zoom.OutFull => zoomOutFull.position,
+            _ => Vector3.zero
 
+        };
+        public float GetSpeedDivider(QuestionAnswers.Zoom zoom) => zoom switch
+        {
+            QuestionAnswers.Zoom.In => zoomIn.speedDivider,
+            QuestionAnswers.Zoom.InX2 => zoomInX2.speedDivider,
+            QuestionAnswers.Zoom.InX3 => zoomInX3.speedDivider,
+            QuestionAnswers.Zoom.InX4 => zoomInX4.speedDivider,
+            QuestionAnswers.Zoom.Out => zoomOut.speedDivider,
+            QuestionAnswers.Zoom.SlowZoomInFull => SlowZoomIn.speedDivider,
+            QuestionAnswers.Zoom.OutX2 => zoomOutX2.speedDivider,
+            QuestionAnswers.Zoom.OutFull => zoomOutFull.speedDivider,
+            _ => 1
+        };
+    }
     [System.Serializable]
     public struct ZoomPlaces
     {
@@ -102,8 +144,7 @@ public class Manager : MonoBehaviour
     private FaceStructure faceStructure;
     private PlayerController player;
     [SerializeField]
-    private ZoomPlaces zoomPlaces;
-
+    private Zooming zooming;
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -253,13 +294,13 @@ public class Manager : MonoBehaviour
         }
     }
 
-    private IEnumerator ZoomCamera(Vector3 position)
+    private IEnumerator ZoomCamera(Vector3 position,float divider, bool slowZoom = false)
     {
         float timer = 0;
-        while(Camera.main.transform.position != position)
+        while (Camera.main.transform.position != position)
         {
             yield return new WaitForEndOfFrame();
-            timer += Time.deltaTime / 10;
+            timer += Time.deltaTime / divider;
 
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, position, timer);
         }
@@ -326,7 +367,7 @@ public class Manager : MonoBehaviour
             }
             ChangeSprites(q);
             if (q.zoom != QuestionAnswers.Zoom.None)
-                StartCoroutine(ZoomCamera(zoomPlaces.GetPostion(q.zoom)));
+                StartCoroutine(ZoomCamera(zooming.GetPostion(q.zoom), zooming.GetSpeedDivider(q.zoom)));
             PlayFaceAnimations(q);
             if (q.question != "")
                 yield return StartCoroutine(PrintText(questionText, q.question));
