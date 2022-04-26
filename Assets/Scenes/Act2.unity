@@ -3906,12 +3906,12 @@ MonoBehaviour:
   - {fileID: 472781493}
   - {fileID: 1608593212}
   - {fileID: 1470438739}
-  pQ: 91
+  pQ: 8
   swears: {fileID: 11400000, guid: 77e3b913fd35cae4d88aa7a892f6a9fd, type: 2}
   disgustEnding: {fileID: 11400000, guid: f9c1c58e910e55343b51fded15f4ca86, type: 2}
   fade: {fileID: 1416936169}
   textFile: {fileID: 4900000, guid: d7300a77ff455d6498d7db4b94eb65de, type: 3}
-  collectData: 0
+  collectData: 1
   state: 1
   convoCam: {fileID: 1892707938}
   facePack: {fileID: 1832522817}
@@ -3923,26 +3923,26 @@ MonoBehaviour:
     additional: {fileID: 109483624}
   zooming:
     zoomIn:
-      position: {x: 0, y: 0, z: 0}
-      speedDivider: 0
+      position: {x: 1.482, y: 1.8, z: 5.59}
+      speedDivider: 10
     zoomOut:
-      position: {x: 0, y: 0, z: 0}
-      speedDivider: 0
+      position: {x: 1.482, y: 1.65, z: 5.31}
+      speedDivider: 10
     zoomInX2:
-      position: {x: 0, y: 0, z: 0}
-      speedDivider: 0
+      position: {x: 1.496, y: 1.8, z: 5.87}
+      speedDivider: 10
     zoomInX3:
-      position: {x: 0, y: 0, z: 0}
-      speedDivider: 0
+      position: {x: 1.503, y: 1.8, z: 6.15}
+      speedDivider: 10
     zoomInX4:
-      position: {x: 0, y: 0, z: 0}
-      speedDivider: 0
+      position: {x: 1.51, y: 1.8, z: 6.43}
+      speedDivider: 10
     SlowZoomIn:
-      position: {x: 0, y: 0, z: 0}
-      speedDivider: 0
+      position: {x: 1.51, y: 1.8, z: 6.64}
+      speedDivider: 10
     zoomOutX2:
-      position: {x: 0, y: 0, z: 0}
-      speedDivider: 0
+      position: {x: 1.482, y: 1.8, z: 5.03}
+      speedDivider: 10
     zoomOutFull:
       position: {x: 1.51, y: 1.8, z: -1241}
       speedDivider: 10

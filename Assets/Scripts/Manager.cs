@@ -282,7 +282,6 @@ public class Manager : MonoBehaviour
 
                 else if (x.Contains("24"))
                     textField.text += "<size=24>";
-                print(x);
                 continue;
             }
             if (t == '>')
@@ -367,11 +366,10 @@ public class Manager : MonoBehaviour
 
     private IEnumerator ManageQuestion(QuestionAnswers question)
     {
-        yield return null;
         var animator = faceStructure.face.GetComponent<Animator>();
         foreach (var q in question.questions)
         {
-            
+            print(question.questions.IndexOf(q));
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Empty")
                 && Mathf.Abs(animator.GetCurrentAnimatorStateInfo(0).normalizedTime) < 0.9f)
             {
@@ -390,13 +388,14 @@ public class Manager : MonoBehaviour
                         && Mathf.Abs(animator.GetCurrentAnimatorStateInfo(2).normalizedTime) < 0.9f)
                     {
                         yield return new WaitUntil(() => Mathf.Abs(animator.GetCurrentAnimatorStateInfo(2).normalizedTime) >= 0.9);
-                        
+
 
                     }
 
                 }
 
             }
+
             ChangeSprites(q);
             if (q.zoom != QuestionAnswers.Zoom.None)
                 StartCoroutine(ZoomCamera(zooming.GetPostion(q.zoom), zooming.GetSpeedDivider(q.zoom)));
@@ -439,6 +438,8 @@ public class Manager : MonoBehaviour
                 }
             }
             yield return new WaitForSeconds(1.5f);
+
+            
         }
         player.inputActive = true;
         playerInputPack.SetActive(true);
@@ -451,15 +452,29 @@ public class Manager : MonoBehaviour
         var animator = faceStructure.face.GetComponent<Animator>();
         if (anims.face != null)
         {
-            animator.SetFloat("FaceSpeed", anims.reverseFace ? -1 : 1);
-            animator.Play(anims.face.name, anims.faceLayer);
+            if (anims.reverseFace)
+            {
+                animator.Play(anims.face.name+"R", anims.faceLayer);
+            }
+            else
+            {
+                animator.Play(anims.face.name, anims.faceLayer);
+            }
+  
 
         }
 
         if (anims.eyes != null)
         {
-            animator.SetFloat("EyesSpeed", anims.reverseEyes ? -1 : 1);
-            animator.Play(anims.eyes.name, anims.eyesLayer);
+            if (anims.reverseEyes)
+            {
+                animator.Play(anims.eyes.name + "R", anims.eyesLayer);
+            }
+            else
+            {
+                animator.Play(anims.eyes.name, anims.eyesLayer);
+            }
+           
         }
 
         if (anims.additional != null)
