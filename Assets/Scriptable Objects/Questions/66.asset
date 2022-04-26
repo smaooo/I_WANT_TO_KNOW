@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 66
   questions:
-  - question: How radical. What do humans do with monsters?
+  - question: How radical. What do humans do with such monsters?
     sprite:
       face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
       eyes: {fileID: 21300000, guid: 623b0a05c0091e6449e63d8c4579094e, type: 3}

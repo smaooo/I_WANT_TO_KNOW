@@ -16,6 +16,8 @@ MonoBehaviour:
     word: demanding
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   scoreMultiplier: 1
   simCategory: 
@@ -23,40 +25,66 @@ MonoBehaviour:
   - word: want
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: demand
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: need
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: wish
     score: 1
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: require
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: desire
     score: 1
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: do
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: give
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: tell
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: show
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: help
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []

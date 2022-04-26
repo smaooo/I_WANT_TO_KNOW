@@ -16,6 +16,8 @@ MonoBehaviour:
     word: human
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations:
     - humanness
     - humaneness
@@ -29,37 +31,64 @@ MonoBehaviour:
   - word: being
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: person
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: mortal
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: earthborn
     score: 1
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: being
     score: 1
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: guy
     score: 1
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: man
     score: 1
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: person
     score: 1
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations:
     - personage
   - word: communication
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
+  - word: feeling
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations:
+    - feel
+    - understand
+    - sympathize

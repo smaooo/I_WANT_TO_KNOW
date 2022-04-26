@@ -26,8 +26,8 @@ MonoBehaviour:
   - word: please
     score: 3
     root: 0
-    numRepeat: 2
-    maxRepeat: 3
+    numRepeat: 1
+    maxRepeat: 2
     variations: []
   - word: pray
     score: 3
@@ -53,3 +53,38 @@ MonoBehaviour:
     numRepeat: 0
     maxRepeat: 0
     variations: []
+  - word: need
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: require
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: ask
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: sake
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: help
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations:
+    - aid
+    - helping
+    - assist
+    - assisting
+    - aiding

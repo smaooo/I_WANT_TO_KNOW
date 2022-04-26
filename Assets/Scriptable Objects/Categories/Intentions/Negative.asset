@@ -17,6 +17,7 @@ MonoBehaviour:
     score: 3
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   scoreMultiplier: 1
   simCategory: 
@@ -25,9 +26,39 @@ MonoBehaviour:
     score: 3
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: dont
     score: 3
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
+  - word: not at all
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: 'not '
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: wouldnt
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations:
+    - couldnt
+    - shouldnt
+  - word: never
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations:
+    - couldnt
+    - shouldnt

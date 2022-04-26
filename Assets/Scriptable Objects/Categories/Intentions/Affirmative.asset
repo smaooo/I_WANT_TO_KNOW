@@ -16,6 +16,8 @@ MonoBehaviour:
     word: affirmative
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   scoreMultiplier: 1
   simCategory: 
@@ -23,41 +25,79 @@ MonoBehaviour:
   - word: yes
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: yeah
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: ye
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: aha
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: for sure
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: surely
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: definitely
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: hundred
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations:
     - 100
   - word: absolutely
-    score: 3
+    score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: most likely
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: precisely
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: i am
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: i have
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []

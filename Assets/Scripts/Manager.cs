@@ -123,9 +123,14 @@ public class Manager : MonoBehaviour
     public string num15;
     private bool printing = false;
     private bool printWhole = false;
+    private int preveQuestionNumber = -2;
+    [SerializeField]
+    private List<SpriteRenderer> stones;
+
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        player.state = state;
         if (collectData)
         {
             collector = new Collector();
@@ -226,8 +231,20 @@ public class Manager : MonoBehaviour
         {
             SetupConversation();
         }
-    }
 
+        CheckSortingOrder();
+    }
+    private void CheckSortingOrder()
+    {
+        foreach (var s in stones)
+        {
+            float dot = Vector3.Dot(player.transform.forward, (s.transform.position - player.transform.position).normalized);
+            if (dot < 0)
+            {
+                //s.sortingOrder
+            }
+        }
+    }
     private void SetupConversation()
     {
 
@@ -444,6 +461,7 @@ public class Manager : MonoBehaviour
         if (currentQuestion.redirect != null)
         {
             inputText.GetComponent<TextMeshProUGUI>().text = "";
+            preveQuestionNumber = currentQuestion.number;
             currentQuestion = currentQuestion.redirect;
             StartCoroutine(ManageQuestion(currentQuestion));
         }
@@ -496,7 +514,7 @@ public class Manager : MonoBehaviour
     }
     public void SetNextQuestion(string input)
     {
-        
+        preveQuestionNumber = currentQuestion.number;
         currentQuestion = DetectNextQuestion(input, currentQuestion);
         print(currentQuestion.number);
         StartCoroutine(ManageQuestion(currentQuestion));
@@ -591,26 +609,46 @@ public class Manager : MonoBehaviour
     private Tuple<Dictionary<int,int>,int> CheckInput(string input, QuestionAnswers currentQuestion)
     {
         var scoring = new Dictionary<int, int>();
-
-        for (int i = 0; i < currentQuestion.answers.Count; i++)
+        int max = 0;
+        var array = input.Split(' ');
+        if (currentQuestion.number == 12 && preveQuestionNumber == 7)
+        {
+            max = currentQuestion.answers.Count;
+        }
+        else if (currentQuestion.number == 12 && preveQuestionNumber != 7)
+        {
+            max = 3;
+        }
+        else
+        {
+            max = currentQuestion.answers.Count;
+        }
+        for (int i = 0; i < max; i++)
         {
             var currentAnswer = currentQuestion.answers[i];
             foreach (var cat in currentAnswer.categories)
             {
                 
                 int currentScore = 0;
-                if (input.Contains(cat.word.word))
+                if (array.Contains(cat.word.word))
+                {
                     currentScore += cat.word.score;
+                        
+                    
+                }
                 foreach (var v in cat.word.variations)
                 {
-                    if (input.Contains(v))
+                    if (array.Contains(v))
                     {
                         currentScore += cat.word.score;
                     }
                 }
                 if (cat.simCategory != "")
-                    if (input.Contains(cat.simCategory))
+                {
+                    if (array.Contains(cat.simCategory))
                         currentScore += cat.word.score;
+                    
+                }
                 foreach (var child in cat.childs)
                 {
 
@@ -618,9 +656,7 @@ public class Manager : MonoBehaviour
                     {
                         var rep = input.Split(' ');
                         var match = rep.Where(x => x == child.word);
-                        //var match = from word in input
-                        //            where word.Equals(child.word)
-                        //            select word;
+                       
                         if (match.Count() >= child.numRepeat && match.Count() < child.maxRepeat)
                         {
                             currentScore += child.score;
@@ -628,12 +664,19 @@ public class Manager : MonoBehaviour
                     }
                     else
                     {
-                        if (input.Contains(child.word))
+                        if (array.Contains(child.word))
+                        {
                             currentScore += child.score;
+
+                        }
                         foreach (var v in child.variations)
                         {
-                            if (input.Contains(v))
+                            if (array.Contains(v))
+                            {
                                 currentScore += child.score;
+                                print(v);  
+
+                            }
                         }
                     }
                 }
@@ -642,6 +685,8 @@ public class Manager : MonoBehaviour
                     scoring[i] += currentScore;
                 else
                     scoring.Add(i, currentScore);
+
+               
 
             }
 

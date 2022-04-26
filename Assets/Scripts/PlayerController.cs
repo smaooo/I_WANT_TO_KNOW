@@ -28,9 +28,9 @@ public class PlayerController : MonoBehaviour
     private Transform rightBorder;
     [SerializeField]
     private GameObject playerInputPack;
-    private enum State { Walking, Conversation}
+    
     [SerializeField]
-    private State state = State.Conversation;
+    public Manager.State state = Manager.State.Conversation;
     void Start()
     {
         animator = this.GetComponent<Animator>();
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (inputActive && !trainingMode && state == State.Conversation)
+        if (inputActive && !trainingMode && state == Manager.State.Conversation)
         {
             CheckKeyInput();
             
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (state == State.Walking)
+        if (state == Manager.State.Walking)
             Move();
     }
 
@@ -83,7 +83,8 @@ public class PlayerController : MonoBehaviour
         Vector3 leftRight = Vector3.zero;
         if (Input.GetAxisRaw("Vertical") > 0)
         {
-            if (Mathf.Abs(this.transform.position.x - leftBorder.transform.position.x) < 2)
+            
+            if (Mathf.Abs(this.transform.position.x - leftBorder.transform.position.x) < 6)
             {
                 if (Input.GetAxisRaw("Horizontal") > 0)
                 {
@@ -99,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
             }
 
-            else if (Mathf.Abs(this.transform.position.x - rightBorder.transform.position.x) < 2)
+            else if (Mathf.Abs(this.transform.position.x - rightBorder.transform.position.x) < 6)
             {
                 if (Input.GetAxisRaw("Horizontal") < 0)
                 {

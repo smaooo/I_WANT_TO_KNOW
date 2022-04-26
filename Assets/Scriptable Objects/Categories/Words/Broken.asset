@@ -17,6 +17,7 @@ MonoBehaviour:
     score: 4
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations:
     - break
     - brokenly
@@ -28,49 +29,59 @@ MonoBehaviour:
     score: 3
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: reflection
-    score: 3
+    score: 4
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: defective
     score: 3
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: water
     score: 2
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: fish
     score: 1
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: busted
     score: 1
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: fracture
     score: 1
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: fragment
     score: 1
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: shatter
     score: 1
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: smash
     score: 1
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []

@@ -15,7 +15,7 @@ MonoBehaviour:
   number: 22
   questions: []
   answers: []
-  redirect: {fileID: 11400000, guid: bf8304e1458eb274ba0a4d9521c49698, type: 2}
+  redirect: {fileID: 11400000, guid: a8e8366c50292dd4f9e6134eb1282b53, type: 2}
   nextIsEnding: 0
   ending: 0
   isEnding: 0

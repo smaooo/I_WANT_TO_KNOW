@@ -61,7 +61,7 @@ MonoBehaviour:
       eyesLayer: 0
       reverseEyes: 0
       face: {fileID: 7400000, guid: 7b119e51696217c459ea425d31cc4700, type: 2}
-      faceLayer: 0
+      faceLayer: 1
       reverseFace: 1
       additional: {fileID: 0}
       additionalLayer: 0

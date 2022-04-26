@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
   word:
     word: world
-    score: 3
+    score: 4
     root: 0
+    numRepeat: 0
     variations: []
   scoreMultiplier: 1
   simCategory: 
@@ -23,20 +24,25 @@ MonoBehaviour:
   - word: fish
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: pond
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: around
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: view
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: wheel
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
