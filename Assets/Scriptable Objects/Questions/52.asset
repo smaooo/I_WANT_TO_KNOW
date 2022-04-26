@@ -17,10 +17,10 @@ MonoBehaviour:
   - question: 'Then you are not the GOD OF THIS WORLD. '
     sprite:
       face: {fileID: 21300000, guid: 89676ad068ef368419209a66fa02ea97, type: 3}
-      eyes: {fileID: 0}
+      eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
       brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
       mouth: {fileID: 21300000, guid: ed55d896c65fa7048b6876f54666703a, type: 3}
-      additional: {fileID: 0}
+      additional: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
@@ -34,10 +34,10 @@ MonoBehaviour:
   - question: 'END 11: FALSE GOD'
     sprite:
       face: {fileID: 21300000, guid: 89676ad068ef368419209a66fa02ea97, type: 3}
-      eyes: {fileID: 0}
+      eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
       brows: {fileID: 21300000, guid: f9fce3759ab0f60418c0d74a550adc03, type: 3}
       mouth: {fileID: 21300000, guid: ed55d896c65fa7048b6876f54666703a, type: 3}
-      additional: {fileID: 0}
+      additional: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0

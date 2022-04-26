@@ -268,13 +268,58 @@ public class Manager : MonoBehaviour
 
         yield return new WaitForSeconds(waitTime);
         textField.text = "";
-        foreach (var t in text)
+        bool meta = false;
+        for (int i = 0; i < text.Length; i++)
         {
-            
+            var t = text[i];
+            if (t == '<')
+            {
+                var x = text.Substring(i, 10);
+
+                meta = true;
+                if (x.Contains("30"))
+                    textField.text += "<size=30>";
+
+                else if (x.Contains("24"))
+                    textField.text += "<size=24>";
+                print(x);
+                continue;
+            }
+            if (t == '>')
+            {
+                meta = false;
+                continue;
+            }
+            if (meta) continue;
             if (printWhole) break;
             textField.text += t;
             yield return new WaitForSeconds(0.05f);
         }
+        //foreach (var t in text)
+        //{
+        //    if (t == '<')
+        //    {
+        //        var x = text.Substring(text.IndexOf(t), text.IndexOf(t) + 10);
+
+        //        meta = true;
+        //        if (x.Contains("30"))
+        //            textField.text += "<size=30>";
+
+        //        else if (x.Contains("24"))
+        //            textField.text += "<size=24>";
+        //        print(x);
+        //        continue;
+        //    }
+        //    if (t == '>')
+        //    {
+        //        meta = false;
+        //        continue;
+        //    }
+        //    if (meta) continue;
+        //    if (printWhole) break;
+        //    textField.text += t;
+        //    yield return new WaitForSeconds(0.05f);
+        //}
         textField.text = text;
         printWhole = false;
         printing = false;
@@ -393,7 +438,7 @@ public class Manager : MonoBehaviour
                     yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
                 }
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1.5f);
         }
         player.inputActive = true;
         playerInputPack.SetActive(true);

@@ -17,10 +17,10 @@ MonoBehaviour:
   - question: The humans standing under you are truly MISFORTUNATE.
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
-      eyes: {fileID: 0}
+      eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
       brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
       mouth: {fileID: 21300000, guid: 6a14d75552401cf4789147d55cb7c264, type: 3}
-      additional: {fileID: 0}
+      additional: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
@@ -34,10 +34,10 @@ MonoBehaviour:
   - question: 'END 13: THE ONE WHO SOWS MISFORTUNE'
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
-      eyes: {fileID: 0}
+      eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
       brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
       mouth: {fileID: 21300000, guid: 6a14d75552401cf4789147d55cb7c264, type: 3}
-      additional: {fileID: 0}
+      additional: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0

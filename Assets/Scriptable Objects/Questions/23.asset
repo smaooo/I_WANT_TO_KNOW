@@ -20,7 +20,7 @@ MonoBehaviour:
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
       brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
       mouth: {fileID: 21300000, guid: fba8dc66e9652994cba102652e91608b, type: 3}
-      additional: {fileID: 0}
+      additional: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0

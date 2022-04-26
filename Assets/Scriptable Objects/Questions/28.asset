@@ -19,10 +19,10 @@ MonoBehaviour:
       all.
     sprite:
       face: {fileID: 21300000, guid: c984e37db7f73ce41ad5d31cbd309aeb, type: 3}
-      eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
-      additional: {fileID: 0}
+      eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
+      brows: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
+      mouth: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
+      additional: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0
@@ -36,10 +36,10 @@ MonoBehaviour:
   - question: 'END 39: THE ONE WHO COMMANDS FISH'
     sprite:
       face: {fileID: 21300000, guid: c984e37db7f73ce41ad5d31cbd309aeb, type: 3}
-      eyes: {fileID: 0}
-      brows: {fileID: 0}
-      mouth: {fileID: 0}
-      additional: {fileID: 0}
+      eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
+      brows: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
+      mouth: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
+      additional: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
     animation:
       eyes: {fileID: 0}
       eyesLayer: 0

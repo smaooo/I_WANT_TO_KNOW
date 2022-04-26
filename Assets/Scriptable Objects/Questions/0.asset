@@ -21,7 +21,7 @@ MonoBehaviour:
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
       brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
       mouth: {fileID: 21300000, guid: 8ab1a718035a05d42a7a78b381cb34a4, type: 3}
-      additional: {fileID: 0}
+      additional: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
     animation:
       eyes: {fileID: 7400000, guid: 6b26f199a22eff54389fd5e72846dd2c, type: 2}
       eyesLayer: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
       brows: {fileID: 21300000, guid: 19015d5f3687d77468a1138fe2e1c9db, type: 3}
       mouth: {fileID: 21300000, guid: 8ab1a718035a05d42a7a78b381cb34a4, type: 3}
-      additional: {fileID: 0}
+      additional: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
     animation:
       eyes: {fileID: 7400000, guid: 6b26f199a22eff54389fd5e72846dd2c, type: 2}
       eyesLayer: 0
