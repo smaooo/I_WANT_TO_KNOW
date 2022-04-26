@@ -72,37 +72,11 @@ public class Manager : MonoBehaviour
             _ => 1
         };
     }
-    [System.Serializable]
-    public struct ZoomPlaces
-    {
-        public Vector3 zoomIn;
-        public Vector3 zoomOut;
-        public Vector3 zoomInX2;
-        public Vector3 zoomInX3;
-        public Vector3 zoomInX4;
-        public Vector3 SlowZoomIn;
-        public Vector3 zoomOutX2;
-        public Vector3 zoomOutFull;
-
-        public Vector3 GetPostion(QuestionAnswers.Zoom zoom) => zoom switch
-        {
-            QuestionAnswers.Zoom.In => zoomIn,
-            QuestionAnswers.Zoom.InX2 => zoomInX2,
-            QuestionAnswers.Zoom.InX3 => zoomInX3,
-            QuestionAnswers.Zoom.InX4 => zoomInX4,
-            QuestionAnswers.Zoom.Out => zoomOut,
-            QuestionAnswers.Zoom.SlowZoomInFull => SlowZoomIn,
-            QuestionAnswers.Zoom.OutX2 => zoomOutX2,
-            QuestionAnswers.Zoom.OutFull => zoomOutFull,
-            _ => Vector3.zero
-
-        };
-        
-    }
+   
     [SerializeField]
     private List<QuestionAnswers> questionsAnswers;
-    
-    private QuestionAnswers currentQuestion;
+    [HideInInspector]
+    public QuestionAnswers currentQuestion;
     [SerializeField]
     private TextMeshProUGUI questionText;
     [SerializeField]
@@ -145,6 +119,9 @@ public class Manager : MonoBehaviour
     private PlayerController player;
     [SerializeField]
     private Zooming zooming;
+    [HideInInspector]
+    public string num15;
+
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -340,6 +317,7 @@ public class Manager : MonoBehaviour
         var animator = faceStructure.face.GetComponent<Animator>();
         foreach (var q in question.questions)
         {
+            
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Empty")
                 && Mathf.Abs(animator.GetCurrentAnimatorStateInfo(0).normalizedTime) < 0.9f)
             {
@@ -370,8 +348,40 @@ public class Manager : MonoBehaviour
                 StartCoroutine(ZoomCamera(zooming.GetPostion(q.zoom), zooming.GetSpeedDivider(q.zoom)));
             PlayFaceAnimations(q);
             if (q.question != "")
-                yield return StartCoroutine(PrintText(questionText, q.question));
+            {
+                string output = q.question;
+                if (question.number == 15)
+                {
+                    
+                    if (question.questions.IndexOf(q) == 1 || question.questions.IndexOf(q) == 3 
+                        || question.questions.IndexOf(q) == 5)
+                    {
+                        yield return StartCoroutine(PrintText(player.textField, output));
+                        yield return new WaitForSeconds(1);
+                        player.textField.text = "";
+                        playerInputPack.SetActive(false);
+                    }
+                    else
+                    {
+                        yield return StartCoroutine(PrintText(questionText, output));
 
+                    }
+
+                }
+
+
+            }
+
+            if (question.number == 15)
+            {
+                if (question.questions.IndexOf(q) == 0 || question.questions.IndexOf(q) == 2 
+                    || question.questions.IndexOf(q) == 4)
+                {
+                    playerInputPack.SetActive(true);
+                    player.inputActive = true;
+                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
+                }
+            }
             yield return new WaitForSeconds(0.5f);
         }
         player.inputActive = true;

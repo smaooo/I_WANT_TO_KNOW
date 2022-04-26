@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI textField;
     private int lastKey;
+    [HideInInspector]
     public bool inputActive = false;
     private Manager manager;
     new private Rigidbody rigidbody;
@@ -162,11 +163,16 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            var input = textField.text;
-            textField.text = "";
-            playerInputPack.SetActive(false);
             inputActive = false;
-            manager.SetNextQuestion(input);
+            if (manager.currentQuestion.number != 15)
+            {
+                var input = textField.text;
+                manager.SetNextQuestion(input);
+                playerInputPack.SetActive(false);
+
+            }
+            
+            textField.text = "";
         }
     }
 

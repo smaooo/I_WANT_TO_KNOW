@@ -80,9 +80,7 @@ MonoBehaviour:
     relatedQuestionNum: 14
     nextQuestion: {fileID: 11400000, guid: 852dcd606deb16e4b8f77cc4446c861f, type: 2}
   - categories:
-    - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
-    - {fileID: 11400000, guid: 99a257859b7c7474eb9fc4900b45e9d7, type: 2}
-    - {fileID: 11400000, guid: 458efd5f0c5da5244854dc42d00d36e4, type: 2}
+    - {fileID: 11400000, guid: 4b5ceabd154efd2458b435edb469b749, type: 2}
     helpers: []
     relatedQuestionNum: 15
     nextQuestion: {fileID: 11400000, guid: fb9bc0a8f11a8d34d9ead29b2c15ed2d, type: 2}
