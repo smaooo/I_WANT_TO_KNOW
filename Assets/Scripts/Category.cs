@@ -9,6 +9,7 @@ public struct CatChild
     public int score;
     public bool root;
     public int numRepeat;
+    public int maxRepeat;
     public List<string> variations;
 }
 

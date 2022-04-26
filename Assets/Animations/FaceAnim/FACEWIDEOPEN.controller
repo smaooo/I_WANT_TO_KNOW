@@ -888,13 +888,13 @@ AnimatorController:
     m_DefaultFloat: 1
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: FaceSpeed
     m_Type: 1
     m_DefaultFloat: 1
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Eyes
@@ -958,16 +958,16 @@ AnimatorStateMachine:
     m_Position: {x: 190, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5165675380895318493}
-    m_Position: {x: 290, y: -20, z: 0}
+    m_Position: {x: 650, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9148880679327867090}
-    m_Position: {x: 530, y: -40, z: 0}
+    m_Position: {x: 660, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7137820751764329347}
-    m_Position: {x: 530, y: -130, z: 0}
+    m_Position: {x: 630, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 168090886603758168}
-    m_Position: {x: 570, y: 270, z: 0}
+    m_Position: {x: 670, y: 210, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

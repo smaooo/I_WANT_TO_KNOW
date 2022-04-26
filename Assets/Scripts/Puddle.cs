@@ -14,6 +14,7 @@ public class Puddle : MonoBehaviour
     [SerializeField]
     private Material whiteMaterial;
     private List<Vector3> bounds = new List<Vector3>();
+    private List<Vector3> meshPoints;
     void Start()
     {
         boundryPoints = this.GetComponent<PathCreator>().path.Points;
@@ -22,40 +23,47 @@ public class Puddle : MonoBehaviour
         bounds.Add(new Vector3(this.transform.position.x, boundryPoints[0].y, this.transform.position.z - 100));
         bounds.Add(new Vector3(this.transform.position.x - 100, boundryPoints[0].y, this.transform.position.z));
         bounds.Add(new Vector3(this.transform.position.x - 100, boundryPoints[0].y, this.transform.position.z));
-
+        var meshPoints = new List<Vector3>(boundryPoints);
+        meshPoints.AddRange(bounds);
         var vertecies = new List<Vertex>();
         
         foreach(var p in boundryPoints)
         {
-            vertecies.Add(new Vertex(p));
             var pos = p;
 
             pos += Vector3.up * 2;
             points.Add(pos);
             points.Add(pos + Vector3.down * 10);
         }
+        foreach (var p in meshPoints)
+        {
+            vertecies.Add(new Vertex(p));
+        }
         foreach (var bo in bounds)
         {
             vertecies.Add(new Vertex(bo));
         }
-        var upperFaceTris = IncrementalTriangulationAlgorithm.TriangulatePoints(vertecies);
-        var upMesh = new Mesh();
-        upMesh.vertices = boundryPoints.ToArray();
-        var upMeshtIndex = new List<int>();
-        foreach (var t in upperFaceTris)
-        {
-
-            upMeshtIndex.Add(boundryPoints.IndexOf(t.v1.position));
-            upMeshtIndex.Add(boundryPoints.IndexOf(t.v2.position));
-            upMeshtIndex.Add(boundryPoints.IndexOf(t.v3.position));
+        print(vertecies.Count);
 
 
-        }
-        upMesh.triangles = upMeshtIndex.ToArray();
-        upMesh.RecalculateNormals();
-        var upG = new GameObject();
-        upG.AddComponent<MeshFilter>().mesh = upMesh;
-        upG.AddComponent<MeshRenderer>();
+        //var upperFaceTris = IncrementalTriangulationAlgorithm.TriangulatePoints(vertecies);
+        //var upMesh = new Mesh();
+        //upMesh.vertices = meshPoints.ToArray();
+        //var upMeshtIndex = new List<int>();
+        //foreach (var t in upperFaceTris)
+        //{
+
+        //    upMeshtIndex.Add(meshPoints.IndexOf(t.v1.position));
+        //    upMeshtIndex.Add(meshPoints.IndexOf(t.v2.position));
+        //    upMeshtIndex.Add(meshPoints.IndexOf(t.v3.position));
+
+
+        //}
+        //upMesh.triangles = upMeshtIndex.ToArray();
+        //upMesh.RecalculateNormals();
+        //var upG = new GameObject();
+        //upG.AddComponent<MeshFilter>().mesh = upMesh;
+        //upG.AddComponent<MeshRenderer>();
 
 
         var b = Instantiate(this.transform.GetChild(0).gameObject, this.transform);
@@ -101,5 +109,17 @@ public class Puddle : MonoBehaviour
         
     }
 
-    
+    private void OnDrawGizmos()
+    {
+        if (meshPoints != null)
+        {
+            foreach (var p in meshPoints)
+            {
+                print("ASDS");
+                Gizmos.DrawSphere(p, 1);
+
+            }
+
+        }
+    }
 }

@@ -616,11 +616,14 @@ public class Manager : MonoBehaviour
 
                     if (child.numRepeat > 1)
                     {
-                        var match = from word in input
-                                    where word.Equals(child.word)
-                                    select word;
-
-                        if (match.Count() >= child.numRepeat)
+                        var rep = input.Split(' ');
+                        var match = rep.Where(x => x == child.word);
+                        //var match = from word in input
+                        //            where word.Equals(child.word)
+                        //            select word;
+                        print(input.Contains(child.word));
+                        print("REP: "+ match.Count());
+                        if (match.Count() >= child.numRepeat && match.Count() < child.maxRepeat)
                         {
                             currentScore += child.score;
                         }
