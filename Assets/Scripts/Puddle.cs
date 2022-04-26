@@ -18,10 +18,10 @@ public class Puddle : MonoBehaviour
     {
         boundryPoints = this.GetComponent<PathCreator>().path.Points;
 
-        bounds.Add(new Vector3(this.transform.position.x + 100, boundryPoints[0].y, this.transform.position.z + 100));
-        bounds.Add(new Vector3(this.transform.position.x + 100, boundryPoints[0].y, this.transform.position.z - 100));
-        bounds.Add(new Vector3(this.transform.position.x - 100, boundryPoints[0].y, this.transform.position.z + 100));
-        bounds.Add(new Vector3(this.transform.position.x - 100, boundryPoints[0].y, this.transform.position.z - 100));
+        bounds.Add(new Vector3(this.transform.position.x, boundryPoints[0].y, this.transform.position.z + 100));
+        bounds.Add(new Vector3(this.transform.position.x, boundryPoints[0].y, this.transform.position.z - 100));
+        bounds.Add(new Vector3(this.transform.position.x - 100, boundryPoints[0].y, this.transform.position.z));
+        bounds.Add(new Vector3(this.transform.position.x - 100, boundryPoints[0].y, this.transform.position.z));
 
         var vertecies = new List<Vertex>();
         
@@ -34,10 +34,10 @@ public class Puddle : MonoBehaviour
             points.Add(pos);
             points.Add(pos + Vector3.down * 10);
         }
-        //foreach(var bo in bounds)
-        //{
-        //    vertecies.Add(new Vertex(bo));
-        //}
+        foreach (var bo in bounds)
+        {
+            vertecies.Add(new Vertex(bo));
+        }
         var upperFaceTris = IncrementalTriangulationAlgorithm.TriangulatePoints(vertecies);
         var upMesh = new Mesh();
         upMesh.vertices = boundryPoints.ToArray();
@@ -49,15 +49,13 @@ public class Puddle : MonoBehaviour
             upMeshtIndex.Add(boundryPoints.IndexOf(t.v2.position));
             upMeshtIndex.Add(boundryPoints.IndexOf(t.v3.position));
 
-            Debug.DrawRay(t.v1.position, t.v2.position, Color.red, 100);
-            Debug.DrawRay(t.v2.position, t.v3.position, Color.red, 100);
-            Debug.DrawRay(t.v3.position, t.v1.position, Color.red,100);
+
         }
-        //upMesh.triangles = upMeshtIndex.ToArray();
-        //upMesh.RecalculateNormals();
-        //var upG = new GameObject();
-        //upG.AddComponent<MeshFilter>().mesh = upMesh;
-        //upG.AddComponent<MeshRenderer>();
+        upMesh.triangles = upMeshtIndex.ToArray();
+        upMesh.RecalculateNormals();
+        var upG = new GameObject();
+        upG.AddComponent<MeshFilter>().mesh = upMesh;
+        upG.AddComponent<MeshRenderer>();
 
 
         var b = Instantiate(this.transform.GetChild(0).gameObject, this.transform);

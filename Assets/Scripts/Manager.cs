@@ -441,9 +441,20 @@ public class Manager : MonoBehaviour
 
             
         }
-        player.inputActive = true;
-        playerInputPack.SetActive(true);
-        inputText.GetComponent<TextMeshProUGUI>().text = "";
+        if (currentQuestion.redirect != null)
+        {
+            inputText.GetComponent<TextMeshProUGUI>().text = "";
+            currentQuestion = currentQuestion.redirect;
+            StartCoroutine(ManageQuestion(currentQuestion));
+        }
+        else
+        {
+
+            player.inputActive = true;
+            playerInputPack.SetActive(true);
+            inputText.GetComponent<TextMeshProUGUI>().text = "";
+
+        }
     }
 
     private void PlayFaceAnimations(QuestionAnswers.QuestionSprite question)
@@ -495,7 +506,7 @@ public class Manager : MonoBehaviour
 
     public QuestionAnswers DetectNextQuestion(string input, QuestionAnswers currentQuestion)
     {
-
+        
         int prevQuestion = currentQuestion.number;
         string prevInput = input;
         string correctInput = "";
@@ -626,7 +637,6 @@ public class Manager : MonoBehaviour
                     }
                 }
                 currentScore *= cat.scoreMultiplier;
-                print(i + " " + currentScore);
                 if (scoring.ContainsKey(i))
                     scoring[i] += currentScore;
                 else
