@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
   word:
     word: love
-    score: 3
+    score: 4
     root: 0
+    numRepeat: 0
     variations: []
   scoreMultiplier: 1
   simCategory: 
@@ -23,62 +24,77 @@ MonoBehaviour:
   - word: feeling
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: like
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: affection
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: intimacy
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: attachment
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: warmth
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: cherish
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: devote
     score: 1
     root: 0
+    numRepeat: 0
     variations:
     - devotedness
     - devotion
   - word: fondness
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: passion
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: prize
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: treasure
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: appreciate
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: value
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: heart
     score: 2
     root: 0
+    numRepeat: 0
     variations: []

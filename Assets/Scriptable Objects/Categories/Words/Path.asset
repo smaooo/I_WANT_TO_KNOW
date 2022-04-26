@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word:
     word: path
-    score: 3
+    score: 4
     root: 0
+    numRepeat: 0
     variations:
     - pathway
   scoreMultiplier: 1
@@ -24,33 +25,41 @@ MonoBehaviour:
   - word: way
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: route
     score: 3
     root: 0
+    numRepeat: 0
     variations:
     - routeway
   - word: wave
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: direction
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: guide
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: course
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: line
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: track
     score: 1
     root: 0
+    numRepeat: 0
     variations: []

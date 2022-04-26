@@ -3906,7 +3906,7 @@ MonoBehaviour:
   - {fileID: 472781493}
   - {fileID: 1608593212}
   - {fileID: 1470438739}
-  pQ: 8
+  pQ: -1
   swears: {fileID: 11400000, guid: 77e3b913fd35cae4d88aa7a892f6a9fd, type: 2}
   disgustEnding: {fileID: 11400000, guid: f9c1c58e910e55343b51fded15f4ca86, type: 2}
   fade: {fileID: 1416936169}

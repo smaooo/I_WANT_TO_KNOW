@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word:
     word: lost
-    score: 3
+    score: 4
     root: 0
+    numRepeat: 0
     variations:
     - lostness
   scoreMultiplier: 1
@@ -24,34 +25,42 @@ MonoBehaviour:
   - word: astray
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: path
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: found
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: walk
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: seek
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: gone
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: mislaid
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: miss
     score: 1
     root: 0
+    numRepeat: 0
     variations:
     - missing
     - misplaced

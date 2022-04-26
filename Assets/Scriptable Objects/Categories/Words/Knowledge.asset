@@ -14,53 +14,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
   word:
     word: knowledge
-    score: 3
+    score: 4
     root: 0
-    variations: []
-  scoreMultiplier: 1
+    numRepeat: 0
+    variations:
+    - know
+  scoreMultiplier: 4
   simCategory: 
   childs:
   - word: meaning
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: information
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: lies
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: how
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: where
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: lore
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: science
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: wisdom
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: learning
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: erudition
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: gather
     score: 1
     root: 0
+    numRepeat: 0
     variations: []

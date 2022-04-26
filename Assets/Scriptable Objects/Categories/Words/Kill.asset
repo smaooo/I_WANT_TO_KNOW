@@ -14,47 +14,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word:
     word: kill
-    score: 3
+    score: 4
     root: 0
+    numRepeat: 0
     variations:
     - killable
   scoreMultiplier: 1
   simCategory: 
   childs:
   - word: murder
-    score: 3
+    score: 4
     root: 0
+    numRepeat: 0
     variations: []
   - word: illuminate
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: discard
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: rid of
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: execute
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: destroy
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: slay
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: dispatch
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: assassin
     score: 1
     root: 0
+    numRepeat: 0
     variations:
     - assassinate

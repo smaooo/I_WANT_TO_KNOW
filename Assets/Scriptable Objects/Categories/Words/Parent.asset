@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word:
     word: parent
-    score: 3
+    score: 4
     root: 0
+    numRepeat: 0
     variations:
     - parental
     - parentally
@@ -25,24 +26,30 @@ MonoBehaviour:
   - word: family
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: others
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: humans
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: friends
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: partner
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: relations
     score: 1
     root: 0
+    numRepeat: 0
     variations: []

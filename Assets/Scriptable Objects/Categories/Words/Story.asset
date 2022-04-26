@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
   word:
     word: story
-    score: 3
+    score: 4
     root: 0
+    numRepeat: 0
     variations:
     - history
     - strorylike
@@ -25,49 +26,61 @@ MonoBehaviour:
   - word: why
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: what
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: truth
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: beginning
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: end
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: you
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: me
     score: 1
     root: 0
+    numRepeat: 0
     variations:
     - i
   - word: god
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: human
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: tale
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: ballade
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: parable
     score: 3
     root: 0
+    numRepeat: 0
     variations: []

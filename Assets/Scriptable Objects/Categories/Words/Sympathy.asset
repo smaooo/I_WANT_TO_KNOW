@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
   word:
     word: sympathy
-    score: 3
+    score: 4
     root: 0
+    numRepeat: 0
     variations: []
   scoreMultiplier: 1
   simCategory: 
@@ -23,28 +24,35 @@ MonoBehaviour:
   - word: empathy
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: understand
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: relate
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: cry
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: 'commiserate '
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: compassion
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: feeling
     score: 1
     root: 0
+    numRepeat: 0
     variations: []

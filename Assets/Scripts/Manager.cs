@@ -531,10 +531,10 @@ public class Manager : MonoBehaviour
             cat4 = scoring.ContainsKey(3) ? scoring[3] : -1,
             catS = sScore
         };
-        //foreach (var s in scoring)
-        //{
-        //    print(s.Key + " " + s.Value);
-        //}
+        foreach (var s in scoring)
+        {
+            print(s.Key + " " + s.Value);
+        }
         if (sScore > 0)
         {
             nextQuestion = disgustEnding;
@@ -590,7 +590,13 @@ public class Manager : MonoBehaviour
                 int currentScore = 0;
                 if (input.Contains(cat.word.word))
                     currentScore += cat.word.score;
-
+                foreach (var v in cat.word.variations)
+                {
+                    if (input.Contains(v))
+                    {
+                        currentScore += cat.word.score;
+                    }
+                }
                 if (cat.simCategory != "")
                     if (input.Contains(cat.simCategory))
                         currentScore += cat.word.score;
@@ -620,7 +626,7 @@ public class Manager : MonoBehaviour
                     }
                 }
                 currentScore *= cat.scoreMultiplier;
-
+                print(i + " " + currentScore);
                 if (scoring.ContainsKey(i))
                     scoring[i] += currentScore;
                 else

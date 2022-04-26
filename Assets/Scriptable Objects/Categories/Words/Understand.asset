@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word:
     word: understand
-    score: 3
+    score: 4
     root: 0
+    numRepeat: 0
     variations:
     - understandable
   scoreMultiplier: 2
@@ -24,41 +25,51 @@ MonoBehaviour:
   - word: get
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: meaning
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: what
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: where
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: how
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: conclude
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: deduce
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: comprehend
     score: 2
     root: 0
+    numRepeat: 0
     variations:
     - comprehensive
   - word: reason
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: grasp
     score: 2
     root: 0
+    numRepeat: 0
     variations: []

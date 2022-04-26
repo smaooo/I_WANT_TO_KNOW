@@ -16,6 +16,7 @@ MonoBehaviour:
     word: polite
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   scoreMultiplier: 1
   simCategory: 
@@ -23,22 +24,36 @@ MonoBehaviour:
   - word: please
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: could
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: would
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: sorry
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: hello
     score: 3
     root: 0
+    numRepeat: 0
+    variations:
+    - good day
+    - good evening
+    - good afternoon
+    - greetings
+  - word: how are you
+    score: 3
+    root: 0
+    numRepeat: 0
     variations:
     - good day
     - good evening

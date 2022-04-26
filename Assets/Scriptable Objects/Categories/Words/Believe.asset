@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:NLPCombs:Category
   word:
     word: believe
-    score: 3
+    score: 4
     root: 0
+    numRepeat: 0
     variations:
     - believer
   scoreMultiplier: 1
@@ -24,53 +25,66 @@ MonoBehaviour:
   - word: worth
     score: 3
     root: 0
+    numRepeat: 0
     variations:
     - 
   - word: creation
     score: 1
     root: 0
+    numRepeat: 0
     variations: []
   - word: what for
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: follow
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: word
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: god
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   - word: destiny
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: accept
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: buy
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: credit
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: swallow
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: take
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: trust
     score: 2
     root: 0
+    numRepeat: 0
     variations: []

@@ -16,6 +16,7 @@ MonoBehaviour:
     word: assertive
     score: 3
     root: 0
+    numRepeat: 0
     variations: []
   scoreMultiplier: 1
   simCategory: 
@@ -23,28 +24,45 @@ MonoBehaviour:
   - word: do
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: want
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: give
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: show
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: tell
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: is
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
   - word: it is
     score: 2
     root: 0
+    numRepeat: 0
     variations: []
+  - word: hey
+    score: 2
+    root: 0
+    numRepeat: 0
+    variations:
+    - hi
+    - yo
+    - sup
+    - whats up
+    - u good
