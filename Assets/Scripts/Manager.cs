@@ -621,8 +621,6 @@ public class Manager : MonoBehaviour
                         //var match = from word in input
                         //            where word.Equals(child.word)
                         //            select word;
-                        print(input.Contains(child.word));
-                        print("REP: "+ match.Count());
                         if (match.Count() >= child.numRepeat && match.Count() < child.maxRepeat)
                         {
                             currentScore += child.score;
