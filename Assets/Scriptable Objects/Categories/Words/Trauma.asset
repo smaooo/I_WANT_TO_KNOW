@@ -17,6 +17,7 @@ MonoBehaviour:
     score: 4
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations:
     - traumatized
   scoreMultiplier: 1
@@ -26,39 +27,53 @@ MonoBehaviour:
     score: 2
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: ill
     score: 3
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: damaged
     score: 3
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: mental
     score: 3
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: forgotten
     score: 1
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: misunderstood
     score: 2
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: unstable
     score: 2
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: wound
     score: 2
     root: 0
     numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: hurt
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []

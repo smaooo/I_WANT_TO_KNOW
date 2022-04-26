@@ -33,6 +33,7 @@ public class WheelController : MonoBehaviour
         //ChangeAnimatorTrack();
         moveSpeed.z = Random.Range(0.24f, 0.4f);
         animator.SetFloat("Speed", moveSpeed.z);
+        StartCoroutine(FadeIn());
     }
 
     private void FixedUpdate()
@@ -54,6 +55,16 @@ public class WheelController : MonoBehaviour
         
     }
 
+    private IEnumerator FadeIn()
+    {
+        float timer = 0;
+        while (renderer.color != new Color(1, 1, 1, 1))
+        {
+            yield return new WaitForEndOfFrame();
+            timer += Time.deltaTime / 20;
+            renderer.color = Color.Lerp(renderer.color, new Color(1, 1, 1, 1), timer);
+        }
+    }
     private void UpdateSortingLayer()
     {
         float dotProduct = Vector3.Dot(this.transform.forward, 

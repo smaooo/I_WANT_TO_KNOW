@@ -225,7 +225,7 @@ public class Manager : MonoBehaviour
         {
             printWhole = true;
         }
-        //UpdateCurrentWheels();
+        UpdateCurrentWheels();
 
         if (state == State.Conversation && !convoCam.activeSelf)
         {
@@ -311,31 +311,7 @@ public class Manager : MonoBehaviour
             textField.text += t;
             yield return new WaitForSeconds(0.05f);
         }
-        //foreach (var t in text)
-        //{
-        //    if (t == '<')
-        //    {
-        //        var x = text.Substring(text.IndexOf(t), text.IndexOf(t) + 10);
-
-        //        meta = true;
-        //        if (x.Contains("30"))
-        //            textField.text += "<size=30>";
-
-        //        else if (x.Contains("24"))
-        //            textField.text += "<size=24>";
-        //        print(x);
-        //        continue;
-        //    }
-        //    if (t == '>')
-        //    {
-        //        meta = false;
-        //        continue;
-        //    }
-        //    if (meta) continue;
-        //    if (printWhole) break;
-        //    textField.text += t;
-        //    yield return new WaitForSeconds(0.05f);
-        //}
+       
         textField.text = text;
         printWhole = false;
         printing = false;
@@ -633,13 +609,13 @@ public class Manager : MonoBehaviour
                 if (array.Contains(cat.word.word))
                 {
                     currentScore += cat.word.score;
-                        
                     
                 }
                 foreach (var v in cat.word.variations)
                 {
                     if (array.Contains(v))
                     {
+                        print(cat.word.word);  
                         currentScore += cat.word.score;
                     }
                 }
@@ -664,17 +640,41 @@ public class Manager : MonoBehaviour
                     }
                     else
                     {
-                        if (array.Contains(child.word))
+                        if (child.word.Contains(' '))
                         {
-                            currentScore += child.score;
+                            if (input.Contains(child.word))
+                            {
+                                currentScore += child.score;
 
+                            }
+                        }
+                        else
+                        {
+
+                            if (array.Contains(child.word))
+                            {
+                                currentScore += child.score;
+
+                            }
                         }
                         foreach (var v in child.variations)
                         {
-                            if (array.Contains(v))
+                            if (v.Contains(' '))
                             {
-                                currentScore += child.score;
-                                print(v);  
+                                if (input.Contains(v))
+                                {
+                                    currentScore += child.score;
+
+                                }
+                            }
+                            else
+                            {
+                                if (array.Contains(v))
+                                {
+                                    
+                                    currentScore += child.score;
+
+                                }
 
                             }
                         }

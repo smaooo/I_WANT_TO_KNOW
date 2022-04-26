@@ -83,12 +83,3 @@ MonoBehaviour:
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: feeling
-    score: 2
-    root: 0
-    numRepeat: 0
-    maxRepeat: 0
-    variations:
-    - feel
-    - understand
-    - sympathize

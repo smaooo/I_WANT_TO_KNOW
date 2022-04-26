@@ -38,7 +38,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1fb2239f1144b974ea7c1f569924a356, type: 2}
     helpers: []
     relatedQuestionNum: 76
-    nextQuestion: {fileID: 0}
+    nextQuestion: {fileID: 11400000, guid: e9580e5441418e447a70ad78d9a0f446, type: 2}
   - categories:
     - {fileID: 11400000, guid: ca842e315f226ec43b3c0bbc8ebdc8ea, type: 2}
     - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
