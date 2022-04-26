@@ -241,7 +241,7 @@ public class Manager : MonoBehaviour
             float dot = Vector3.Dot(player.transform.forward, (s.transform.position - player.transform.position).normalized);
             if (dot < 0)
             {
-                //s.sortingOrder
+                s.sortingOrder = 200 +(int)(Vector3.Distance(player.transform.position, s.transform.position));
             }
         }
     }
