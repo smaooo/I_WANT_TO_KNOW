@@ -121,7 +121,8 @@ public class Manager : MonoBehaviour
     private Zooming zooming;
     [HideInInspector]
     public string num15;
-
+    private bool printing = false;
+    private bool printWhole = false;
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -215,7 +216,10 @@ public class Manager : MonoBehaviour
             currentQuestion = questionsAnswers[0];
             FindObjectOfType<PlayerController>().textField.text = "";
         }
-
+        if (state == State.Conversation && printing && Input.GetKeyDown(KeyCode.Space))
+        {
+            printWhole = true;
+        }
         //UpdateCurrentWheels();
 
         if (state == State.Conversation && !convoCam.activeSelf)
@@ -256,7 +260,7 @@ public class Manager : MonoBehaviour
     }
     private IEnumerator PrintText(TextMeshProUGUI textField, string text, float waitTime = 0f)
     {
-
+        printing = true;
         if (!convoCam.activeSelf)
         {
             yield return new WaitUntil(() => convoCam.activeSelf);
@@ -266,9 +270,14 @@ public class Manager : MonoBehaviour
         textField.text = "";
         foreach (var t in text)
         {
+            
+            if (printWhole) break;
             textField.text += t;
             yield return new WaitForSeconds(0.05f);
         }
+        textField.text = text;
+        printWhole = false;
+        printing = false;
     }
 
     private IEnumerator ZoomCamera(Vector3 position,float divider, bool slowZoom = false)
@@ -352,8 +361,8 @@ public class Manager : MonoBehaviour
                 string output = q.question;
                 if (question.number == 15)
                 {
-                    
-                    if (question.questions.IndexOf(q) == 1 || question.questions.IndexOf(q) == 3 
+
+                    if (question.questions.IndexOf(q) == 1 || question.questions.IndexOf(q) == 3
                         || question.questions.IndexOf(q) == 5)
                     {
                         yield return StartCoroutine(PrintText(player.textField, output));
@@ -368,6 +377,8 @@ public class Manager : MonoBehaviour
                     }
 
                 }
+                else
+                    yield return StartCoroutine(PrintText(questionText, output));
 
 
             }
