@@ -32,7 +32,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 30: OF THE SAME KIND'
+  - question: '<size=30>END 30: OF THE SAME KIND'
     sprite:
       face: {fileID: 21300000, guid: b2a4ed7f885747b41ab48e996f393f2b, type: 3}
       eyes: {fileID: 21300000, guid: e853d3822feaf95428b07243c4c77b74, type: 3}

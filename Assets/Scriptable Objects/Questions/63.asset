@@ -15,8 +15,8 @@ MonoBehaviour:
   number: 63
   questions:
   - question: "\u2026I do not get your logic. When the one thing it takes to be recognized
-      by YOU as a human is missing, YOU still refuse to take that creature as someone
-      not of your kind? You are a hypocrite. "
+      by <size=30>YOU<size=24> as a human is missing, <size=30>YOU<size=24> still
+      refuse to take that creature as someone not of your kind? You are a hypocrite. "
     sprite:
       face: {fileID: 21300000, guid: 89676ad068ef368419209a66fa02ea97, type: 3}
       eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
@@ -50,7 +50,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 17: THE ESSENCE OF HUMANENESS'
+  - question: '<size=30>END 17: THE ESSENCE OF HUMANENESS'
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
       eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}

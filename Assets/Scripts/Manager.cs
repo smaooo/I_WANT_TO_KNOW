@@ -83,7 +83,6 @@ public class Manager : MonoBehaviour
     private GameObject inputText;
     [SerializeField]
     private GameObject playerInputPack;
-    private QuestionAnswers resEnding;
     [SerializeField]
     private Category noneCat;
     [SerializeField]
@@ -131,6 +130,9 @@ public class Manager : MonoBehaviour
     private string sub74 = "";
     private string sub1 = "";
 
+    [SerializeField]
+    private Category negation;
+
     private void Start()
     {
 
@@ -153,7 +155,6 @@ public class Manager : MonoBehaviour
         StartCoroutine(FadeIn());
 
         
-        resEnding = questionsAnswers.Find(x => x.number == 3);
         for (int i = 0; i < wheelTracks.Count; i++)
         {
             currentWheels.Add(i, new List<WheelController>());
@@ -583,6 +584,7 @@ public class Manager : MonoBehaviour
         }
 
         var x = scoring.Where(x => x.Value == 0);
+        
         var sToD = new ScoringToData
         {
             cat1 = scoring.ContainsKey(0) ? scoring[0] : -1,
@@ -597,6 +599,7 @@ public class Manager : MonoBehaviour
         }
         if (sScore > 0)
         {
+            print(sScore);
             nextQuestion = disgustEnding;
             if (collectData)
                 collector.AddInput(prevInput, input, nextQuestion.number, prevQuestion, sToD);
@@ -617,13 +620,24 @@ public class Manager : MonoBehaviour
         else
         {
             var ordered = (from v in scoring orderby v.Value descending select v.Key).ToList();
+
+            var negativeOrder = (from v in scoring orderby v.Value ascending select v.Key).ToList();
+            bool hasNegative = scoring[negativeOrder[0]] < 0;
             if (ordered[0] < sScore)
             {
                 nextQuestion = disgustEnding;
             }
             else
             {
-                nextQuestion = currentQuestion.answers[ordered[0]].nextQuestion;
+                    nextQuestion = currentQuestion.answers[ordered[0]].nextQuestion;
+                //if (hasNegative)
+                //{
+                //    nextQuestion = currentQuestion.answers[negativeOrder[0]].nextQuestion;
+                //}
+                //else
+                //{
+
+                //}
 
             }
             if (collectData)
@@ -631,17 +645,222 @@ public class Manager : MonoBehaviour
             return nextQuestion;
         }
         if (collectData)
-            collector.AddInput(prevInput, input, resEnding.number, prevQuestion, sToD);
-        return resEnding; 
+            collector.AddInput(prevInput, input, disgustEnding.number, prevQuestion, sToD);
+        return disgustEnding; 
         
     }
 
+    private void CleanUpInput(ref string input)
+    {
+        input = input.Replace(" an ", " ");
+        input = input.Replace(" a ", " ");
+        input = input.Replace(" be ", " ");
+        input = input.Replace(" the ", " ");
+        input = input.Replace(" seem ", " ");
+        input = input.Replace(" seems ", " ");
+        input = input.Replace(" deem ", " ");
+        input = input.Replace("?", "");
+        input = input.Replace(".", "");
+        input = input.Replace(",", "");
+        input = input.Replace("!", "");
 
+        if (input.Contains(" but "))
+        {
+            var words = input.Split(' ').ToList();
+            int i = words.IndexOf("but");
+
+            var tWords = new List<string>();
+            for (int j = i + 1; j < words.Count; j++)
+            {
+                tWords.Add(words[j]);
+
+            }
+            input = "";
+            foreach (var w in tWords)
+            {
+                input += w + " ";
+            }
+            
+        }
+        if (input.Contains(" other than "))
+        {
+            var words = input.Split(' ').ToList();
+            int i = words.IndexOf("than");
+
+            var tWords = new List<string>();
+            for (int j = i + 1; j < words.Count; j++)
+            {
+                tWords.Add(words[j]);
+
+            }
+            input = "";
+            foreach (var w in tWords)
+            {
+                input += w + " ";
+            }
+
+        }
+        if (input.Contains(" rather "))
+        {
+            var words = input.Split(' ').ToList();
+            int i = words.IndexOf("rather");
+
+            var tWords = new List<string>();
+            for (int j = i + 1; j < words.Count; j++)
+            {
+                tWords.Add(words[j]);
+
+            }
+            input = "";
+            foreach (var w in tWords)
+            {
+                input += w + " ";
+            }
+        }
+        if (input.Contains(" when "))
+        {
+            var words = input.Split(' ').ToList();
+            int i = words.IndexOf("when");
+
+            var tWords = new List<string>();
+            for (int j = i + 1; j < words.Count; j++)
+            {
+                tWords.Add(words[j]);
+
+            }
+            input = "";
+            foreach (var w in tWords)
+            {
+                input += w + " ";
+            }
+        }
+        if (input.Contains(" if "))
+        {
+            var words = input.Split(' ').ToList();
+            int i = words.IndexOf("if");
+
+            var tWords = new List<string>();
+            for (int j = i + 1; j < words.Count; j++)
+            {
+                tWords.Add(words[j]);
+
+            }
+            input = "";
+            foreach (var w in tWords)
+            {
+                input += w + " ";
+            }
+        }
+    }
     private Tuple<Dictionary<int,int>,int> CheckInput(string input, QuestionAnswers currentQuestion)
     {
+        CleanUpInput(ref input);
+        print(input);
         var scoring = new Dictionary<int, int>();
         int max = 0;
         var array = input.Split(' ');
+        var negativeWords = new List<string>();
+        int negativeCount = 0;
+        
+
+        foreach (var ne in negation.childs)
+        {
+            foreach (var word in array)
+            {
+                if (ne.word.Contains('%'))
+                {
+                    string pref = ne.word.Replace("%", "");
+
+                    if (word.Contains(pref))
+                    {
+
+                        string checker = word.Replace(pref, "");
+                        string spelled = spelling.Correct(checker);
+
+                        if (checker.Equals(spelled))
+                        {
+                            if (ne.word.IndexOf('%') == 0)
+                            {
+                                if (word.IndexOf(pref) == 0)
+                                    negativeWords.Add(checker);
+                                negativeCount++;
+                            }
+                            else
+                            {
+                                if (word.IndexOf(pref) + 1 == word.Length - 1)
+                                {
+                                    int index = array.ToList().IndexOf(word);
+                                    if (index + 1 < array.Length)
+                                    {
+                                        negativeWords.Add(array[index + 1]);
+                                        negativeCount++;
+                                    }
+                                    else
+                                    {
+                                        negativeWords.Add(word);
+                                        negativeCount++;
+                                    }
+
+                                }
+                            }
+
+                        }
+                    }
+                }
+                else
+                {
+                    if (word.Equals(ne.word))
+                    {
+                        if (array.ToList().IndexOf(word) != array.Length - 1)
+                        {
+                            negativeWords.Add(array[array.ToList().IndexOf(word) + 1]);
+                            negativeCount++;
+                        }
+                    }
+                }
+               
+            }
+        }
+        bool endWithNegative = false;
+        foreach (var ne in negation.childs)
+        {
+            if (!ne.word.Contains('%'))
+            {
+
+                if (array.ToList().Last().Equals(ne.word))
+                {
+                    endWithNegative = true;
+                    break;
+                }
+            }
+        }
+        if (negativeCount % 2 != 0 && !endWithNegative)
+        {
+            var editArray = input.Split(' ').ToList();
+            foreach (var n in negation.childs)
+            {
+                if (!n.word.Contains('%'))
+                {
+                    if (editArray.Contains(n.word))
+                    {
+                        var temp = new List<string>();
+                        int index = editArray.IndexOf(n.word);
+                        for (int i = index + 1; i < editArray.Count; i++)
+                        {
+                            temp.Add(editArray[i]);
+                        }
+                        editArray = new List<string>(temp);
+                    }
+                }
+            }
+            input = "";
+            array = editArray.ToArray();
+            foreach (var w in editArray)
+            {
+                input += w + " ";
+            }
+        }
+        print("final " + input);
         if (currentQuestion.number == 12 && preveQuestionNumber == 7)
         {
             max = currentQuestion.answers.Count;
@@ -663,26 +882,58 @@ public class Manager : MonoBehaviour
                 int currentScore = 0;
                 if (array.Contains(cat.word.word))
                 {
-                    currentScore += cat.word.score;
+
                     
+                    if (negativeWords.Contains(cat.word.word) && negativeCount % 2 != 0)
+                    {
+                        currentScore -= cat.word.score;
+                    }
+                    else
+                    {
+                        currentScore += cat.word.score;
+
+                    }
                 }
                 foreach (var v in cat.word.variations)
                 {
                     if (array.Contains(v))
                     {
-                        print(cat.word.word);  
-                        currentScore += cat.word.score;
+                        
+                        if (negativeWords.Contains(v) && negativeCount % 2 != 0)
+                        {
+                            currentScore -= cat.word.score;
+
+                        }
+                        else
+                        {
+                            currentScore += cat.word.score;
+
+                        }
                     }
                 }
                 if (cat.simCategory != "")
                 {
                     if (array.Contains(cat.simCategory))
-                        currentScore += cat.word.score;
+                    {
+                       
+                        if (negativeWords.Contains(cat.simCategory) && negativeCount % 2 != 0)
+                        {
+                            currentScore -= cat.word.score;
+
+                        }
+                        else
+                        {
+                            currentScore += cat.word.score;
+
+                        }
+                    }
                     
                 }
+                
+                
                 foreach (var child in cat.childs)
                 {
-
+                    
                     if (child.numRepeat > 0)
                     {
                         var rep = input.Split(' ');
@@ -709,7 +960,17 @@ public class Manager : MonoBehaviour
 
                             if (array.Contains(child.word))
                             {
-                                currentScore += child.score;
+                               
+                                if (negativeWords.Contains(child.word) && negativeCount % 2 != 0)
+                                {
+                                     currentScore -= child.score;
+
+                                }
+                                else
+                                {
+                                    currentScore += child.score;
+
+                                }
 
                             }
                         }
@@ -719,6 +980,7 @@ public class Manager : MonoBehaviour
                             {
                                 if (input.Contains(v))
                                 {
+                                    
                                     currentScore += child.score;
 
                                 }
@@ -727,9 +989,17 @@ public class Manager : MonoBehaviour
                             {
                                 if (array.Contains(v))
                                 {
-                                    
-                                    currentScore += child.score;
+                                   
+                                    if (negativeWords.Contains(v) && negativeCount % 2 != 0)
+                                    {
+                                         currentScore -= child.score;
 
+                                    }
+                                    else
+                                    {
+                                        currentScore += child.score;
+
+                                    }
                                 }
 
                             }
@@ -751,10 +1021,14 @@ public class Manager : MonoBehaviour
         int sScore = 0;
         foreach (var s in swears.childs)
         {
-            if (input.Contains(s.word))
+            foreach (var a in array)
             {
-                sScore += s.score;
+                if (a.Equals(s))
+                {
+                    sScore += s.score;
+                }
             }
+            
         }
         sScore *= swears.scoreMultiplier;
 

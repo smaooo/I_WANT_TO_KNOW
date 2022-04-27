@@ -47,7 +47,6 @@ namespace DataCollector
                     connection.Close();
                 }
 
-                Debug.Log(this.id);
             }
 
             catch(SqlException e)

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 52
   questions:
-  - question: 'Then you are not the GOD OF THIS WORLD. '
+  - question: 'Then you are not the <size=30>GOD OF THIS WORLD. '
     sprite:
       face: {fileID: 21300000, guid: 89676ad068ef368419209a66fa02ea97, type: 3}
       eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
@@ -31,7 +31,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 11: FALSE GOD'
+  - question: '<size=30>END 11: FALSE GOD'
     sprite:
       face: {fileID: 21300000, guid: 89676ad068ef368419209a66fa02ea97, type: 3}
       eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}

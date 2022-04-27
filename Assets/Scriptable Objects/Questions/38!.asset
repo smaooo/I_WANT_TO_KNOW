@@ -31,7 +31,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 9: THE ONE WHO DICTATES THE TRUTH '
+  - question: '<size=30>END 9: THE ONE WHO DICTATES THE TRUTH '
     sprite:
       face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
       eyes: {fileID: 21300000, guid: e853d3822feaf95428b07243c4c77b74, type: 3}

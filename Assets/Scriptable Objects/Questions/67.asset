@@ -48,7 +48,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 21: THE DELUSION OF THE ONE IN FRONT OF ME'
+  - question: '<size=30>END 21: THE DELUSION OF THE ONE IN FRONT OF ME'
     sprite:
       face: {fileID: 21300000, guid: 788be0991a70b114b884a23bd566a57f, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 46
   questions:
-  - question: Are you? Then tell me, THE GOD OF THIS WORLD, why should I believe
-      in you?
+  - question: Are you? Then tell me, <size=30>THE GOD OF THIS WORLD<size=24>, why
+      should I believe in you?
     sprite:
       face: {fileID: 21300000, guid: b2a4ed7f885747b41ab48e996f393f2b, type: 3}
       eyes: {fileID: 21300000, guid: e853d3822feaf95428b07243c4c77b74, type: 3}

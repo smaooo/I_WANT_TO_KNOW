@@ -50,8 +50,8 @@ MonoBehaviour:
       additionalLayer: 0
     zoom: 4
   - question: 'I had someone by my side, they were close, close enough to call them
-      the FIRST STANDING NEXT TO ME, but what they desired was what I had. And what
-      I had was not something they could obtain. '
+      the <size=30>FIRST STANDING NEXT TO ME<size=24>, but what they desired was
+      what I had. And what I had was not something they could obtain. '
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
@@ -125,9 +125,9 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 4
-  - question: 'That one was the SECOND NEXT TO ME, as they never were able to obtain
-      the title of the first. It sent them into insanity as they were not able to
-      take up the spot which they wanted. '
+  - question: 'That one was the <size=30>SECOND NEXT TO ME<size=24>, as they never
+      were able to obtain the title of the first. It sent them into insanity as they
+      were not able to take up the spot which they wanted. '
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
@@ -161,7 +161,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 5
-  - question: 'END 1: THE DESPERATE'
+  - question: '<size=30>END 1: THE DESPERATE'
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}

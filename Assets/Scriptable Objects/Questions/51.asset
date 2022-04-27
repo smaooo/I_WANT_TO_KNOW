@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 51
   questions:
-  - question: The humans standing under you are truly MISFORTUNATE.
+  - question: The humans standing under you are truly <size=30>MISFORTUNATE.
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
       eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
@@ -31,7 +31,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 13: THE ONE WHO SOWS MISFORTUNE'
+  - question: '<size=30>END 13: THE ONE WHO SOWS MISFORTUNE'
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
       eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}

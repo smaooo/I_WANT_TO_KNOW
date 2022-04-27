@@ -31,7 +31,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'You are TO BELIEVE, but instead you keep QUESTIONING. '
+  - question: 'You are <size=30>TO BELIEVE<size=24>, but instead you keep <size=30>QUESTIONING. '
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
@@ -83,7 +83,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 4
-  - question: 'END 43: THE ULTIMATE SACRIFICE'
+  - question: '<size=30>END 43: THE ULTIMATE SACRIFICE'
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}

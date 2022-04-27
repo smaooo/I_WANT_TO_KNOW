@@ -33,7 +33,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 40: DEFECTIVE BELIEVER '
+  - question: '<size=30>END 40: DEFECTIVE BELIEVER '
     sprite:
       face: {fileID: 21300000, guid: 5df8ad0a605603a41bbcf452bec46504, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}

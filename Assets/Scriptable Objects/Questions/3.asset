@@ -48,7 +48,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 47: GODS DO NOT FEEL PITY'
+  - question: '<size=30>END 47: GODS DO NOT FEEL PITY'
     sprite:
       face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}

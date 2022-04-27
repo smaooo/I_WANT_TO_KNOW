@@ -23,7 +23,7 @@ MonoBehaviour:
   scoreMultiplier: 1
   simCategory: 
   childs:
-  - word: '- human'
+  - word: not human
     score: 2
     root: 0
     numRepeat: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: '- right'
+  - word: not right
     score: 1
     root: 0
     numRepeat: 0

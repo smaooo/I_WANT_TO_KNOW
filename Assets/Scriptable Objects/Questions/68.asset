@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 68
   questions:
-  - question: Then who was the one that took away that very HUMAN thing?
+  - question: Then who was the one that took away that very <size=30>HUMAN<size=24>
+      thing?
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
@@ -47,6 +48,11 @@ MonoBehaviour:
   - categories:
     - {fileID: 11400000, guid: 92830f33ac1c5314399bcbe9839e406c, type: 2}
     - {fileID: 11400000, guid: f1265a7725c3669489500e8a8d94d716, type: 2}
+    helpers: []
+    relatedQuestionNum: 75
+    nextQuestion: {fileID: 11400000, guid: 6dc83f8c9c6b404438e86ecf37ba5d0c, type: 2}
+  - categories:
+    - {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
     helpers: []
     relatedQuestionNum: 75
     nextQuestion: {fileID: 11400000, guid: 6dc83f8c9c6b404438e86ecf37ba5d0c, type: 2}

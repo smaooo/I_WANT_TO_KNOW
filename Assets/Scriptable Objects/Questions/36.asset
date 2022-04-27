@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 36
   questions:
-  - question: DO NOT CALL ME THAT. I DO NOT LIE AND I DO NOT DECEIVE.
+  - question: <size=30>DO NOT CALL ME THAT. I DO NOT LIE AND I DO NOT DECEIVE.
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: 623b0a05c0091e6449e63d8c4579094e, type: 3}
@@ -49,7 +49,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 2
-  - question: 'END 3: THE LOST ONE'
+  - question: '<size=30>END 3: THE LOST ONE'
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}

@@ -33,7 +33,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 16: YOUR DOUBT HAS KILLED YOU '
+  - question: '<size=30>END 16: YOUR DOUBT HAS KILLED YOU '
     sprite:
       face: {fileID: 21300000, guid: 788be0991a70b114b884a23bd566a57f, type: 3}
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}

@@ -32,7 +32,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 36: DEFECTIVITY IN THE SYSTEM'
+  - question: '<size=30>END 36: DEFECTIVITY IN THE SYSTEM'
     sprite:
       face: {fileID: 21300000, guid: 788be0991a70b114b884a23bd566a57f, type: 3}
       eyes: {fileID: 21300000, guid: 623b0a05c0091e6449e63d8c4579094e, type: 3}

@@ -319,7 +319,7 @@ MonoBehaviour:
       additionalLayer: 0
     zoom: 0
   - question: "I believed there for a second that I was able to finally understand
-      the term itself -  \u201CHUMANENESS\u201D.\r\n"
+      the term itself -  <size=30>\u201CHUMANENESS\u201D.\r\n"
     sprite:
       face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
@@ -336,7 +336,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 2
-  - question: 'END 49: CAN YOU DEFINE IT? '
+  - question: '<size=30>END 49: CAN YOU DEFINE IT? '
     sprite:
       face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}

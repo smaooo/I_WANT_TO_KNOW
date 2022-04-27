@@ -16,6 +16,8 @@ MonoBehaviour:
     word: question
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   scoreMultiplier: 1
   simCategory: 
@@ -23,28 +25,36 @@ MonoBehaviour:
   - word: what
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: where
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: when
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: why
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: how
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: who
     score: 3
     root: 0
-    variations: []
-  - word: '?'
-    score: 3
-    root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 56
   questions:
-  - question: I see, so you have given meaning to the very word HUMANENESS. Have
-      you met a human who lacks the very essence of HUMANENESS?
+  - question: I see, so you have given meaning to the very word <size=30>HUMANENESS<size=24>.
+      Have you met a human who lacks the very essence of <size=30>HUMANENESS<size=24>?
     sprite:
       face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
       eyes: {fileID: 21300000, guid: b6904ecb1768d0647a8f6ca6cc67fa5b, type: 3}

@@ -10,82 +10,122 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
-  m_Name: Understand
+  m_Name: Negation
   m_EditorClassIdentifier: 
   word:
-    word: understand
-    score: 4
+    word: 
+    score: 0
     root: 0
     numRepeat: 0
     maxRepeat: 0
-    variations:
-    - understandable
-  scoreMultiplier: 2
+    variations: []
+  scoreMultiplier: 1
   simCategory: 
   childs:
-  - word: get
-    score: 2
+  - word: '%nt'
+    score: 0
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: meaning
-    score: 3
+  - word: dis%
+    score: 0
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: what
-    score: 3
+  - word: im%
+    score: 0
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: where
-    score: 3
+  - word: in
+    score: 0
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: how
-    score: 3
+  - word: un%
+    score: 0
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: conclude
-    score: 2
+  - word: non%
+    score: 0
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: deduce
-    score: 2
+  - word: de%
+    score: 0
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: comprehend
-    score: 2
-    root: 0
-    numRepeat: 0
-    maxRepeat: 0
-    variations:
-    - comprehensive
-  - word: reason
-    score: 2
+  - word: a%
+    score: 0
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: grasp
-    score: 2
+  - word: ab%
+    score: 0
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: purpose
-    score: 2
+  - word: anti%
+    score: 0
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: il
+    score: 0
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: ir%
+    score: 0
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: not
+    score: 0
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: any
+    score: 0
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: never
+    score: 0
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: no
+    score: 0
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: no%
+    score: 0
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: neither nor
+    score: 0
     root: 0
     numRepeat: 0
     maxRepeat: 0

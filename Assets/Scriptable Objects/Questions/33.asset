@@ -32,7 +32,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 2: THE LOOK OF HUMAN'
+  - question: '<size=30>END 2: THE LOOK OF HUMAN'
     sprite:
       face: {fileID: 21300000, guid: 048b281f8d32da044906d46c02182f8e, type: 3}
       eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}

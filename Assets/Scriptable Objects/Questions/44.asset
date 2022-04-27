@@ -31,7 +31,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 1
-  - question: 'END 4: IT SEEMS YOU ARE STILL CLUELESS'
+  - question: '<size=30>END 4: IT SEEMS YOU ARE STILL CLUELESS'
     sprite:
       face: {fileID: 21300000, guid: a3b58a99605b0e64fbe3bdabbce50ea8, type: 3}
       eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}

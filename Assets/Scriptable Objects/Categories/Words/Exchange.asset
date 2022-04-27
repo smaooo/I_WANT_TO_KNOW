@@ -17,6 +17,7 @@ MonoBehaviour:
     score: 4
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations:
     - exchangeability
     - exchangeable
@@ -28,34 +29,94 @@ MonoBehaviour:
     score: 3
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: offer
     score: 3
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: suggest
     score: 2
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: would
     score: 3
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: give
     score: 2
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: swap
     score: 2
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: trade
     score: 2
     root: 0
     numRepeat: 0
+    maxRepeat: 0
     variations: []
+  - word: trade
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: too
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: as well
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: share
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: one
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: interest
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations:
+    - interested
+    - interesting
+  - word: fascinate
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations:
+    - fascinated
+    - fascinating
+  - word: excited
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations:
+    - exciting

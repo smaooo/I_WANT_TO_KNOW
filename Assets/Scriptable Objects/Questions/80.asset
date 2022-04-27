@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 80
   questions:
-  - question: God, you say? Then is the GOD able to understand a human? If you are
-      human that is.
+  - question: God, you say? Then is the <size=30>GOD<size=24> able to understand
+      a human? If you are human that is.
     sprite:
       face: {fileID: 21300000, guid: 788be0991a70b114b884a23bd566a57f, type: 3}
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}

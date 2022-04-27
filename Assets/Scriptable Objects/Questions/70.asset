@@ -15,7 +15,8 @@ MonoBehaviour:
   number: 70
   questions:
   - question: 'How charming. If you are to kill the one who is different from you,
-      then YOU yourself are lacking that very thing you refer to as HUMANENESS. '
+      then <size=30>YOU<size=24> yourself are lacking that very thing you refer to
+      as <size=30>HUMANENESS. '
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: e853d3822feaf95428b07243c4c77b74, type: 3}
@@ -32,7 +33,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'Will you KILL me then? '
+  - question: 'Will you <size=30>KILL<size=24> me then? '
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
@@ -49,7 +50,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 1
-  - question: 'END 18: THE DEFINITION OF HUMANENESS'
+  - question: '<size=30>END 18: THE DEFINITION OF HUMANENESS'
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}

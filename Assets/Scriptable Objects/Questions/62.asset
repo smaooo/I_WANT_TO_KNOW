@@ -31,7 +31,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 28: "DO NOT JUDGE, OR YOU TOO WILL BE JUDGED"'
+  - question: '<size=30>END 28: "DO NOT JUDGE, OR YOU TOO WILL BE JUDGED"'
     sprite:
       face: {fileID: 21300000, guid: 89676ad068ef368419209a66fa02ea97, type: 3}
       eyes: {fileID: 0}

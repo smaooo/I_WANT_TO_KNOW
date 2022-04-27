@@ -31,8 +31,8 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'There lived a human I used to know. That person was close to GOD,
-      that person relied on GOD, they always believed in GOD. '
+  - question: 'There lived a human I used to know. That person was close to <size=30>GOD<size=24>,
+      that person relied on <size=30>GOD<size=24>, they always believed in <size=30>GOD. '
     sprite:
       face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
@@ -68,8 +68,8 @@ MonoBehaviour:
       additionalLayer: 0
     zoom: 0
   - question: 'The world was not touched by it. But the human believed for their
-      tragedy to be of the greatest burden. They started calling to GOD asking for
-      their misfortune to go away. '
+      tragedy to be of the greatest burden. They started calling to <size=30>GOD<size=24>
+      asking for their misfortune to go away. '
     sprite:
       face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
@@ -86,9 +86,9 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'When they realized the GOD was not going to save them, they started
-      calling, crying out loud. They would scream to the CRUEL GOD, they would hate
-      and cry and beg and pray. '
+  - question: 'When they realized the <size=30>GOD<size=24> was not going to save
+      them, they started calling, crying out loud. They would scream to the <size=30>CRUEL
+      GOD<size=24>, they would hate and cry and beg and pray. '
     sprite:
       face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
@@ -105,8 +105,9 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: "And when the hatred went away and all that was left was the DESPAIR
-      itself, they started asking the GOD for a different thing. \r\n"
+  - question: "And when the hatred went away and all that was left was the <size=30>DESPAIR<size=24>
+      itself, they started asking the <size=30>GOD<size=24> for a different thing.
+      \r\n"
     sprite:
       face: {fileID: 21300000, guid: aadcd294e8f58d04a8b56b7beb82aa4a, type: 3}
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}
@@ -140,7 +141,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 22: BALLADE OF THE CRUEL GOD'
+  - question: '<size=30>END 22: BALLADE OF THE CRUEL GOD'
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: f0112f2ef686f7943886806772531f35, type: 3}

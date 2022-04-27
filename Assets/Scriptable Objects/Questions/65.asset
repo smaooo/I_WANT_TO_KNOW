@@ -15,7 +15,7 @@ MonoBehaviour:
   number: 65
   questions:
   - question: 'How is it that you do not have an answer? You are so sure as what
-      a HUMAN is, but you cannot tell me when one has lost HUMANITY? '
+      a <size=30>HUMAN<size=24> is, but you cannot tell me when one has lost <size=30>HUMANITY<size=24>? '
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}
@@ -50,7 +50,7 @@ MonoBehaviour:
       additional: {fileID: 0}
       additionalLayer: 0
     zoom: 0
-  - question: 'END 26: LIES AND DECEIT'
+  - question: '<size=30>END 26: LIES AND DECEIT'
     sprite:
       face: {fileID: 21300000, guid: c984e37db7f73ce41ad5d31cbd309aeb, type: 3}
       eyes: {fileID: 21300000, guid: 30932b3032bfa1f41bbb1569255beea5, type: 3}
