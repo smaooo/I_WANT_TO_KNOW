@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 398ccb7853f28c443bcdd5d3bea2c2a3, type: 3}
-  m_Name: Polite
+  m_Name: Greetings
   m_EditorClassIdentifier: 
   word:
-    word: polite
+    word: greetings
     score: 3
     root: 0
     numRepeat: 0
@@ -22,37 +22,33 @@ MonoBehaviour:
   scoreMultiplier: 1
   simCategory: 
   childs:
-  - word: please
+  - word: hello
     score: 3
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: could
+  - word: good day
     score: 3
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: would
+  - word: good afternoon
     score: 3
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: sorry
+  - word: good evening
     score: 3
     root: 0
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: how are you
+  - word: good morning
     score: 3
     root: 0
     numRepeat: 0
     maxRepeat: 0
-    variations:
-    - good day
-    - good evening
-    - good afternoon
-    - greetings
+    variations: []

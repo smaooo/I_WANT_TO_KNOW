@@ -129,7 +129,7 @@ public class Manager : MonoBehaviour
     public List<SpriteRenderer> stones;
     private float camOffset = 0;
     private string sub74 = "";
-
+    private string sub1 = "";
 
     private void Start()
     {
@@ -413,6 +413,12 @@ public class Manager : MonoBehaviour
                 {
                     output = output.Replace("parents", sub74);
                 }
+                else if (question.number == 1 && question.questions.IndexOf(q) == 0 && sub1 != "")
+                {
+                    output = sub1 + output;
+                    output = output.Replace("Very well then", "");
+                }
+
                 if (question.number == 15)
                 {
 
@@ -510,24 +516,25 @@ public class Manager : MonoBehaviour
         preveQuestionNumber = currentQuestion.number;
         currentQuestion = DetectNextQuestion(input, currentQuestion);
         print(currentQuestion.number);
-        if (currentQuestion.number == 74) DetectWord74(input);
+        if (currentQuestion.number == 74) DetectWordSub(input, ref sub74, 68, "parent", 1);
+        if (currentQuestion.number == 1) DetectWordSub(input, ref sub1, -1, "greetings", 0);
         StartCoroutine(ManageQuestion(currentQuestion));
      
         //print(currentQuestion);
     }
 
-
-    private void DetectWord74(string input)
+  
+    private void DetectWordSub(string input, ref string sub, int questionNumber, string category, int answerNumber)
     {
-        var cat = questionsAnswers.Find(x => x.number == 68).answers[1].categories.Find(x => x.word.word == "parent");
-        
+        var cat = questionsAnswers.Find(x => x.number == questionNumber).answers[answerNumber].categories.Find(x => x.word.word == category);
+
         if (!input.Contains(cat.word.word))
         {
             foreach (var child in cat.childs)
             {
                 if (input.Contains(child.word))
                 {
-                    sub74 = child.word;
+                    sub = child.word;
                     return;
                 }
                 else if (child.variations.Count > 0)
@@ -536,14 +543,16 @@ public class Manager : MonoBehaviour
                     {
                         if (input.Contains(v))
                         {
-                            sub74 = v;
+                            sub = v;
                             return;
                         }
                     }
                 }
             }
         }
+
     }
+   
     public QuestionAnswers DetectNextQuestion(string input, QuestionAnswers currentQuestion)
     {
         
