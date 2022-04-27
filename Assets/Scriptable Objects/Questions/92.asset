@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 92
   questions:
-  - question: "\u2026why are you looking to find out about it? I have seen your thoughts
-      and prayers. "
+  - question: '... I have seen your thoughts and prayers. '
     sprite:
       face: {fileID: 21300000, guid: e4de9c119b38b5e438f767e3c7174713, type: 3}
       eyes: {fileID: 21300000, guid: d55914b7b970b21408d70cb8040067ba, type: 3}

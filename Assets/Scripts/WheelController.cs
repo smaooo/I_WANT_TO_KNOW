@@ -20,7 +20,8 @@ public class WheelController : MonoBehaviour
     private Animator animator;
     private bool changingTrack = false;
     private SpriteRenderer renderer;
-    
+    private bool jumping = false;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -30,7 +31,7 @@ public class WheelController : MonoBehaviour
         playerWidth = player.GetComponent<BoxCollider>().size.x;
         manager = FindObjectOfType<Manager>();
         animator = this.GetComponent<Animator>();
-        //ChangeAnimatorTrack();
+        ChangeAnimatorTrack();
         moveSpeed.z = Random.Range(0.24f, 0.4f);
         animator.SetFloat("Speed", moveSpeed.z);
         StartCoroutine(FadeIn());
@@ -51,7 +52,10 @@ public class WheelController : MonoBehaviour
         }
 
         UpdateSortingLayer();
-        
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    Jump();
+        //}
         
     }
 
@@ -65,17 +69,30 @@ public class WheelController : MonoBehaviour
             renderer.color = Color.Lerp(renderer.color, new Color(1, 1, 1, 1), timer);
         }
     }
+
     private void UpdateSortingLayer()
     {
-        float dotProduct = Vector3.Dot(this.transform.forward, 
+        float dotProduct = Vector3.Dot(this.transform.forward,
             (new Vector3(this.transform.position.x, player.transform.position.y, this.transform.position.z) - player.transform.position).normalized);
         if (dotProduct > 0)
         {
             renderer.sortingOrder = 500;
-        } else
+        }
+        else
         {
             renderer.sortingOrder = 200 - Mathf.FloorToInt(Vector3.Distance(this.transform.position, player.transform.position));
         }
+
+        //foreach (var s in manager.stones)
+        //{
+        //    float dot = Vector3.Dot(this.transform.forward,
+        //        (s.transform.position - this.transform.position).normalized);
+        //    if (dot < 0)
+        //    {
+        //        renderer.sortingOrder = s.sortingOrder - 10;
+        //    }
+
+        //}
     }
     private void DecisionMaker()
     {
@@ -84,6 +101,7 @@ public class WheelController : MonoBehaviour
             Mathf.Abs(this.transform.position.z - player.transform.position.z) < boxSize * 3)
         {
             int newTrack = -1;
+
             foreach (var t in tracks)
             {
                 if (tracks.IndexOf(t) != currenTrack)
@@ -117,12 +135,17 @@ public class WheelController : MonoBehaviour
             {
                 var rayDir = new Vector3(tracks[newTrack].position.x, this.transform.position.y, this.transform.position.z) - this.transform.position;
                 var b = Physics.Raycast(this.transform.position, rayDir.normalized, boxSize * 3, LayerMask.GetMask("Wheel"));
-                if (!b)
+                if (!b && !jumping)
                 {
                     changingTrack = true;
                     rigidbody.velocity = Vector3.zero;
                     StartCoroutine(MoveToTrack(newTrack));
                 }
+                //else if (Vector3.Distance(this.transform.position, player.transform.position) < 10)
+                //{
+                //    StartCoroutine(MoveToTrack(newTrack));
+
+                //}
             }
 
 
@@ -130,19 +153,26 @@ public class WheelController : MonoBehaviour
         
         foreach (var t in manager.currentWheels)
         {
+            bool shouldbreak = false;
             foreach (var w in t.Value)
             {
                 
-                if (w.fallen && Mathf.Abs(this.transform.position.x - w.transform.position.x) < boxSize &&
-                    Mathf.Abs(this.transform.position.z - w.transform.position.z) < boxSize * 1.5f)
+                if (w.fallen && Mathf.Abs(this.transform.position.x - w.transform.position.x) < 6 &&
+                    Mathf.Abs(this.transform.position.z - w.transform.position.z) < 6 && !jumping)
                 {
+                    shouldbreak = true;
                     Jump();
+                    break;
                 }
             }
+            if (shouldbreak) break;
         }
-
+        if (jumping && rigidbody.velocity.y == 0)
+        {
+            jumping = false;
+        }
         if (Vector3.Dot(this.transform.forward, (new Vector3(this.transform.position.x,player.transform.position.y,this.transform.position.z) - player.transform.position).normalized) > 0 &&
-            Vector3.Distance(this.transform.position, player.transform.position) > 5)
+            Vector3.Distance(this.transform.position, player.transform.position) > 50)
         {
             Destroy(this.gameObject);
         }
@@ -162,16 +192,17 @@ public class WheelController : MonoBehaviour
         animator.SetTrigger("Fall");
         rigidbody.Sleep();
         rigidbody.isKinematic = true;
-        float targetY = 0 + this.GetComponent<BoxCollider>().size.x / 1.5f;
+        //float targetY = 0 + this.GetComponent<BoxCollider>().size.x / 1.5f;
+        float targetY = this.transform.position.y - 26;
         yield return null;
 
-        //while (Mathf.Abs(this.transform.position.y - targetY) > 0.2f) 
-        //{
-        //    yield return new WaitForEndOfFrame();
-        //    this.transform.position = Vector3.MoveTowards(this.transform.position, 
-        //        new Vector3(this.transform.position.x, targetY, this.transform.position.z), 0.1f);
-            
-        //}
+        while (Mathf.Abs(this.transform.position.y - targetY) > 0.2f)
+        {
+            yield return new WaitForEndOfFrame();
+            this.transform.position = Vector3.MoveTowards(this.transform.position,
+                new Vector3(this.transform.position.x, targetY, this.transform.position.z), 0.8f);
+
+        }
 
         this.GetComponent<BoxCollider>().enabled = false;
 
@@ -180,7 +211,7 @@ public class WheelController : MonoBehaviour
 
     private void ChangeAnimatorTrack()
     {
-        if (currenTrack >= 0 && currenTrack < 3)
+        if (currenTrack >= 0 && currenTrack < 2)
         {
             
             animator.SetFloat("LeftRight", 1);
@@ -195,7 +226,8 @@ public class WheelController : MonoBehaviour
     private void Jump()
     {
 
-        Vector3 moveVector = this.transform.forward * boxSize / 2 + this.transform.up * this.GetComponent<BoxCollider>().size.x / 2;
+        jumping = true;
+        Vector3 moveVector = this.transform.forward *2 + this.transform.up *2;
         rigidbody.velocity = Vector3.zero;
         rigidbody.AddForce(moveVector, ForceMode.Impulse);
     }
@@ -209,7 +241,7 @@ public class WheelController : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
             this.transform.position = Vector3.MoveTowards(this.transform.position,
-                new Vector3(x, this.transform.position.y, this.transform.position.z), 0.01f);
+                new Vector3(x, this.transform.position.y, this.transform.position.z), 0.1f);
             if (Mathf.Abs(this.transform.position.x - x) < 0.1f)
             {
                 break;

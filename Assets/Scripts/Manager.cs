@@ -97,7 +97,8 @@ public class Manager : MonoBehaviour
     [SerializeField]
     private QuestionAnswers disgustEnding;
     public Dictionary<int, List<WheelController>> currentWheels = new Dictionary<int, List<WheelController>>();
-
+    [SerializeField]
+    private bool spawnWheels;
     [SerializeField]
     private RawImage fade;
 
@@ -125,11 +126,17 @@ public class Manager : MonoBehaviour
     private bool printWhole = false;
     private int preveQuestionNumber = -2;
     [SerializeField]
-    private List<SpriteRenderer> stones;
+    public List<SpriteRenderer> stones;
+    private float camOffset = 0;
+    private string sub74 = "";
+
 
     private void Start()
     {
+
+        stones.ForEach(x => x.sortingOrder += 100);
         player = FindObjectOfType<PlayerController>();
+        camOffset = player.transform.position.z - Camera.main.transform.position.z;
         player.state = state;
         if (collectData)
         {
@@ -152,7 +159,8 @@ public class Manager : MonoBehaviour
             currentWheels.Add(i, new List<WheelController>());
 
         }
-        StartCoroutine(SpawnWheel());
+        if (spawnWheels)
+            StartCoroutine(SpawnWheel());
     }
 
     private IEnumerator FadeIn()
@@ -169,8 +177,8 @@ public class Manager : MonoBehaviour
     }
     private IEnumerator SpawnWheel(int track = -1)
     {
-        //yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
-        
+        yield return new WaitForSeconds(Random.Range(0.5f, 1.5f));
+
         int rand;
         if (track == -1)
         {
@@ -183,7 +191,7 @@ public class Manager : MonoBehaviour
         foreach (var cW in currentWheels[rand])
         {
             
-            if (Vector3.Distance(wheelTracks[rand].transform.position,cW.transform.position) < 3)
+            if (Vector3.Distance(wheelTracks[rand].transform.position,cW.transform.position) < 15)
             {
                 canSpawn = false;
                 break;
@@ -233,6 +241,11 @@ public class Manager : MonoBehaviour
         }
 
         CheckSortingOrder();
+
+        if (state == State.Walking)
+        {
+            Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, player.transform.position.z - camOffset);
+        }
     }
     private void CheckSortingOrder()
     {
@@ -396,6 +409,10 @@ public class Manager : MonoBehaviour
             if (q.question != "")
             {
                 string output = q.question;
+                if (question.number == 74 && question.questions.IndexOf(q) == 0 && sub74 != "")
+                {
+                    output = output.Replace("parents", sub74);
+                }
                 if (question.number == 15)
                 {
 
@@ -493,11 +510,40 @@ public class Manager : MonoBehaviour
         preveQuestionNumber = currentQuestion.number;
         currentQuestion = DetectNextQuestion(input, currentQuestion);
         print(currentQuestion.number);
+        if (currentQuestion.number == 74) DetectWord74(input);
         StartCoroutine(ManageQuestion(currentQuestion));
      
         //print(currentQuestion);
     }
 
+
+    private void DetectWord74(string input)
+    {
+        var cat = questionsAnswers.Find(x => x.number == 68).answers[1].categories.Find(x => x.word.word == "parent");
+        
+        if (!input.Contains(cat.word.word))
+        {
+            foreach (var child in cat.childs)
+            {
+                if (input.Contains(child.word))
+                {
+                    sub74 = child.word;
+                    return;
+                }
+                else if (child.variations.Count > 0)
+                {
+                    foreach (var v in child.variations)
+                    {
+                        if (input.Contains(v))
+                        {
+                            sub74 = v;
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+    }
     public QuestionAnswers DetectNextQuestion(string input, QuestionAnswers currentQuestion)
     {
         
@@ -628,11 +674,11 @@ public class Manager : MonoBehaviour
                 foreach (var child in cat.childs)
                 {
 
-                    if (child.numRepeat > 1)
+                    if (child.numRepeat > 0)
                     {
                         var rep = input.Split(' ');
                         var match = rep.Where(x => x == child.word);
-                       
+                        
                         if (match.Count() >= child.numRepeat && match.Count() < child.maxRepeat)
                         {
                             currentScore += child.score;
@@ -640,6 +686,7 @@ public class Manager : MonoBehaviour
                     }
                     else
                     {
+                       
                         if (child.word.Contains(' '))
                         {
                             if (input.Contains(child.word))

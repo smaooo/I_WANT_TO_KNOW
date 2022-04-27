@@ -16,6 +16,8 @@ MonoBehaviour:
     word: god
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   scoreMultiplier: 1
   simCategory: 
@@ -23,25 +25,67 @@ MonoBehaviour:
   - word: deity
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: immortal
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: supreme being
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: divine
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations:
     - divinity
   - word: creator
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: lord
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: superior
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: everknowing
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: master
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: above
+    score: 2
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: front
+    score: 3
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []

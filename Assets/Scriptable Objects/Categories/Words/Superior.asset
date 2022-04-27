@@ -16,6 +16,8 @@ MonoBehaviour:
     word: superior
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   scoreMultiplier: 1
   simCategory: 
@@ -23,36 +25,60 @@ MonoBehaviour:
   - word: high
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: divine
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: better
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: dominant
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: power
     score: 3
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: lord
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: master
     score: 2
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: elder
     score: 1
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
   - word: senior
     score: 1
     root: 0
+    numRepeat: 0
+    maxRepeat: 0
+    variations: []
+  - word: above
+    score: 1
+    root: 0
+    numRepeat: 0
+    maxRepeat: 0
     variations: []
