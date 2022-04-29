@@ -807,6 +807,7 @@ public class Manager : MonoBehaviour
                         }
                     }
                 }
+                
                 else
                 {
                     if (word.Equals(ne.word))
@@ -820,7 +821,26 @@ public class Manager : MonoBehaviour
                 }
                
             }
+            if (ne.word.Contains('+'))
+            {
+                var negation = ne.word.Split('+');
+                var p1 = array.Any(x => x == negation[0]);
+                
+                var p2 = array.Any(x => x == negation[1]);
+
+                if (p1 && p2)
+                {
+                    int i1 = array.ToList().IndexOf(negation[0]);
+                    int i2 = array.ToList().IndexOf(negation[1]);
+                    negativeWords.Add(array[i1 + 1]);
+                    negativeWords.Add(array[i2 + 1]);
+
+                    negativeCount++;
+                }
+            }
         }
+
+        
         bool endWithNegative = false;
         foreach (var ne in negation.childs)
         {

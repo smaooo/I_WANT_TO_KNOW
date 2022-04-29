@@ -46,7 +46,6 @@ public class Fish : MonoBehaviour
             
             yield return null;
 
-            //newPos = this.transform.TransformPoint(new Vector3());
             newPos = Quaternion.Euler(0, yR, zR) * this.transform.right;
             direction = newPos - this.transform.position;
             Debug.DrawRay(this.transform.position, direction.normalized, Color.green);

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.97431624, g: 0.94193685, b: 0.9193947, a: 1}
+  m_IndirectSpecularColor: {r: 0.97994804, g: 0.9557449, b: 0.93932503, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3311,7 +3311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '...'
+  m_text: ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -3942,20 +3942,19 @@ MonoBehaviour:
   inputText: {fileID: 1355649827}
   playerInputPack: {fileID: 1347113315}
   noneCat: {fileID: 11400000, guid: a10ef2858f5c2ae46af5f9f5454bc591, type: 2}
-  wheelPrefab: {fileID: 6460981209395510528, guid: 7e23b1fd5afc46c48bdf0f8e8056cb8d,
-    type: 3}
+  wheelPrefab: {fileID: 6460981209395510528, guid: 7e23b1fd5afc46c48bdf0f8e8056cb8d, type: 3}
   wheelTracks:
   - {fileID: 1509777728}
   - {fileID: 84391235}
   - {fileID: 472781493}
   - {fileID: 1470438739}
-  pQ: 24
+  pQ: -1
   swears: {fileID: 11400000, guid: 77e3b913fd35cae4d88aa7a892f6a9fd, type: 2}
   disgustEnding: {fileID: 11400000, guid: f9c1c58e910e55343b51fded15f4ca86, type: 2}
   spawnWheels: 0
   fade: {fileID: 1416936169}
   textFile: {fileID: 4900000, guid: d7300a77ff455d6498d7db4b94eb65de, type: 3}
-  collectData: 0
+  collectData: 1
   state: 1
   convoCam: {fileID: 1892707938}
   facePack: {fileID: 1832522817}
@@ -5724,7 +5723,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '...'
+  m_text: ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}

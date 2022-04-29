@@ -40,7 +40,7 @@ MonoBehaviour:
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: in
+  - word: in%
     score: 0
     root: 0
     numRepeat: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: il
+  - word: il%
     score: 0
     root: 0
     numRepeat: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: neither nor
+  - word: neither+nor
     score: 0
     root: 0
     numRepeat: 0

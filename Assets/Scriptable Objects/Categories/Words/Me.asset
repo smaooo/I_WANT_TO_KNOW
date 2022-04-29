@@ -46,9 +46,3 @@ MonoBehaviour:
     numRepeat: 0
     maxRepeat: 0
     variations: []
-  - word: human
-    score: 2
-    root: 0
-    numRepeat: 0
-    maxRepeat: 0
-    variations: []
