@@ -31,8 +31,11 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField]
     public Manager.State state = Manager.State.Conversation;
+    private AudioManager audioManager;
+
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         animator = this.GetComponent<Animator>();
         rigidbody = this.GetComponent<Rigidbody>();
         if (trainingMode)
@@ -148,21 +151,25 @@ public class PlayerController : MonoBehaviour
             {
                 textField.text += ((char)lastKey).ToString();
                 lastKey = 0;
+                audioManager.PlaySound();
             }
             else if (lastKey == 49)
             {
                 textField.text += "!";
                 lastKey = 0;
+                audioManager.PlaySound();
             }
             else if (lastKey == 47)
             {
                 textField.text += "?";
                 lastKey = 0;
+                audioManager.PlaySound();
             }
             else if (lastKey == 8 && textField.text.Length > 0)
             {
                 textField.text = textField.text.Remove(textField.text.Length - 1);
                 lastKey = 0;
+                audioManager.PlaySound();
             }
         }
 

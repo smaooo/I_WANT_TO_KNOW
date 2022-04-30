@@ -133,9 +133,13 @@ public class Manager : MonoBehaviour
     [SerializeField]
     private Category negation;
 
+    [SerializeField]
+    private AudioManager audioManager;
+
+    
     private void Start()
     {
-
+        audioManager = FindObjectOfType<AudioManager>();
         stones.ForEach(x => x.sortingOrder += 100);
         player = FindObjectOfType<PlayerController>();
         camOffset = player.transform.position.z - Camera.main.transform.position.z;
@@ -300,8 +304,10 @@ public class Manager : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         textField.text = "";
         bool meta = false;
+        int charCount = 0;
         for (int i = 0; i < text.Length; i++)
         {
+            charCount++;
             var t = text[i];
             if (t == '<')
             {
@@ -323,6 +329,8 @@ public class Manager : MonoBehaviour
             if (meta) continue;
             if (printWhole) break;
             textField.text += t;
+            if (charCount %2 == 0)
+                audioManager.PlaySound();
             yield return new WaitForSeconds(0.05f);
         }
        

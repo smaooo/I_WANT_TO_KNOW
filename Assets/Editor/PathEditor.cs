@@ -43,11 +43,12 @@ public class PathEditor : Editor
             Undo.RecordObject(creator, "Toggle auto set controls");
             Path.AutoSetControlPoints = autoSetControlPoints;
         }
-
+      
         if (EditorGUI.EndChangeCheck())
         {
             SceneView.RepaintAll();
         }
+        
     }
 
     void OnSceneGUI()

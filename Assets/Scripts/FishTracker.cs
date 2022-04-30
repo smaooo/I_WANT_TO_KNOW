@@ -22,7 +22,7 @@ public class FishTracker : MonoBehaviour
         
         var dist = this.transform.position.y - puddle.transform.position.y;
         
-        if (dist <= 0 && dist > -0.05f && canRipple)
+        if (dist <= 0 && dist > -1f && canRipple)
         {
             canRipple = false;
             puddleMaterial.SetVector("_RefPos", this.transform.position);

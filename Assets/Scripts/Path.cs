@@ -13,6 +13,7 @@ public class Path
     [SerializeField, HideInInspector]
     bool autoSetControlPoints;
     float yPos;
+
     public Path(Vector3 centre)
     {
         yPos = centre.y;
