@@ -87,7 +87,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxisRaw("Vertical") > 0)
         {
             
-            if (Mathf.Abs(this.transform.position.x - leftBorder.transform.position.x) < 6)
+            
+            if (Mathf.Abs(this.transform.position.x - leftBorder.transform.position.x) < manager.island.lossyScale.x)
             {
                 if (Input.GetAxisRaw("Horizontal") > 0)
                 {
@@ -103,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
             }
 
-            else if (Mathf.Abs(this.transform.position.x - rightBorder.transform.position.x) < 6)
+            else if (Mathf.Abs(this.transform.position.x - rightBorder.transform.position.x) < manager.island.lossyScale.x)
             {
                 if (Input.GetAxisRaw("Horizontal") < 0)
                 {

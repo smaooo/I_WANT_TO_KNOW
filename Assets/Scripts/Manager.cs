@@ -33,6 +33,7 @@ public class Manager : MonoBehaviour
     public struct ZoomPack
     {
         public Vector3 position;
+        public Quaternion rotation;
         public float speedDivider;
     }
     [System.Serializable]
@@ -46,6 +47,7 @@ public class Manager : MonoBehaviour
         public ZoomPack SlowZoomIn;
         public ZoomPack zoomOutX2;
         public ZoomPack zoomOutFull;
+        public ZoomPack pondZoom;
         public Vector3 GetPostion(QuestionAnswers.Zoom zoom) => zoom switch
         {
             QuestionAnswers.Zoom.In => zoomIn.position,
@@ -56,9 +58,16 @@ public class Manager : MonoBehaviour
             QuestionAnswers.Zoom.SlowZoomInFull => SlowZoomIn.position,
             QuestionAnswers.Zoom.OutX2 => zoomOutX2.position,
             QuestionAnswers.Zoom.OutFull => zoomOutFull.position,
+            QuestionAnswers.Zoom.PondZoom => pondZoom.position,
             _ => Vector3.zero
 
         };
+        public Quaternion GetRotation(QuestionAnswers.Zoom zoom) => zoom switch
+        {
+            QuestionAnswers.Zoom.PondZoom => pondZoom.rotation,
+            _ => Quaternion.identity
+        };
+
         public float GetSpeedDivider(QuestionAnswers.Zoom zoom) => zoom switch
         {
             QuestionAnswers.Zoom.In => zoomIn.speedDivider,
@@ -69,6 +78,7 @@ public class Manager : MonoBehaviour
             QuestionAnswers.Zoom.SlowZoomInFull => SlowZoomIn.speedDivider,
             QuestionAnswers.Zoom.OutX2 => zoomOutX2.speedDivider,
             QuestionAnswers.Zoom.OutFull => zoomOutFull.speedDivider,
+            QuestionAnswers.Zoom.PondZoom => pondZoom.speedDivider,
             _ => 1
         };
     }
@@ -133,9 +143,10 @@ public class Manager : MonoBehaviour
     [SerializeField]
     private Category negation;
 
-    [SerializeField]
     private AudioManager audioManager;
 
+    [SerializeField]
+    public Transform island;
     
     private void Start()
     {
@@ -339,13 +350,22 @@ public class Manager : MonoBehaviour
         printing = false;
     }
 
-    private IEnumerator ZoomCamera(Vector3 position,float divider, bool slowZoom = false)
+    private IEnumerator ZoomCamera(QuestionAnswers.Zoom zoom, bool slowZoom = false)
     {
         float timer = 0;
+        Quaternion rotation = zooming.GetRotation(zoom);
+        var position = zooming.GetPostion(zoom);
+        float divider = zooming.GetSpeedDivider(zoom);
+        
         while (Camera.main.transform.position != position)
         {
             yield return new WaitForEndOfFrame();
             timer += Time.deltaTime / divider;
+
+            if (zoom == QuestionAnswers.Zoom.PondZoom)
+            {
+                Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, rotation, timer);
+            }
 
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, position, timer);
         }
@@ -413,7 +433,7 @@ public class Manager : MonoBehaviour
 
             ChangeSprites(q);
             if (q.zoom != QuestionAnswers.Zoom.None)
-                StartCoroutine(ZoomCamera(zooming.GetPostion(q.zoom), zooming.GetSpeedDivider(q.zoom)));
+                StartCoroutine(ZoomCamera(q.zoom));
             PlayFaceAnimations(q);
             if (q.question != "")
             {

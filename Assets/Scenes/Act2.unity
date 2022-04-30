@@ -4454,7 +4454,7 @@ MonoBehaviour:
   fade: {fileID: 1416936169}
   textFile: {fileID: 4900000, guid: d7300a77ff455d6498d7db4b94eb65de, type: 3}
   collectData: 0
-  state: 1
+  state: 0
   convoCam: {fileID: 1892707938}
   facePack: {fileID: 1832522817}
   faceStructure:
@@ -4518,7 +4518,7 @@ MonoBehaviour:
   - {fileID: 1638583465}
   - {fileID: 32127141}
   negation: {fileID: 11400000, guid: fd97f1feeff4a054b812f74f0acb245a, type: 2}
-  audioManager: {fileID: 0}
+  island: {fileID: 2145819838}
 --- !u!4 &1472332258
 Transform:
   m_ObjectHideFlags: 0

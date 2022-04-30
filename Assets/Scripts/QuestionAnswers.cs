@@ -15,7 +15,7 @@ public class QuestionAnswers : ScriptableObject
         public QuestionAnswers nextQuestion;
     }
 
-    public enum Zoom { None, In, Out, InX2, InX3, InX4, SlowZoomInFull, OutX2, OutFull}
+    public enum Zoom { None, In, Out, InX2, InX3, InX4, SlowZoomInFull, OutX2, OutFull, PondZoom}
     [System.Serializable]
     public struct FaceExpression
     {
