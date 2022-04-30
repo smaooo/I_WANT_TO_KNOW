@@ -243,10 +243,10 @@ public class Manager : MonoBehaviour
 
         CheckSortingOrder();
 
-        if (state == State.Walking)
-        {
-            Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, player.transform.position.z - camOffset);
-        }
+        //if (state == State.Walking)
+        //{
+        //    Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, player.transform.position.z - camOffset);
+        //}
     }
     private void CheckSortingOrder()
     {

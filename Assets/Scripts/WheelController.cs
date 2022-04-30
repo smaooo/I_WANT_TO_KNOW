@@ -98,7 +98,7 @@ public class WheelController : MonoBehaviour
     {
 
         if (Mathf.Abs(this.transform.position.x - player.transform.position.x) < playerWidth &&
-            Mathf.Abs(this.transform.position.z - player.transform.position.z) < boxSize * 3)
+            Mathf.Abs(this.transform.position.z - player.transform.position.z) < boxSize)
         {
             int newTrack = -1;
 

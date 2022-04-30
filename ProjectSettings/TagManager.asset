@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wheel
   - Island
+  - StuckArea
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - PondHole
   - PondHoleMask
   - EndPlayer
-  - 
-  - 
+  - PlaneBounds
+  - StuckArea
   - 
   - 
   - 
