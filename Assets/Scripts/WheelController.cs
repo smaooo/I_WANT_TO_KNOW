@@ -96,13 +96,22 @@ public class WheelController : MonoBehaviour
     }
     private void DecisionMaker()
     {
-
-        if (Mathf.Abs(this.transform.position.x - player.transform.position.x) < playerWidth &&
-            Mathf.Abs(this.transform.position.z - player.transform.position.z) < boxSize)
+        print(Vector3.Distance(this.transform.position, player.transform.position));
+        if (Vector3.Distance(this.transform.position, player.transform.position) < 20)
         {
             int newTrack = -1;
-
-            foreach (var t in tracks)
+            var tempTracks = new List<Transform>();
+            if (currenTrack == 0 || currenTrack == 1)
+            {
+                tempTracks.Add(tracks[2]);
+                tempTracks.Add(tracks[3]);
+            }
+            else
+            {
+                tempTracks.Add(tracks[0]);
+                tempTracks.Add(tracks[1]);
+            }
+            foreach (var t in tempTracks)
             {
                 if (tracks.IndexOf(t) != currenTrack)
                 {

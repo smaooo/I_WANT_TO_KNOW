@@ -1329,7 +1329,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &453683906
 AudioListener:
@@ -4466,28 +4466,40 @@ MonoBehaviour:
   zooming:
     zoomIn:
       position: {x: 1.482, y: 1.8, z: 5.59}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
       speedDivider: 10
     zoomOut:
       position: {x: 1.482, y: 1.65, z: 5.31}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
       speedDivider: 10
     zoomInX2:
       position: {x: 1.496, y: 1.8, z: 5.87}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
       speedDivider: 10
     zoomInX3:
       position: {x: 1.503, y: 1.8, z: 6.15}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
       speedDivider: 10
     zoomInX4:
       position: {x: 1.51, y: 1.8, z: 6.43}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
       speedDivider: 10
     SlowZoomIn:
       position: {x: 1.51, y: 1.8, z: 6.64}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
       speedDivider: 99999
     zoomOutX2:
       position: {x: 1.482, y: 1.8, z: 5.03}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
       speedDivider: 10
     zoomOutFull:
       position: {x: 1.51, y: 1.8, z: -1241}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
       speedDivider: 10
+    pondZoom:
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
+      speedDivider: 0
   num15: 
   stones:
   - {fileID: 589775703}
@@ -5870,7 +5882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textField: {fileID: 1355649829}
   inputActive: 1
-  moveSpeed: 5
+  moveSpeed: 10
   trainingMode: 0
   endPoint: {fileID: 228996004}
   leftBorder: {fileID: 1776462099}
@@ -5916,10 +5928,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -6.1522884, z: -167.2}
   m_LocalScale: {x: 4.1047, y: 4.1047, z: 4.1047}
-  m_Children:
-  - {fileID: 1949729032}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861151550
 GameObject:
@@ -6546,11 +6557,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949729031}
   m_LocalRotation: {x: 0.13734078, y: -0, z: -0, w: 0.9905239}
-  m_LocalPosition: {x: 0, y: 7, z: -13.45287}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 22.580612, z: -222.42}
+  m_LocalScale: {x: 4.1047, y: 4.1047, z: 4.1047}
   m_Children: []
-  m_Father: {fileID: 1840336409}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 15.788, y: 0, z: 0}
 --- !u!114 &1949729033
 MonoBehaviour:
@@ -7125,7 +7136,7 @@ RectTransform:
   - {fileID: 1347113316}
   - {fileID: 1707069969}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7451,7 +7462,7 @@ Transform:
   - {fileID: 1896431295}
   - {fileID: 1500175263}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2146033333
 GameObject:
