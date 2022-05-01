@@ -180,7 +180,7 @@ public class WheelAgent : Agent
         
         float forward = 0;
         float up = 0;
-        float right = 0;
+        //float right = 0;
         int index = currentTrack;
 
         if (Input.GetKey(KeyCode.W))

@@ -31,7 +31,7 @@ public class CameraDirector : MonoBehaviour
 
             if (Mathf.Abs(fade.color.a - 0.3f) < 0.05f && !sceneLoading)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
                 sceneLoading = true;
 
             }

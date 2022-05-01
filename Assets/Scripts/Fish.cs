@@ -66,11 +66,11 @@ public class Fish : MonoBehaviour
                 out hit, LayerMask.GetMask("PuddleBound"));
             if (col)
             {
-                Debug.DrawRay(this.transform.position, (position - this.transform.position).normalized * hit.distance, Color.green, 10);
+                //Debug.DrawRay(this.transform.position, (position - this.transform.position).normalized * hit.distance, Color.green, 10);
             }
         }
         while (col);
-        Debug.DrawRay(this.transform.position, position - this.transform.position, Color.red, 100);
+        //Debug.DrawRay(this.transform.position, position - this.transform.position, Color.red, 100);
         
         return position;
 

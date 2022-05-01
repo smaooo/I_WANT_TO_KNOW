@@ -139,7 +139,6 @@ public class Manager : MonoBehaviour
     private float camOffset = 0;
     private string sub74 = "";
     private string sub1 = "";
-
     [SerializeField]
     private Category negation;
 
@@ -147,9 +146,24 @@ public class Manager : MonoBehaviour
 
     [SerializeField]
     public Transform island;
-    
+    [SerializeField]
+    private TextMeshProUGUI endingText;
+
+    [SerializeField]
+    private GameObject faceInPond;
+    [SerializeField]
+    private Transform firstZoom;
+    [SerializeField]
+    private Transform secondZoom;
+    [SerializeField]
+    private GameObject godBody;
+    [SerializeField]
+    private GameObject godFace;
+    private bool backed = false;
+
     private void Start()
     {
+        
         audioManager = FindObjectOfType<AudioManager>();
         stones.ForEach(x => x.sortingOrder += 100);
         player = FindObjectOfType<PlayerController>();
@@ -177,8 +191,17 @@ public class Manager : MonoBehaviour
         }
         if (spawnWheels)
             StartCoroutine(SpawnWheel());
-    }
 
+        if (state == State.Conversation)
+        {
+            Invoke("EditMode", 1);
+        }
+    }
+    private void EditMode()
+    {
+        StartCoroutine(SetupConversation());
+
+    }
     private IEnumerator FadeIn()
     {
         float timer = 0;
@@ -236,7 +259,8 @@ public class Manager : MonoBehaviour
 
         }
         yield return new WaitForSeconds(Random.Range(0.5f, 3f));
-        StartCoroutine(SpawnWheel());
+        if (spawnWheels)
+            StartCoroutine(SpawnWheel());
     }
     private void Update()
     {
@@ -251,10 +275,6 @@ public class Manager : MonoBehaviour
         }
         UpdateCurrentWheels();
 
-        if (state == State.Conversation && !convoCam.activeSelf)
-        {
-            SetupConversation();
-        }
 
         CheckSortingOrder();
 
@@ -274,14 +294,22 @@ public class Manager : MonoBehaviour
             }
         }
     }
-    private void SetupConversation()
+    public IEnumerator SetupConversation()
     {
-
-        Camera.main.gameObject.SetActive(false);
-        convoCam.SetActive(true);
+        state = player.state = State.Conversation;
+        player.StopMoving();
+        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(ZoomCamera());
+        spawnWheels = false;
+        for (int i = 0; i < this.transform.childCount; i++)
+        {
+            Destroy(this.transform.GetChild(i).gameObject);
+        }
+        yield return new WaitUntil(() => godFace.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Done"));
+        yield return new WaitForSeconds(0.8f);
+        yield return StartCoroutine(ZoomCamera(second: true));
         questionText.gameObject.SetActive(true);
         inputText.SetActive(true);
-        facePack.SetActive(true);
         if (pQ != -1)
             currentQuestion = questionsAnswers.Find(q => q.number == pQ);
         else
@@ -307,10 +335,6 @@ public class Manager : MonoBehaviour
     private IEnumerator PrintText(TextMeshProUGUI textField, string text, float waitTime = 0f)
     {
         printing = true;
-        if (!convoCam.activeSelf)
-        {
-            yield return new WaitUntil(() => convoCam.activeSelf);
-        }
 
         yield return new WaitForSeconds(waitTime);
         textField.text = "";
@@ -340,8 +364,9 @@ public class Manager : MonoBehaviour
             if (meta) continue;
             if (printWhole) break;
             textField.text += t;
-            if (charCount %2 == 0)
-                audioManager.PlaySound();
+            if (i != text.Length -1)
+                if (charCount %2 == 0)
+                    audioManager.PlaySound();
             yield return new WaitForSeconds(0.05f);
         }
        
@@ -350,23 +375,85 @@ public class Manager : MonoBehaviour
         printing = false;
     }
 
-    private IEnumerator ZoomCamera(QuestionAnswers.Zoom zoom, bool slowZoom = false)
+    private IEnumerator ZoomCamera(QuestionAnswers.Zoom zoom = QuestionAnswers.Zoom.None, bool second = false, bool backing = false)
     {
+
+        if (zoom == QuestionAnswers.Zoom.PondZoom)
+        {
+            var rot = Quaternion.Euler(0, 90, 0);
+            float t = 0;
+
+            while (Camera.main.transform.rotation != rot)
+            {
+                yield return new WaitForEndOfFrame();
+                t += Time.deltaTime / 4;
+
+                Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, rot, t);
+            }
+            faceInPond.gameObject.SetActive(true);
+        }
+
+       
         float timer = 0;
         Quaternion rotation = zooming.GetRotation(zoom);
-        var position = zooming.GetPostion(zoom);
-        float divider = zooming.GetSpeedDivider(zoom);
-        
+        Vector3 position;
+        float divider = 0;
+        if (zoom == QuestionAnswers.Zoom.None && !second)
+        {
+            position = firstZoom.position;
+            divider = 1;
+        }
+        else if (zoom == QuestionAnswers.Zoom.None && second)
+        {
+            position = secondZoom.position;
+            divider = 0.1f;
+        }
+        else if (backing)
+        {
+            position = zooming.GetPostion(zoom);
+            divider = 1f;
+        }
+        else
+        {
+            position = zooming.GetPostion(zoom);
+            divider = zooming.GetSpeedDivider(zoom);
+        }
+        var originalRotation = Quaternion.Euler(0, 0, 0);
+        bool changedFirst = false;
+        bool changedSecond = false;
         while (Camera.main.transform.position != position)
         {
+            if (zoom == QuestionAnswers.Zoom.None && Vector3.Distance(Camera.main.transform.position, position) <=0.2 && !changedFirst && !second)
+            {
+                changedFirst = true;
+                godBody.SetActive(false);
+                godFace.SetActive(true);
+            }
+            else if (zoom == QuestionAnswers.Zoom.None && Vector3.Distance(Camera.main.transform.position, position) <= 0.2 && !changedSecond && second)
+            {
+                changedSecond = true;
+                godFace.SetActive(false);
+                facePack.SetActive(true);
+
+            }
+
             yield return new WaitForEndOfFrame();
             timer += Time.deltaTime / divider;
-
+            
             if (zoom == QuestionAnswers.Zoom.PondZoom)
             {
                 Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, rotation, timer);
             }
-
+            if (Camera.main.transform.rotation != originalRotation && zoom != QuestionAnswers.Zoom.PondZoom && zoom != QuestionAnswers.Zoom.None)
+            {
+                Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, originalRotation, timer);
+                backed = true;
+                
+            }
+            if (zoom == QuestionAnswers.Zoom.None && position == firstZoom.position)
+            {
+                Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, Quaternion.Euler(0, 0, 0), timer);
+            }
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, position, timer);
         }
     }
@@ -401,6 +488,7 @@ public class Manager : MonoBehaviour
 
     private IEnumerator ManageQuestion(QuestionAnswers question)
     {
+        print(question.number);
         var animator = faceStructure.face.GetComponent<Animator>();
         foreach (var q in question.questions)
         {
@@ -432,8 +520,15 @@ public class Manager : MonoBehaviour
             }
 
             ChangeSprites(q);
-            if (q.zoom != QuestionAnswers.Zoom.None)
+            if (q.zoom != QuestionAnswers.Zoom.None && preveQuestionNumber == 31)
+            {
+
+                yield return StartCoroutine(ZoomCamera(q.zoom, backing: true));
+
+            }
+            else if (q.zoom != QuestionAnswers.Zoom.None)
                 StartCoroutine(ZoomCamera(q.zoom));
+
             PlayFaceAnimations(q);
             if (q.question != "")
             {
@@ -448,27 +543,39 @@ public class Manager : MonoBehaviour
                     output = output.Replace("Very well then", "");
                 }
 
-                if (question.number == 15)
+                if (q.question.Contains("END"))
                 {
-
-                    if (question.questions.IndexOf(q) == 1 || question.questions.IndexOf(q) == 3
-                        || question.questions.IndexOf(q) == 5)
-                    {
-                        yield return StartCoroutine(PrintText(player.textField, output));
-                        yield return new WaitForSeconds(1);
-                        player.textField.text = "";
-                        playerInputPack.SetActive(false);
-                    }
-                    else
-                    {
-                        yield return StartCoroutine(PrintText(questionText, output));
-
-                    }
-
+                    playerInputPack.SetActive(false);
+                    player.inputActive = false;
+                    questionText.gameObject.SetActive(false);
+                    endingText.gameObject.SetActive(true);
+                    yield return StartCoroutine(PrintText(endingText, output));
                 }
                 else
-                    yield return StartCoroutine(PrintText(questionText, output));
+                {
+                    if (question.number == 15)
+                    {
 
+                        if (question.questions.IndexOf(q) == 1 || question.questions.IndexOf(q) == 3
+                            || question.questions.IndexOf(q) == 5)
+                        {
+                            yield return StartCoroutine(PrintText(player.textField, output));
+                            yield return new WaitForSeconds(1);
+                            player.textField.text = "";
+                            playerInputPack.SetActive(false);
+                        }
+                        else
+                        {
+                            yield return StartCoroutine(PrintText(questionText, output));
+
+                        }
+
+                    }
+                    else
+                        yield return StartCoroutine(PrintText(questionText, output));
+
+
+                }
 
             }
 
@@ -493,7 +600,7 @@ public class Manager : MonoBehaviour
             currentQuestion = currentQuestion.redirect;
             StartCoroutine(ManageQuestion(currentQuestion));
         }
-        else
+        else if (!currentQuestion.nextIsEnding)
         {
 
             player.inputActive = true;

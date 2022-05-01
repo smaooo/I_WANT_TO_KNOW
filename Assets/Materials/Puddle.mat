@@ -133,11 +133,11 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TrackerRadius: 0
+    - _TrackerRadius: 0.5
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_1a73539d1c574304b34b42ea6aafe853: {r: 0.8301887, g: 0.44505706, b: 0.30857953, a: 0}
+    - Color_1a73539d1c574304b34b42ea6aafe853: {r: 1, g: 1, b: 1, a: 0}
     - Color_609293141be74dc68574594d6d5402fe: {r: 1, g: 0.7018868, b: 0.71317756, a: 0}
     - Color_d2b29d87bf644ef38d91fce804c0d3e5: {r: 1, g: 0.78679246, b: 0.78679246, a: 0}
     - Vector3_4d04f3927932441fb052ccb7f1641540: {r: 0, g: 0, b: 0, a: 0}

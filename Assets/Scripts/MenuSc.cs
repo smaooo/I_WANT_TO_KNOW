@@ -119,7 +119,7 @@ public class MenuSc : MonoBehaviour
             if (fade.color.a > 0.95)
             {
                 fade.color = new Color(1,1,1,1);
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
 
             }
         }

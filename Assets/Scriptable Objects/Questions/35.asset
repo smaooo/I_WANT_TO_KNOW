@@ -30,7 +30,7 @@ MonoBehaviour:
       reverseFace: 0
       additional: {fileID: 0}
       additionalLayer: 0
-    zoom: 0
+    zoom: 2
   - question: When something goes wrong, you chose to blame it on anything else other
       than yourself.
     sprite:

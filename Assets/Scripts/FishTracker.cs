@@ -24,11 +24,13 @@ public class FishTracker : MonoBehaviour
         
         if (dist <= 0 && dist > -1f && canRipple)
         {
+            print("SHould");
             canRipple = false;
             puddleMaterial.SetVector("_RefPos", this.transform.position);
             puddleMaterial.SetFloat("_CurrentTime", Time.realtimeSinceStartup);
             puddleMaterial.SetInt("_Ripple", 0);
             Invoke("ResetRipple", 2);
+            //canRipple = true;
         }
     }
 

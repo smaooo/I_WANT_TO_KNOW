@@ -27,13 +27,13 @@ public class Puddle : MonoBehaviour
 
             pos += Vector3.up * 2;
             points.Add(pos);
-            points.Add(pos + Vector3.down * 5);
+            points.Add(pos + Vector3.down * 10);
         }
 
 
         
         var b = Instantiate(this.transform.GetChild(0).gameObject, this.transform);
-        b.transform.position = new Vector3(b.transform.position.x, points[1].y, b.transform.position.z);
+        b.transform.position = new Vector3(b.transform.position.x, points[1].y + (Vector3.up * 5).y, b.transform.position.z);
         b.transform.localRotation = Quaternion.Euler(0, 0, 0);
         var triangles = new List<int>();
         

@@ -19,7 +19,7 @@ public class WheelController : MonoBehaviour
     private float playerWidth;
     private Animator animator;
     private bool changingTrack = false;
-    private SpriteRenderer renderer;
+    new private SpriteRenderer renderer;
     private bool jumping = false;
 
     void Start()
@@ -83,20 +83,10 @@ public class WheelController : MonoBehaviour
             renderer.sortingOrder = 200 - Mathf.FloorToInt(Vector3.Distance(this.transform.position, player.transform.position));
         }
 
-        //foreach (var s in manager.stones)
-        //{
-        //    float dot = Vector3.Dot(this.transform.forward,
-        //        (s.transform.position - this.transform.position).normalized);
-        //    if (dot < 0)
-        //    {
-        //        renderer.sortingOrder = s.sortingOrder - 10;
-        //    }
-
-        //}
+      
     }
     private void DecisionMaker()
     {
-        print(Vector3.Distance(this.transform.position, player.transform.position));
         if (Vector3.Distance(this.transform.position, player.transform.position) < 20)
         {
             int newTrack = -1;
