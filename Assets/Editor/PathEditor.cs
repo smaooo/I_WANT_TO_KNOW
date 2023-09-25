@@ -187,7 +187,7 @@ public class PathEditor : Editor
             {
                 Handles.color = (i % 3 == 0) ? creator.anchorCol : creator.controlCol;
                 float handleSize = (i % 3 == 0) ? creator.anchorDiameter : creator.controlDiameter;
-                Vector3 newPos = Handles.FreeMoveHandle(Path[i], Quaternion.identity, handleSize, Vector2.zero, Handles.CylinderHandleCap);
+                var fmh_190_66_638312772965656750 = Quaternion.identity; Vector3 newPos = Handles.FreeMoveHandle(Path[i], handleSize, Vector2.zero, Handles.CylinderHandleCap);
                 if (Path[i] != newPos)
                 {
                     Undo.RecordObject(creator, "Move point");
